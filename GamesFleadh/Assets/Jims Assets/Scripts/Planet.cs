@@ -14,6 +14,8 @@ public class Planet : MonoBehaviour
     public float rotationSpeed;
     public bool RandomSize;
 
+    public bool allowOrbitDebug;
+
     private Vector3 sunVec;
 
     // 10km = 1 Scale
@@ -95,8 +97,11 @@ public class Planet : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        UnityEditor.Handles.color = Color.yellow;
-        float distance =Vector3.Distance(transform.position,sun.transform.position);
-        UnityEditor.Handles.DrawWireDisc(sun.transform.position, Vector3.up, distance);
+        if (allowOrbitDebug)
+        {
+            UnityEditor.Handles.color = Color.yellow;
+            float distance = Vector3.Distance(transform.position, sun.transform.position);
+            UnityEditor.Handles.DrawWireDisc(sun.transform.position, Vector3.up, distance);
+        }
     }
 }

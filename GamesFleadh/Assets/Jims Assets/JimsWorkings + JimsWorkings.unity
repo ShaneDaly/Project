@@ -1603,6 +1603,7 @@ MonoBehaviour:
   sun: {fileID: 265839406}
   rotationSpeed: 0
   RandomSize: 0
+  allowOrbitDebug: 1
   size: 0
   sizeKm: 0
 --- !u!23 &430498823
@@ -1868,6 +1869,7 @@ MonoBehaviour:
   sun: {fileID: 265839406}
   rotationSpeed: 0
   RandomSize: 0
+  allowOrbitDebug: 1
   size: 0
   sizeKm: 0
 --- !u!23 &461546543
@@ -4859,6 +4861,7 @@ MonoBehaviour:
   sun: {fileID: 265839406}
   rotationSpeed: 0
   RandomSize: 0
+  allowOrbitDebug: 1
   size: 0
   sizeKm: 0
 --- !u!23 &925632713
@@ -5013,6 +5016,7 @@ MonoBehaviour:
   sun: {fileID: 265839406}
   rotationSpeed: 0
   RandomSize: 0
+  allowOrbitDebug: 1
   size: 0
   sizeKm: 0
 --- !u!23 &1090986550
@@ -5103,6 +5107,7 @@ MonoBehaviour:
   sun: {fileID: 265839406}
   rotationSpeed: 0
   RandomSize: 0
+  allowOrbitDebug: 1
   size: 0
   sizeKm: 0
 --- !u!23 &1113132455
@@ -5270,6 +5275,7 @@ MonoBehaviour:
   sun: {fileID: 265839406}
   rotationSpeed: 0
   RandomSize: 0
+  allowOrbitDebug: 1
   size: 0
   sizeKm: 0
 --- !u!23 &1212261042
@@ -6275,6 +6281,7 @@ MonoBehaviour:
   sun: {fileID: 265839406}
   rotationSpeed: 0
   RandomSize: 0
+  allowOrbitDebug: 1
   size: 0
   sizeKm: 0
 --- !u!4 &1763261029 stripped
@@ -6330,6 +6337,7 @@ MonoBehaviour:
   sun: {fileID: 265839406}
   rotationSpeed: 0
   RandomSize: 0
+  allowOrbitDebug: 1
   size: 0
   sizeKm: 0
 --- !u!23 &1880655975
@@ -7642,6 +7650,7 @@ MonoBehaviour:
   sun: {fileID: 265839406}
   rotationSpeed: 0
   RandomSize: 0
+  allowOrbitDebug: 1
   size: 0
   sizeKm: 0
 --- !u!23 &2108895622
