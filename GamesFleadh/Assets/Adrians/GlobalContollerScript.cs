@@ -69,6 +69,7 @@ public class GlobalContollerScript : MonoBehaviour
                     Debug.Log("Planet selected!");
                     selectedPlanet = hitInfo.transform.gameObject;
                     sidebarPlanet.SetActive(true);
+                    sidebarSatellite.SetActive(false);
                     sidebarUpgrades.SetActive(true);
                 }
             }
