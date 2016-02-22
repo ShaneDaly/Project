@@ -37,10 +37,11 @@ public class pointer : MonoBehaviour
                 Vector3 point = ray.GetPoint(dist);
                 if (!hit)
                 {
-                    mCamera.transform.position = new Vector3(point.x, 268, point.z);
+                    Camera.main.GetComponent<cameraControl>().goTo(point);
                 }
                 if (hit)
                 {
+
                 }
             }
         }
