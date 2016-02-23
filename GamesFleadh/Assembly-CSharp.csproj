@@ -50,7 +50,9 @@
      <Compile Include="Assets\Adrians\ImageFadeOut.cs" />
      <Compile Include="Assets\Adrians\LoadLevelDelay.cs" />
      <Compile Include="Assets\Adrians\NewChase.cs" />
+     <Compile Include="Assets\Adrians\PlanetStats.cs" />
      <Compile Include="Assets\Adrians\RocketOther.cs" />
+     <Compile Include="Assets\Adrians\SatelliteStats.cs" />
      <Compile Include="Assets\Jims Assets\Scripts\Moon.cs" />
      <Compile Include="Assets\Jims Assets\Scripts\Planet.cs" />
      <Compile Include="Assets\Jims Assets\Scripts\Satelite.cs" />
@@ -66,7 +68,6 @@
      <Compile Include="Assets\MaxP\Shaders\Scripts\DirtyLensFlare.cs" />
      <Compile Include="Assets\Pause.cs" />
      <Compile Include="Assets\PickUpItem.cs" />
-     <Compile Include="Assets\PlanetStats.cs" />
      <Compile Include="Assets\Robs\Assets\Scripts\Camera Script\Movement.cs" />
      <Compile Include="Assets\Robs\Assets\Scripts\Camera Script\ZoomScript.cs" />
      <Compile Include="Assets\Robs\Assets\Scripts\Ojects\Chaser.cs" />
