@@ -21,7 +21,7 @@ public class pointer : MonoBehaviour
             bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
             Vector3 point = ray.GetPoint(dist);
 
-            if ((Vector3.Distance(border, point)) < (Vector3.Distance(border, sun.transform.position)))
+            if ((Vector3.Distance(sun.transform.position, point)) < (Vector3.Distance(border, sun.transform.position)))
             {
                 if (!hit)
                 {
@@ -43,14 +43,17 @@ public class pointer : MonoBehaviour
             { 
                 bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
                 Vector3 point = ray.GetPoint(dist);
-                if (!hit)
+                if ((Vector3.Distance(sun.transform.position, point)) < (Vector3.Distance(border, sun.transform.position)))
                 {
-                    Camera.main.GetComponent<cameraControl>().goTo(point);
-                    Camera.main.transform.parent = null;
-                }
-                if (hit)
-                {
-                    Camera.main.transform.parent = hitInfo.transform;
+                    if (!hit)
+                    {
+                        Camera.main.GetComponent<cameraControl>().goTo(point);
+                        Camera.main.transform.parent = null;
+                    }
+                    if (hit)
+                    {
+                        Camera.main.transform.parent = hitInfo.transform;
+                    }
                 }
             }
         }
