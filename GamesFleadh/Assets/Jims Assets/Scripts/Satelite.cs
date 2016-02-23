@@ -3,36 +3,51 @@ using System.Collections;
 
 public class Satelite : MonoBehaviour 
 {
-    public GameObject sun;
+    [SerializeField] private GameObject sun;
+
+    [SerializeField] private Vector3 sunVec;
     public float rotationSpeed;
 
-    private Vector3 sunVec;
-
     // 10km = 1 Scale
-    public float size;
-    public float sizeKm;
+    [SerializeField]
+    private float size;
+    [SerializeField]
+    private float sizeKm;
 
+    [SerializeField]
     private float g;
+    [SerializeField]
     private float m;
+    [SerializeField]
     private float gm;
+    [SerializeField]
     private float gmOverRadius;
+    [SerializeField]
     private float orbitV;
 
-    public float circumference;
-    public float rps;
-    public float rotateSpeed;
-    public float desiredRotateSpeed;
+    [SerializeField]
+    private float circumference;
+    [SerializeField]
+    private float rps;
+    [SerializeField]
+    private float rotateSpeed;
+    [SerializeField]
+    private float desiredRotateSpeed;
 
-    public float height;
+    [SerializeField]
+    private float height;
 
     //public GameObject emitter;
 
-    public bool isAcc;
+    [SerializeField]
+    private bool isAcc;
 
     // Use this for initialization
     void Start()
     {
         isAcc = true;
+
+        sun = GameObject.FindGameObjectWithTag("sun");
     }
 
     // Update is called once per frame
