@@ -79,6 +79,7 @@
      <Compile Include="Assets\ShanesScripts\DestroyByTime.cs" />
      <Compile Include="Assets\ShanesScripts\EnemyScript.cs" />
      <Compile Include="Assets\ShanesScripts\EnemyShooting.cs" />
+     <Compile Include="Assets\ShanesScripts\Health.cs" />
      <Compile Include="Assets\ShanesScripts\HealthScript.cs" />
      <Compile Include="Assets\ShanesScripts\HealthScript2.cs" />
      <Compile Include="Assets\ShanesScripts\PlanetAttack.cs" />
@@ -87,6 +88,8 @@
      <Compile Include="Assets\ShanesScripts\ScrapGenerate.cs" />
      <Compile Include="Assets\ShanesScripts\Spawner.cs" />
      <Compile Include="Assets\ShanesScripts\Spawner1.cs" />
+     <Compile Include="Assets\ShanesScripts\SunShield.cs" />
+     <Compile Include="Assets\ShanesScripts\WinOrLose.cs" />
      <Compile Include="Assets\ShanesScripts\chase.cs" />
      <Compile Include="Assets\ShanesScripts\flying.cs" />
      <Compile Include="Assets\ShanesScripts\mover.cs" />
