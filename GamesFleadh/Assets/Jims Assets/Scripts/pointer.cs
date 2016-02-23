@@ -29,7 +29,7 @@ public class pointer : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(2))
         {
             if (plane.Raycast(ray, out dist))
             { 
@@ -38,10 +38,11 @@ public class pointer : MonoBehaviour
                 if (!hit)
                 {
                     Camera.main.GetComponent<cameraControl>().goTo(point);
+                    Camera.main.transform.parent = null;
                 }
                 if (hit)
                 {
-
+                    Camera.main.transform.parent = hitInfo.transform;
                 }
             }
         }

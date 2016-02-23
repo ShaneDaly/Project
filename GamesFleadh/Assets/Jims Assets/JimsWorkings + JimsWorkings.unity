@@ -5990,9 +5990,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1733496161}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 944ee2a0103d7be47a71f3584510188a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8881fd5555a50b446a8976c4b5a42526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Satelite: {fileID: 686962884}
+  pSatelite: {fileID: 0}
+  Sun: {fileID: 265839406}
+  dist: 0
 --- !u!4 &1733496163
 Transform:
   m_ObjectHideFlags: 0
