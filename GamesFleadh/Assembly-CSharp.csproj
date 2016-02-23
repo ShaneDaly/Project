@@ -77,6 +77,7 @@
      <Compile Include="Assets\ShanesScripts\DestroyByContact.cs" />
      <Compile Include="Assets\ShanesScripts\DestroyByTime.cs" />
      <Compile Include="Assets\ShanesScripts\EnemyScript.cs" />
+     <Compile Include="Assets\ShanesScripts\EnemyShooting.cs" />
      <Compile Include="Assets\ShanesScripts\HealthScript.cs" />
      <Compile Include="Assets\ShanesScripts\HealthScript2.cs" />
      <Compile Include="Assets\ShanesScripts\PlanetAttack.cs" />
@@ -88,6 +89,8 @@
      <Compile Include="Assets\ShanesScripts\chase.cs" />
      <Compile Include="Assets\ShanesScripts\flying.cs" />
      <Compile Include="Assets\ShanesScripts\mover.cs" />
+     <Compile Include="Assets\TurretRotation.cs" />
+     <Compile Include="Assets\TurretShoot.cs" />
      <None Include="Assets\MaxP\Shaders\_Source\Shaders\Resources\Blur.shader" />
      <None Include="Assets\sky5X\README.txt" />
      <None Include="Assets\Materials\UI-Default-No-Alpha.shader" />

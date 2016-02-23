@@ -263,7 +263,7 @@ MonoBehaviour:
   InvestigateSpeed: 35
   range: 40
   state: 0
-  lasershot: {fileID: 188010, guid: b74bfb433e489f74fb865e1b9b9e03a6, type: 2}
+  lasershot: {fileID: 176082, guid: b8c80c700bac8214fbd741979af0ff5f, type: 2}
   shotspawn: {fileID: 412194}
   waypoint: []
   Waypoint: {fileID: 0}
@@ -350,7 +350,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: lasershot
       value: 
-      objectReference: {fileID: 188010, guid: b74bfb433e489f74fb865e1b9b9e03a6, type: 2}
+      objectReference: {fileID: 176082, guid: b8c80c700bac8214fbd741979af0ff5f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 167036}
