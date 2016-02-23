@@ -59,26 +59,25 @@ public class cameraControl : MonoBehaviour {
             return;
         }
 
-            if (Input.GetMouseButton(0) && Input.GetMouseButton(1))
+        if (Input.GetMouseButton(0) && Input.GetMouseButton(1))
+        {
+            Strafe(deltaX);
+            ChangeHeight(deltaY);
+        }
+        else
+        {
+            if (Input.GetMouseButton(0))
             {
-                Strafe(deltaX);
-                ChangeHeight(deltaY);
+                MoveForwards(deltaY);
+                ChangeHeading(deltaX);
             }
-            else
+            else if (Input.GetMouseButton(1))
             {
-                if (Input.GetMouseButton(0))
-                {
-                    MoveForwards(deltaY);
-                    ChangeHeading(deltaX);
-                }
-                else if (Input.GetMouseButton(1))
-                {
-                    ChangeHeading(deltaX);
-                    ChangePitch(-deltaY);
-                }
+                ChangeHeading(deltaX);
+                ChangePitch(-deltaY);
             }
+        }
         
-
     }
 
     void MoveForwards(float aVal)
