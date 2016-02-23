@@ -1584,7 +1584,7 @@ GameObject:
   - 114: {fileID: 430498822}
   m_Layer: 0
   m_Name: Earth
-  m_TagString: Untagged
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1850,7 +1850,7 @@ GameObject:
   - 114: {fileID: 461546542}
   m_Layer: 0
   m_Name: Mars
-  m_TagString: Untagged
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1986,7 +1986,7 @@ Camera:
     height: 1
   near clip plane: .300000012
   far clip plane: 5000
-  field of view: 60
+  field of view: 90
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -4830,7 +4830,7 @@ GameObject:
   - 114: {fileID: 925632712}
   m_Layer: 0
   m_Name: Neptune
-  m_TagString: Untagged
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4985,7 +4985,7 @@ GameObject:
   - 114: {fileID: 1090986549}
   m_Layer: 0
   m_Name: Saturn
-  m_TagString: Untagged
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5076,7 +5076,7 @@ GameObject:
   - 114: {fileID: 1113132454}
   m_Layer: 0
   m_Name: Uranus
-  m_TagString: Untagged
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5244,7 +5244,7 @@ GameObject:
   - 114: {fileID: 1212261041}
   m_Layer: 0
   m_Name: Pluto
-  m_TagString: Untagged
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5419,6 +5419,92 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 20
+--- !u!1001 &1265611557
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 22484814, guid: 862798891e5d7424dbbd322910d55e80, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22484814, guid: 862798891e5d7424dbbd322910d55e80, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22484814, guid: 862798891e5d7424dbbd322910d55e80, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22484814, guid: 862798891e5d7424dbbd322910d55e80, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22484814, guid: 862798891e5d7424dbbd322910d55e80, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22484814, guid: 862798891e5d7424dbbd322910d55e80, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22484814, guid: 862798891e5d7424dbbd322910d55e80, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22484814, guid: 862798891e5d7424dbbd322910d55e80, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 22484814, guid: 862798891e5d7424dbbd322910d55e80, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22484814, guid: 862798891e5d7424dbbd322910d55e80, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22484814, guid: 862798891e5d7424dbbd322910d55e80, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22484814, guid: 862798891e5d7424dbbd322910d55e80, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22484814, guid: 862798891e5d7424dbbd322910d55e80, type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22484814, guid: 862798891e5d7424dbbd322910d55e80, type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22484814, guid: 862798891e5d7424dbbd322910d55e80, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22484814, guid: 862798891e5d7424dbbd322910d55e80, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22484814, guid: 862798891e5d7424dbbd322910d55e80, type: 2}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22484814, guid: 862798891e5d7424dbbd322910d55e80, type: 2}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22321518, guid: 862798891e5d7424dbbd322910d55e80, type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 477500729}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 862798891e5d7424dbbd322910d55e80, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1291719018
 GameObject:
   m_ObjectHideFlags: 0
@@ -5428,6 +5514,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1291719020}
   - 114: {fileID: 1291719019}
+  - 114: {fileID: 1291719021}
   m_Layer: 0
   m_Name: pointer
   m_TagString: Untagged
@@ -5447,6 +5534,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mCamera: {fileID: 477500725}
+  sun: {fileID: 265839406}
+  border: {x: 0, y: 400, z: 1169}
 --- !u!4 &1291719020
 Transform:
   m_ObjectHideFlags: 0
@@ -5454,12 +5543,25 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1291719018}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 327.809143, y: -390.391968, z: -2213.77759}
+  m_LocalPosition: {x: 77, y: -390.391968, z: 1161}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 352827120}
   m_Father: {fileID: 0}
   m_RootOrder: 11
+--- !u!114 &1291719021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1291719018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f292aa12981c1541866d5c4d46e8a56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceDelay: 0
+  resources: 0
 --- !u!1 &1456820317
 GameObject:
   m_ObjectHideFlags: 0
@@ -5807,6 +5909,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9a5e84d18daaedb4497558b28ad54d57, type: 2}
+    - target: {fileID: 140068, guid: 1e2ec26a55678f54d8fffbf34fa96828, type: 2}
+      propertyPath: m_TagString
+      value: Planet
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11414808, guid: 1e2ec26a55678f54d8fffbf34fa96828, type: 2}
     - {fileID: 11464570, guid: 1e2ec26a55678f54d8fffbf34fa96828, type: 2}
@@ -6292,6 +6398,47 @@ MonoBehaviour:
 Transform:
   m_PrefabParentObject: {fileID: 441238, guid: 1e2ec26a55678f54d8fffbf34fa96828, type: 2}
   m_PrefabInternal: {fileID: 1532952001}
+--- !u!1 &1788931710
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1788931712}
+  - 114: {fileID: 1788931711}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1788931711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1788931710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f292aa12981c1541866d5c4d46e8a56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceDelay: 3
+  resources: 100
+--- !u!4 &1788931712
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1788931710}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2673.93311, y: 2.68778443, z: -1111.21179}
+  m_LocalScale: {x: 25, y: 25, z: 25}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
 --- !u!1 &1880655972
 GameObject:
   m_ObjectHideFlags: 0
@@ -6306,7 +6453,7 @@ GameObject:
   - 114: {fileID: 1880655974}
   m_Layer: 0
   m_Name: Jupiter
-  m_TagString: Untagged
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7635,7 +7782,7 @@ GameObject:
   - 114: {fileID: 2108895621}
   m_Layer: 0
   m_Name: Venus
-  m_TagString: Untagged
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
