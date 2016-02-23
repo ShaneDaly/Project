@@ -29,72 +29,84 @@ public class cameraControl : MonoBehaviour {
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            if (mode == 0)
+            {
+                mode = 1;
+            }
+            else if (mode == 1)
+            {
+                mode = 0;
+            }
+
+            isMoving = true;
+            goToLocation = new Vector3(sun.transform.position.x, zoomOutY, sun.transform.position.z);
+            mPitch = 90;
+        }
+
         if (mode == 0)
         {
-            if (Input.GetAxis("Mouse ScrollWheel") >0f)
+            if (Input.GetAxis("Mouse ScrollWheel") > 0f)
             {
                 transform.position += transform.forward * Time.deltaTime * movementSpeed;
             }
-            else if (Input.GetAxis("Mouse ScrollWheel") <0f)
+            else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
             {
                 transform.position -= transform.forward * Time.deltaTime * movementSpeed;
             }
 
-            if(Input.GetKey(KeyCode.W)) {
-                 transform.position += transform.forward * Time.deltaTime * movementSpeed;
-             }
-             else if(Input.GetKey(KeyCode.S)) {
+            if (Input.GetKey(KeyCode.W)) {
+                transform.position += transform.forward * Time.deltaTime * movementSpeed;
+            }
+            else if (Input.GetKey(KeyCode.S)) {
                 transform.position -= transform.forward * Time.deltaTime * movementSpeed;
-             }
-             else if(Input.GetKey(KeyCode.A)) {
-                transform.position -= transform.right * Time.deltaTime * movementSpeed;
-             }
-             else if(Input.GetKey(KeyCode.D)) {
-                transform.position += transform.right * Time.deltaTime * movementSpeed;
-             }
-
-
-            if (isMoving)
-            {
-                if (transform.position == goToLocation)
-                {
-                    isMoving = false;
-                }
-                float step = speed * Time.deltaTime;
-                transform.position = Vector3.MoveTowards(transform.position, goToLocation, step);
-            }
-
-            float deltaX = Input.GetAxis("Mouse X") * sensitivityX;
-            float deltaY = Input.GetAxis("Mouse Y") * sensitivityY;
-
-            if (!(Input.GetMouseButton(0) || Input.GetMouseButton(1)))
-            {
-                return;
-            }
-
-            if (Input.GetMouseButton(0) && Input.GetMouseButton(1))
-            {
-                Strafe(deltaX);
-                ChangeHeight(deltaY);
-            }
-            else
-            {
-                if (Input.GetMouseButton(0))
-                {
-                    MoveForwards(deltaY);
-                    ChangeHeading(deltaX);
-                }
-                else if (Input.GetMouseButton(1))
-                {
-                    ChangeHeading(deltaX);
-                    ChangePitch(-deltaY);
-                }
             }
         }
-        if (Input.GetKey(KeyCode.D))
+
+        if (Input.GetKey(KeyCode.A)) {
+            transform.position -= transform.right * Time.deltaTime * movementSpeed;
+        }
+        else if (Input.GetKey(KeyCode.D)) {
+            transform.position += transform.right * Time.deltaTime * movementSpeed;
+        }
+
+
+        if (isMoving)
         {
-            isMoving = true;
-            goToLocation = new Vector3(sun.transform.position.x, zoomOutY, sun.transform.position.z);
+            if (transform.position == goToLocation)
+            {
+                isMoving = false;
+            }
+            float step = speed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, goToLocation, step);
+        }
+
+        float deltaX = Input.GetAxis("Mouse X") * sensitivityX;
+        float deltaY = Input.GetAxis("Mouse Y") * sensitivityY;
+
+        if (!(Input.GetMouseButton(0) || Input.GetMouseButton(1)))
+        {
+            return;
+        }
+
+        if (Input.GetMouseButton(0) && Input.GetMouseButton(1))
+        {
+            Strafe(deltaX);
+            ChangeHeight(deltaY);
+        }
+        else
+        {
+            if (Input.GetMouseButton(0))
+            {
+                MoveForwards(deltaY);
+                ChangeHeading(deltaX);
+            }
+            else if (Input.GetMouseButton(1))
+            {
+                ChangeHeading(deltaX);
+                ChangePitch(-deltaY);
+            }
         }
     }
 
