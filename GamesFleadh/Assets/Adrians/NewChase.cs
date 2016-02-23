@@ -4,6 +4,7 @@ using System.Collections;
 public class NewChase : MonoBehaviour {
 	public int health = 100;
 	public float timer = 6;
+	float time = 0f;
 	public Transform[] waypoint;             
 	private float rotSpeed= 4.0f;      
 	float pauseDuration = 5;
@@ -18,6 +19,7 @@ public class NewChase : MonoBehaviour {
 	private float curTime;
 	private int currentWaypoint = 0;
 	public GameObject lasershot;
+	public GameObject rocket;
 	public Transform shotspawn;
     private CharacterController character;
     GameObject[] planets = null;
@@ -26,12 +28,19 @@ public class NewChase : MonoBehaviour {
 	public Vector3 target;
 	public Vector3 direction;
 	public Vector3 velocity;
+
+	RaycastHit hit;
+	private Vector3 fwd;
 	
 	void  Start ()
 	{
 		character = GetComponent<CharacterController>();
 		planet = GameObject.FindWithTag("Planet").transform;
 		state = State.PatrolState;
+	}
+	void OnTriggerCollider (Collider rocket)
+	{
+		health -= 20;
 	}
 	void  Update ()
 	{
@@ -82,8 +91,7 @@ public class NewChase : MonoBehaviour {
         Quaternion finalrotation = Quaternion.LookRotation(planet.transform.position - transform.position, Vector3.up);
 		gameObject.GetComponent<Renderer>().material.color = new Color(255, 0, 0, 0);
 		Instantiate (lasershot, shotspawn.position, finalrotation);
-		ammo -= 1;
-
+		ammo -= 1;	
 	}
 	
 	void Healing()
