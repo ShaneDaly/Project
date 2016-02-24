@@ -50,7 +50,6 @@
      <None Include="Assets\MaxP\Shaders\_Source\Shaders\Resources\Blur.shader" />
      <None Include="Assets\sky5X\README.txt" />
      <None Include="Assets\Materials\UI-Default-No-Alpha.shader" />
-     <None Include="Assets\Robs\ProjectSettings\ProjectVersion.txt" />
      <None Include="Assets\MaxP\Shaders\_Source\Shaders\Resources\DirtyLensFlare.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
@@ -106,6 +105,10 @@
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp.csproj">
+      <Project>{72182CD2-4C78-E3E0-7328-6916F7E63E8E}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
