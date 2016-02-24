@@ -11,6 +11,9 @@ TagManager:
   - Button
   - Planet
   - Enemy
+  - Sun
+  - Waypoint
+  - Rocket
   layers:
   - Default
   - TransparentFX

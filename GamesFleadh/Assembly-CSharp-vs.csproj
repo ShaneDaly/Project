@@ -79,8 +79,10 @@
      <Compile Include="Assets\ShanesScripts\Coloniser.cs" />
      <Compile Include="Assets\ShanesScripts\DestroyByContact.cs" />
      <Compile Include="Assets\ShanesScripts\DestroyByTime.cs" />
+     <Compile Include="Assets\ShanesScripts\EnemyHealth.cs" />
      <Compile Include="Assets\ShanesScripts\EnemyScript.cs" />
      <Compile Include="Assets\ShanesScripts\EnemyShooting.cs" />
+     <Compile Include="Assets\ShanesScripts\GameOver.cs" />
      <Compile Include="Assets\ShanesScripts\Health.cs" />
      <Compile Include="Assets\ShanesScripts\HealthScript.cs" />
      <Compile Include="Assets\ShanesScripts\HealthScript2.cs" />
