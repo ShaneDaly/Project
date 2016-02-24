@@ -11,9 +11,13 @@ TagManager:
   - Button
   - Planet
   - Enemy
+<<<<<<< HEAD
   - Sun
   - Waypoint
   - Rocket
+=======
+  - pauseMenu
+>>>>>>> 698550933a199a5872cd66757164a2eb048b427f
   layers:
   - Default
   - TransparentFX

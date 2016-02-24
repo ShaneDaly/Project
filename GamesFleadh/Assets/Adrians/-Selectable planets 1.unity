@@ -100,7 +100,7 @@ GameObject:
   - 23: {fileID: 52683798}
   m_Layer: 0
   m_Name: Sun
-  m_TagString: Sun
+  m_TagString: sun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1662,6 +1662,7 @@ MonoBehaviour:
   sun: {fileID: 52683797}
   rotationSpeed: 0
   RandomSize: 0
+  allowOrbitDebug: 0
   size: 0
   sizeKm: 0
 --- !u!1 &1340599508
@@ -2648,6 +2649,7 @@ MonoBehaviour:
   sun: {fileID: 52683797}
   rotationSpeed: 0
   RandomSize: 0
+  allowOrbitDebug: 0
   size: 0
   sizeKm: 0
 --- !u!1 &1796650843
@@ -3120,6 +3122,7 @@ MonoBehaviour:
   sun: {fileID: 52683797}
   rotationSpeed: 0
   RandomSize: 0
+  allowOrbitDebug: 0
   size: 0
   sizeKm: 0
 --- !u!1 &2004716724
