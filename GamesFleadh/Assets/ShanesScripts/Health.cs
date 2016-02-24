@@ -14,8 +14,8 @@ public class Health : MonoBehaviour {
 	void Update ()
 	{
 		if (health <= 0) {
-			Application.LoadLevel("gameOver");
+			//Application.LoadLevel("GameOver");
+			transform.parent.gameObject.AddComponent<GameOver>();
 		}
 	}
-
 }
