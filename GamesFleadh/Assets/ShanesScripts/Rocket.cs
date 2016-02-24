@@ -11,14 +11,15 @@ public class Rocket : MonoBehaviour {
 	public float timer = 5;
     float closestDist = -2;
 
-    void Start()
-    {
-        
-    }
+	void Start ()
+	{
+		enemy=GameObject.FindGameObjectWithTag("Enemy");
+	}
+
     void OnTriggerEnter(Collider enemy)
     {
         Destroy(gameObject);
-
+		GetComponent<NewChase>().destroySelf ();
     }
 
     void Update () 
@@ -37,11 +38,6 @@ public class Rocket : MonoBehaviour {
             transform.position += transform.forward * Speed * Time.deltaTime;
         }
     }
-
-	/*void Awake()
-	{
-		enemies = GameObject.FindGameObjectsWithTag("Enemy");
-	}*/
 
     public void detectClosestEnemy()
     {

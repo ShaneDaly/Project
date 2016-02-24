@@ -4,7 +4,6 @@ using System.Collections;
 public class SateliteCreator : MonoBehaviour {
 
     public Transform Satelite;
-    public Transform pSatelite;
     public GameObject Sun;
     public float dist;
     private Vector3 sunVec;
@@ -47,10 +46,6 @@ public class SateliteCreator : MonoBehaviour {
                     }
                     if (hit)
                     {
-                        if (hitInfo.transform.gameObject.tag == "Planet")
-                        {
-                            Instantiate(pSatelite, point, Quaternion.identity);
-                        }
                     }
                 }
             }

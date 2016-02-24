@@ -4,10 +4,11 @@ using System.Collections;
 public class NewChase : MonoBehaviour {
 	public int health = 100;
 	public float timer = 6;
+	float time = 0f;
 	public Transform[] waypoint;             
 	private float rotSpeed= 4.0f;      
 	float pauseDuration = 5;
-	Transform planet;
+	public Transform planet;
 	private float MoveSpeed= 50;
 	private float RetreatSpeed = 15;
 	private float InvestigateSpeed = 35;
@@ -26,12 +27,17 @@ public class NewChase : MonoBehaviour {
 	public Vector3 target;
 	public Vector3 direction;
 	public Vector3 velocity;
+
+	RaycastHit hit;
+	private Vector3 fwd;
 	
 	void  Start ()
 	{
 		character = GetComponent<CharacterController>();
-		state = State.PatrolState;
+		planet = GameObject.FindWithTag("Planet").transform;
+		state = State.InvestState;
 	}
+
 	void  Update ()
 	{
         detectClosestEnemy();
@@ -45,44 +51,43 @@ public class NewChase : MonoBehaviour {
 		}
 		switch (state)
 		{
-		case(State.InvestState):
-		{
-			Investigating ();
-			break;
-		}
-		case(State.PatrolState):
-		{
-			Patrol ();
-			break;
-		}
-		case(State.ShootState):
-		{
-			Shooting ();
-			break;
-		}
-		case(State.RetreatState):
-		{
-			Retreat();
-			break;
-		}
-		case(State.HealingState):
-		{
-			Healing();
-			break;
-		}
+			case(State.InvestState):
+			{
+				Investigating ();
+				break;
+			}
+			case(State.PatrolState):
+			{
+				Patrol ();
+				break;
+			}
+			case(State.ShootState):
+			{
+				Shooting ();
+				break;
+			}
+			case(State.RetreatState):
+			{
+				Retreat();
+				break;
+			}
+			case(State.HealingState):
+			{
+				Healing();
+				break;
+			}
 		}
 		
 	}
 
 
-	public int ammo = 1000;
+	//public int ammo = 1000;
 	void Shooting ()
 	{
         Quaternion finalrotation = Quaternion.LookRotation(planet.transform.position - transform.position, Vector3.up);
 		gameObject.GetComponent<Renderer>().material.color = new Color(255, 0, 0, 0);
 		Instantiate (lasershot, shotspawn.position, finalrotation);
-		ammo -= 1;
-
+		//ammo -= 1;	
 	}
 	
 	void Healing()
@@ -101,32 +106,11 @@ public class NewChase : MonoBehaviour {
 		gameObject.GetComponent<Renderer> ().material.color = new Color (0,0,0,0);
 		transform.LookAt(planet);
 		transform.position += (transform.forward * -1)*MoveSpeed*Time.deltaTime;
+
 	}
 	void  Patrol ()
 	{
-		gameObject.GetComponent<Renderer> ().material.color = new Color (0,204,0,0);
-		if (currentWaypoint < waypoint.Length) {
-			target = waypoint [currentWaypoint].position;
-			direction = target - transform.position;
-			
-			if (direction.magnitude < 1) {
-				currentWaypoint++;
-			} else {
-				velocity = direction.normalized * MoveSpeed;
-			}
-		} 
-		else 
-		{
-			/*if(patrol){
-				currentWaypoint = 0;
-			}
-			else{
-				velocity = Vector3.zero;
-			}*/
-		}
-		
-		gameObject.GetComponent<Rigidbody>().velocity = velocity;
-		transform.LookAt (target);
+
 	}
 	void  Investigating ()
 	{

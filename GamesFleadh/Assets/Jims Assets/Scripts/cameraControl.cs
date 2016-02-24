@@ -16,29 +16,60 @@ public class cameraControl : MonoBehaviour {
 
     public float movementSpeed;
 
+    public int mode;
+
+    public GameObject sun;
+
+    public float zoomOutY;
+
+    void start()
+    {
+        mode = 0;
+    }
+
     void Update()
     {
-        if (Input.GetAxis("Mouse ScrollWheel") >0f)
+        if (Input.GetKeyDown(KeyCode.Z))
         {
-            transform.position += transform.forward * Time.deltaTime * movementSpeed;
-        }
-        else if (Input.GetAxis("Mouse ScrollWheel") <0f)
-        {
-            transform.position -= transform.forward * Time.deltaTime * movementSpeed;
+            if (mode == 0)
+            {
+                mode = 1;
+            }
+            else if (mode == 1)
+            {
+                mode = 0;
+            }
+
+            isMoving = true;
+            goToLocation = new Vector3(sun.transform.position.x, zoomOutY, sun.transform.position.z);
+            mPitch = 90;
         }
 
-        if(Input.GetKey(KeyCode.W)) {
-             transform.position += transform.forward * Time.deltaTime * movementSpeed;
-         }
-         else if(Input.GetKey(KeyCode.S)) {
-            transform.position -= transform.forward * Time.deltaTime * movementSpeed;
-         }
-         else if(Input.GetKey(KeyCode.A)) {
+        if (mode == 0)
+        {
+            if (Input.GetAxis("Mouse ScrollWheel") > 0f)
+            {
+                transform.position += transform.forward * Time.deltaTime * movementSpeed;
+            }
+            else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
+            {
+                transform.position -= transform.forward * Time.deltaTime * movementSpeed;
+            }
+
+            if (Input.GetKey(KeyCode.W)) {
+                transform.position += transform.forward * Time.deltaTime * movementSpeed;
+            }
+            else if (Input.GetKey(KeyCode.S)) {
+                transform.position -= transform.forward * Time.deltaTime * movementSpeed;
+            }
+        }
+
+        if (Input.GetKey(KeyCode.A)) {
             transform.position -= transform.right * Time.deltaTime * movementSpeed;
-         }
-         else if(Input.GetKey(KeyCode.D)) {
+        }
+        else if (Input.GetKey(KeyCode.D)) {
             transform.position += transform.right * Time.deltaTime * movementSpeed;
-         }
+        }
 
 
         if (isMoving)
@@ -77,7 +108,6 @@ public class cameraControl : MonoBehaviour {
                 ChangePitch(-deltaY);
             }
         }
-        
     }
 
     void MoveForwards(float aVal)
