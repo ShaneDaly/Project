@@ -4,10 +4,13 @@ using System.Collections;
 public class SunShield : MonoBehaviour {
 
 	public int health = 1000;
-	public GameObject[] planets = GameObject.FindGameObjectsWithTag("Planet");
+	public GameObject[] planets;
+	public int num;
 
-	void OnBecameInvisible() {
-		enabled = false;
+	void Awake ()
+	{
+		planets = GameObject.FindGameObjectsWithTag ("Planet");
+		num = planets.Length;
 	}
 
 	void Update ()
