@@ -7,21 +7,29 @@ public class GlobalContollerScript : MonoBehaviour
     public float resourceDelay;
     public int resources = 0;
     GameObject selectedPlanet = null;
+    GameObject selectedSatellite = null;
     GameObject sidebarPlanet;
     GameObject sidebarSatellite;
-    GameObject sidebarUpgrades;
+    GameObject sidebarPlanetUpgrades;
+    GameObject sidebarSatelliteUpgrades;
     RaycastHit hitInfo = new RaycastHit();
     GameObject nameStat;
     GameObject offenceStat;
     GameObject defenceStat;
     GameObject utilityStat;
+    GameObject offenceStatSat;
+    GameObject defenceStatSat;
     Text name;
     Text off;
     Text def;
     Text util;
+    Text satOff;
+    Text satDef;
     PlanetStats planetStats;
+    SatelliteStats satelliteStats;
     GameObject resVal;
     Text resValText;
+    GameObject[] satellite = null;
     GameObject[] planets = null;
     GameObject costTxt;
     Text costVal;
@@ -34,8 +42,10 @@ public class GlobalContollerScript : MonoBehaviour
         sidebarPlanet.SetActive(false);
         sidebarSatellite = GameObject.Find("SatelliteStuff");
         sidebarSatellite.SetActive(false);
-        sidebarUpgrades = GameObject.Find("Upgrades");
-        sidebarUpgrades.SetActive(false);
+        sidebarPlanetUpgrades = GameObject.Find("PlanetUpgrades");
+        sidebarPlanetUpgrades.SetActive(false);
+        sidebarSatelliteUpgrades = GameObject.Find("SatelliteUpgrades");
+        sidebarSatelliteUpgrades.SetActive(false);
         resVal = GameObject.Find("ResourceNumber");
         resValText = resVal.GetComponent<Text>();
         resValText.text = "" + resources;
@@ -51,6 +61,14 @@ public class GlobalContollerScript : MonoBehaviour
             {
                 setPlanetStats();
                 costVal.text = ("" + planetStats.cost);
+            }
+        }
+        else if (selectedSatellite != null)
+        {
+            if (sidebarSatellite.activeInHierarchy)
+            {
+                setSatelliteStats();
+                costVal.text = ("" + satelliteStats.cost);
             }
         }
     }
@@ -70,7 +88,15 @@ public class GlobalContollerScript : MonoBehaviour
                     selectedPlanet = hitInfo.transform.gameObject;
                     sidebarPlanet.SetActive(true);
                     sidebarSatellite.SetActive(false);
-                    sidebarUpgrades.SetActive(true);
+                    sidebarPlanetUpgrades.SetActive(true);
+                } 
+                else if (hitInfo.transform.gameObject.tag == "Satellite")
+                {
+                    Debug.Log("Satellite selected!");
+                    selectedSatellite = hitInfo.transform.gameObject;
+                    sidebarPlanet.SetActive(false);
+                    sidebarSatellite.SetActive(true);
+                    sidebarSatelliteUpgrades.SetActive(true);
                 }
             }
             else
@@ -101,7 +127,21 @@ public class GlobalContollerScript : MonoBehaviour
         }
     }
 
-    public void upgradeSelectedOffence()
+    void setSatelliteStats()
+    {
+        offenceStatSat = GameObject.Find("SatelliteOff");
+        defenceStatSat = GameObject.Find("SatelliteDef");
+        satOff = offenceStatSat.GetComponent<Text>();
+        satDef = defenceStatSat.GetComponent<Text>();
+        satelliteStats = selectedSatellite.GetComponent<SatelliteStats>();
+        if (sidebarSatellite.activeInHierarchy)
+        {
+            satOff.text = "" + satelliteStats.offence;
+            satDef.text = "" + satelliteStats.defence;
+        }
+    }
+
+    public void upgradePlanetOffence()
     {
         if (resources >= planetStats.cost)
         {
@@ -112,7 +152,7 @@ public class GlobalContollerScript : MonoBehaviour
         }
     }
 
-    public void upgradeSelectedDefence()
+    public void upgradePlanetDefence()
     {
         if (resources >= planetStats.cost)
         {
@@ -123,13 +163,35 @@ public class GlobalContollerScript : MonoBehaviour
         }
     }
 
-    public void upgradeSelectedUtility()
+    public void upgradePlanetUtility()
     {
         if (resources >= planetStats.cost)
         {
             resources -= planetStats.cost;
             planetStats.upgradeUtility();
             planetStats.cost++;
+            resValText.text = "" + resources;
+        }
+    }
+
+    public void upgradeSatOffence()
+    {
+        if (resources >= satelliteStats.cost)
+        {
+            resources -= satelliteStats.cost;
+            satelliteStats.upgradeOffence();
+            satelliteStats.cost++;
+            resValText.text = "" + resources;
+        }
+    }
+
+    public void upgradeSatDefence()
+    {
+        if (resources >= satelliteStats.cost)
+        {
+            resources -= satelliteStats.cost;
+            satelliteStats.upgradeDefence();
+            satelliteStats.cost++;
             resValText.text = "" + resources;
         }
     }
