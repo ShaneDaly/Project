@@ -37,6 +37,9 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+--- !u!127 &3
+LevelGameManager:
+  m_ObjectHideFlags: 0
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -65,7 +68,6 @@ LightmapSettings:
     m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
-    m_ReflectionCompression: 2
   m_LightmapSnapshot: {fileID: 0}
   m_RuntimeCPUUsage: 25
 --- !u!196 &5
@@ -1512,6 +1514,7 @@ GameObject:
   - 33: {fileID: 432820585}
   - 135: {fileID: 432820584}
   - 23: {fileID: 432820583}
+  - 114: {fileID: 432820582}
   - 114: {fileID: 432820586}
   m_Layer: 0
   m_Name: Moon (3)
@@ -1532,6 +1535,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1880655973}
   m_RootOrder: 3
+--- !u!114 &432820582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 432820580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a89f23058f5cab443878ac56b1d165aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!23 &432820583
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1691,7 +1705,6 @@ GameObject:
   - 92: {fileID: 477500727}
   - 81: {fileID: 477500726}
   - 114: {fileID: 477500731}
-  - 114: {fileID: 477500732}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -1761,7 +1774,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 477500725}
   m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
-  m_LocalPosition: {x: 119, y: 1800, z: -2455}
+  m_LocalPosition: {x: 748, y: 2389, z: -2455}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1779,34 +1792,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensitivityX: 8
   sensitivityY: 8
-  goToLocation: {x: 0, y: 0, z: 0}
   target: {fileID: 0}
   speed: 1200
-  movementSpeed: 1000
-  zoomOutY: 2389
-  mode: 0
-  minHeight: 50
   isMoving: 0
-  active: 1
+  goToLocation: {x: 0, y: 0, z: 0}
+  movementSpeed: 1000
+  mode: 0
   sun: {fileID: 265839406}
---- !u!114 &477500732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 477500725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91689db4d838edc48bd85621d2e0e4cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 0
-  movementSpeed: 2000
-  maxHeight: 4500
-  minHeight: 600
-  CamHeight: 2000
-  speed: 10
-  sun: {fileID: 265839406}
+  zoomOutY: 2389
 --- !u!1 &639241856
 GameObject:
   m_ObjectHideFlags: 0
@@ -1818,6 +1811,7 @@ GameObject:
   - 33: {fileID: 639241860}
   - 135: {fileID: 639241859}
   - 23: {fileID: 639241858}
+  - 114: {fileID: 639241857}
   - 114: {fileID: 639241862}
   m_Layer: 0
   m_Name: Moon (2)
@@ -1826,6 +1820,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &639241857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 639241856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a89f23058f5cab443878ac56b1d165aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!23 &639241858
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2343,6 +2348,7 @@ GameObject:
   - 33: {fileID: 1220567154}
   - 135: {fileID: 1220567153}
   - 23: {fileID: 1220567152}
+  - 114: {fileID: 1220567151}
   - 114: {fileID: 1220567155}
   m_Layer: 0
   m_Name: Moon
@@ -2363,6 +2369,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 430498826}
   m_RootOrder: 0
+--- !u!114 &1220567151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1220567149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a89f23058f5cab443878ac56b1d165aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!23 &1220567152
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2449,12 +2466,6 @@ MonoBehaviour:
   mCamera: {fileID: 477500725}
   sun: {fileID: 265839406}
   border: {x: 0, y: 400, z: 1169}
-  isTracking: 0
-  objectTracking: {fileID: 0}
-  objectTrackingPrev: {x: 0, y: 0, z: 0}
-  difference: {x: 0, y: 0, z: 0}
-  prevSet: 0
-  mainActive: 0
 --- !u!4 &1291719020
 Transform:
   m_ObjectHideFlags: 0
@@ -2678,6 +2689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Satelite: {fileID: 686962884}
+  pSatelite: {fileID: 0}
   Sun: {fileID: 265839406}
   dist: 0
 --- !u!4 &1733496163
@@ -2703,6 +2715,7 @@ GameObject:
   - 33: {fileID: 1747679401}
   - 135: {fileID: 1747679400}
   - 23: {fileID: 1747679399}
+  - 114: {fileID: 1747679398}
   - 114: {fileID: 1747679402}
   m_Layer: 0
   m_Name: Moon (1)
@@ -2723,6 +2736,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1880655973}
   m_RootOrder: 1
+--- !u!114 &1747679398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1747679396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a89f23058f5cab443878ac56b1d165aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!23 &1747679399
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2851,6 +2875,7 @@ GameObject:
   - 33: {fileID: 1759493648}
   - 135: {fileID: 1759493647}
   - 23: {fileID: 1759493646}
+  - 114: {fileID: 1759493645}
   - 114: {fileID: 1759493649}
   m_Layer: 0
   m_Name: Moon
@@ -2871,6 +2896,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1880655973}
   m_RootOrder: 0
+--- !u!114 &1759493645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1759493643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a89f23058f5cab443878ac56b1d165aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!23 &1759493646
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3112,14 +3148,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 11454898, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
-      propertyPath: sun
-      value: 
-      objectReference: {fileID: 265839406}
     - target: {fileID: 133454, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
       propertyPath: m_Name
       value: Satelite
       objectReference: {fileID: 0}
+    - target: {fileID: 11454898, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
+      propertyPath: sun
+      value: 
+      objectReference: {fileID: 265839406}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
   m_IsPrefabParent: 0

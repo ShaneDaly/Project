@@ -11,11 +11,7 @@ TagManager:
   - Button
   - Planet
   - Enemy
-<<<<<<< HEAD
-  - Satellite
-=======
   - pauseMenu
->>>>>>> 9bb023c42cefe157b91cffc67cc8e8092cb5fcbf
   layers:
   - Default
   - TransparentFX

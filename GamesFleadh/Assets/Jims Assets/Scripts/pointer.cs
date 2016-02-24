@@ -9,25 +9,11 @@ public class pointer : MonoBehaviour
     public Vector3 border;
     private float distance;
 
-    public bool isTracking;
-    public GameObject objectTracking;
-
-    public Vector3 objectTrackingPrev;
-    public Vector3 difference;
-
-    public bool prevSet;
-    public bool mainActive;
-
-    void start()
-    {
-        isTracking = false;
-        prevSet = false;
-    }
-    void Update () 
+	void Update () 
     {
         Plane plane = new Plane(Vector3.up, 0);
         float dist;
-        
+
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         if (plane.Raycast(ray, out dist))
@@ -63,28 +49,13 @@ public class pointer : MonoBehaviour
                     {
                         Camera.main.GetComponent<cameraControl>().goTo(point);
                         Camera.main.transform.parent = null;
-                        isTracking = false;
                     }
                     if (hit)
                     {
-                        prevSet = false;
-                        isTracking = true;
-                        objectTracking = hitInfo.transform.gameObject;
+                        Camera.main.transform.parent = hitInfo.transform;
                     }
                 }
             }
-        }
-
-        if (isTracking)
-        {
-            if (!prevSet)
-            {
-                objectTrackingPrev = objectTracking.transform.position;
-                prevSet = true;
-            }
-            difference = objectTracking.transform.position - objectTrackingPrev;
-            objectTrackingPrev = objectTracking.transform.position;
-            mCamera.transform.position = (mCamera.transform.position + difference);
         }
     }
     private void OnDrawGizmos()
