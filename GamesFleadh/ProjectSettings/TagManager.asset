@@ -3,21 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - waypoint
-  - New Tag
-  - sun
-  - HUD
-  - Button
-  - Planet
-  - Enemy
-<<<<<<< HEAD
-  - Sun
-  - Waypoint
-  - Rocket
-=======
-  - pauseMenu
->>>>>>> 698550933a199a5872cd66757164a2eb048b427f
+  tags: []
   layers:
   - Default
   - TransparentFX
