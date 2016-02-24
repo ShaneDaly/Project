@@ -367,7 +367,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!114 &201779673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -702,6 +702,52 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 276217993}
+--- !u!1001 &281829096
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -5.19999981
+      objectReference: {fileID: 0}
+    - target: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -15.3000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11454898, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
+      propertyPath: sun
+      value: 
+      objectReference: {fileID: 52683797}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &485135543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1679,7 +1725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce7ec6228f551d14fb1240619f79b778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 167036, guid: efc31530a39a66c43bf304481afa30ad, type: 2}
+  enemy: {fileID: 184102, guid: bcb9e48e51226f84b8e161d5f78d9767, type: 2}
   rocket: {fileID: 175474, guid: df8b8823927a30d4aabc06a9662e63a4, type: 2}
   planet: {fileID: 1303573425}
   timer: 1
@@ -2666,7 +2712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce7ec6228f551d14fb1240619f79b778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 167036, guid: efc31530a39a66c43bf304481afa30ad, type: 2}
+  enemy: {fileID: 184102, guid: bcb9e48e51226f84b8e161d5f78d9767, type: 2}
   rocket: {fileID: 175474, guid: df8b8823927a30d4aabc06a9662e63a4, type: 2}
   planet: {fileID: 1771178415}
   timer: 1
@@ -2823,52 +2869,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1882488155}
---- !u!1001 &1895405098
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 76.6999969
-      objectReference: {fileID: 0}
-    - target: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -52.7999992
-      objectReference: {fileID: 0}
-    - target: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11454898, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
-      propertyPath: sun
-      value: 
-      objectReference: {fileID: 52683797}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1908508299
 GameObject:
   m_ObjectHideFlags: 0
@@ -3185,7 +3185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce7ec6228f551d14fb1240619f79b778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 167036, guid: efc31530a39a66c43bf304481afa30ad, type: 2}
+  enemy: {fileID: 184102, guid: bcb9e48e51226f84b8e161d5f78d9767, type: 2}
   rocket: {fileID: 175474, guid: df8b8823927a30d4aabc06a9662e63a4, type: 2}
   planet: {fileID: 1954803683}
   timer: 1

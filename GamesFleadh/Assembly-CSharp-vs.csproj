@@ -57,6 +57,7 @@
      <Compile Include="Assets\Jims Assets\Scripts\Planet.cs" />
      <Compile Include="Assets\Jims Assets\Scripts\Satelite.cs" />
      <Compile Include="Assets\Jims Assets\Scripts\SateliteCreator.cs" />
+     <Compile Include="Assets\Jims Assets\Scripts\SecondaryCamera.cs" />
      <Compile Include="Assets\Jims Assets\Scripts\ShipController.cs" />
      <Compile Include="Assets\Jims Assets\Scripts\WaypointInput.cs" />
      <Compile Include="Assets\Jims Assets\Scripts\cameraControl.cs" />
