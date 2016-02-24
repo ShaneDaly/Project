@@ -11,6 +11,7 @@ TagManager:
   - Button
   - Planet
   - Enemy
+  - Satellite
   layers:
   - Default
   - TransparentFX
