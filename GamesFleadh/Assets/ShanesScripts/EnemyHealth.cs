@@ -3,10 +3,12 @@ using System.Collections;
 
 public class EnemyHealth : MonoBehaviour {
 
-	public int health = 100;
+	public float health = 100;
+	public float max = 100;
 	public int damage;
 	public GameObject rocket;
 	public GameObject scrap;
+	public GameObject healthBar;
 
 	void Awake ()
 	{
@@ -17,11 +19,12 @@ public class EnemyHealth : MonoBehaviour {
 		health -= 10;
 	}
 
+
 	void Update () {
 
 		if (health <= 0) {
 			Destroy (gameObject);
-			GetComponent<Spawner>().max -= 1;
+			//GetComponent<Spawner>().ReduceMax ();
 			Instantiate(scrap, transform.position, transform.rotation);
 		}
 	

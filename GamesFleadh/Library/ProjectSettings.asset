@@ -60,9 +60,12 @@ PlayerSettings:
   xboxSpeechDB: 0
   xboxEnableHeadOrientation: 0
   xboxEnableGuest: 0
+<<<<<<< HEAD
   n3dsDisableStereoscopicView: 0
   n3dsEnableSharedListOpt: 1
   n3dsEnableVSync: 0
+=======
+>>>>>>> e2ad8c0c1e5d71993479e7ed53c07933a970388e
   xboxOneResolution: 0
   ps3SplashScreen: {fileID: 0}
   videoMemoryForVertexBuffers: 0
@@ -153,7 +156,15 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - m_Icon: {fileID: 0}
+<<<<<<< HEAD
       m_Size: 0
+=======
+<<<<<<< HEAD
+      m_Size: 28612
+=======
+      m_Size: 28619
+>>>>>>> aec387d476ea9a72015a2374e758d7b4310b085c
+>>>>>>> e2ad8c0c1e5d71993479e7ed53c07933a970388e
   m_BuildTargetBatching: []
   m_BuildTargetGraphicsAPIs: []
   webPlayerTemplate: APPLICATION:Default
@@ -244,11 +255,14 @@ PlayerSettings:
   ps4pnFriends: 1
   ps4pnGameCustomData: 1
   playerPrefsSupport: 0
+<<<<<<< HEAD
   ps4ReprojectionSupport: 0
   ps4attribUserManagement: 0
   ps4attribMoveSupport: 0
   ps4attrib3DSupport: 0
   ps4attribShareSupport: 0
+=======
+>>>>>>> e2ad8c0c1e5d71993479e7ed53c07933a970388e
   monoEnv: 
   psp2Splashimage: {fileID: 0}
   psp2NPTrophyPackPath: 
