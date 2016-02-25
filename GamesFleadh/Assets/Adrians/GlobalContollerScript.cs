@@ -25,19 +25,30 @@ public class GlobalContollerScript : MonoBehaviour
     Text util;
     Text satOff;
     Text satDef;
-    PlanetStats planetStats;
-    SatelliteStats satelliteStats;
+    public PlanetStats planetStats;
+    public SatelliteStats satelliteStats;
     GameObject resVal;
-    Text resValText;
+    public Text resValText;
     GameObject[] satellite = null;
     GameObject[] planets = null;
-    GameObject costTxt;
-    Text costVal;
+    GameObject costTxtPlanet;
+    GameObject costTxtSatellite;
+    Text costValPlanet;
+    Text costValSatellite;
+    public int newSatelliteCost = 100;
+    GameObject newSatelliteCost2;
+
+
 
     void Start () 
     {
-        costTxt = GameObject.Find("CostValue");
-        costVal = costTxt.GetComponent<Text>();
+        newSatelliteCost2 = GameObject.Find("SatCostValue");
+        Text newSatelliteCostTxt = newSatelliteCost2.GetComponent<Text>();
+        newSatelliteCostTxt.text = "" + newSatelliteCost;
+        costTxtPlanet = GameObject.Find("PlanetCostValue");
+        costValPlanet = costTxtPlanet.GetComponent<Text>();
+        costTxtSatellite = GameObject.Find("SatelliteCostValue");
+        costValSatellite = costTxtSatellite.GetComponent<Text>();
         sidebarPlanet = GameObject.Find("PlanetStuff");
         sidebarPlanet.SetActive(false);
         sidebarSatellite = GameObject.Find("SatelliteStuff");
@@ -59,16 +70,18 @@ public class GlobalContollerScript : MonoBehaviour
         {
             if (sidebarPlanet.activeInHierarchy)
             {
+                planetStats = selectedPlanet.GetComponent<PlanetStats>();
                 setPlanetStats();
-                costVal.text = ("" + planetStats.cost);
+                costValPlanet.text = ("" + planetStats.cost);
             }
         }
-        else if (selectedSatellite != null)
+        if (selectedSatellite != null)
         {
             if (sidebarSatellite.activeInHierarchy)
             {
+                satelliteStats = selectedSatellite.GetComponent<SatelliteStats>();
                 setSatelliteStats();
-                costVal.text = ("" + satelliteStats.cost);
+                costValSatellite.text = ("" + satelliteStats.cost);
             }
         }
     }
@@ -81,27 +94,32 @@ public class GlobalContollerScript : MonoBehaviour
             bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
             if (hit)
             {
-                Debug.Log("Hit " + hitInfo.transform.gameObject.name);
+                //Debug.Log("Hit " + hitInfo.transform.gameObject.name);
                 if (hitInfo.transform.gameObject.tag == "Planet")
                 {
                     Debug.Log("Planet selected!");
                     selectedPlanet = hitInfo.transform.gameObject;
                     sidebarPlanet.SetActive(true);
-                    sidebarSatellite.SetActive(false);
                     sidebarPlanetUpgrades.SetActive(true);
+                    sidebarSatellite.SetActive(false);
+                    sidebarSatelliteUpgrades.SetActive(false);
+                    setPlanetStats();
                 } 
                 else if (hitInfo.transform.gameObject.tag == "Satellite")
                 {
                     Debug.Log("Satellite selected!");
                     selectedSatellite = hitInfo.transform.gameObject;
-                    sidebarPlanet.SetActive(false);
                     sidebarSatellite.SetActive(true);
                     sidebarSatelliteUpgrades.SetActive(true);
+                    sidebarPlanetUpgrades.SetActive(false);
+                    sidebarPlanet.SetActive(false);
+                    setSatelliteStats();
                 }
             }
             else
             {
-                Debug.Log("Nothing hit");
+
+                //Debug.Log("Nothing hit");
             }
         }
 
@@ -147,8 +165,8 @@ public class GlobalContollerScript : MonoBehaviour
         {
             resources -= planetStats.cost;
             planetStats.upgradeOffence();
-            planetStats.cost++;
             resValText.text = "" + resources;
+            setPlanetStats();
         }
     }
 
@@ -158,8 +176,8 @@ public class GlobalContollerScript : MonoBehaviour
         {
             resources -= planetStats.cost;
             planetStats.upgradeDefence();
-            planetStats.cost++;
             resValText.text = "" + resources;
+            setPlanetStats();
         }
     }
 
@@ -169,8 +187,8 @@ public class GlobalContollerScript : MonoBehaviour
         {
             resources -= planetStats.cost;
             planetStats.upgradeUtility();
-            planetStats.cost++;
             resValText.text = "" + resources;
+            setPlanetStats();
         }
     }
 
@@ -180,8 +198,8 @@ public class GlobalContollerScript : MonoBehaviour
         {
             resources -= satelliteStats.cost;
             satelliteStats.upgradeOffence();
-            satelliteStats.cost++;
             resValText.text = "" + resources;
+            setSatelliteStats();
         }
     }
 
@@ -191,8 +209,8 @@ public class GlobalContollerScript : MonoBehaviour
         {
             resources -= satelliteStats.cost;
             satelliteStats.upgradeDefence();
-            satelliteStats.cost++;
             resValText.text = "" + resources;
+            setSatelliteStats();
         }
     }
 
@@ -218,6 +236,7 @@ public class GlobalContollerScript : MonoBehaviour
         calcResources();
         StartCoroutine(wait(resourceDelay));
     }
+
 
 
 }

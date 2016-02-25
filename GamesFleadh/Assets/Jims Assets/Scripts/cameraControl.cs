@@ -16,6 +16,7 @@ public class cameraControl : MonoBehaviour
     public float zoomOutY;
     public int mode;
     public float minHeight;
+    public float maxHeight;
     public float zoomSpeed;
     public float GotoHeight;
 
@@ -39,10 +40,15 @@ public class cameraControl : MonoBehaviour
             {
                 active = false;
                 gameObject.GetComponent<SecondaryCamera>().toggleActive();
+                Pointer.GetComponent<pointer>().toggleEmitter();
+                isMoving = false;
             }
             else if (!active)
             {
+                goTo(new Vector3(transform.position.x, GotoHeight, transform.position.z));
+                gameObject.GetComponent<SecondaryCamera>().toggleActive();
                 enableMain();
+                isMoving = true;
             }
             return;
         }
@@ -111,31 +117,34 @@ public class cameraControl : MonoBehaviour
 
     void moveCamera()
     {
-        if (Input.GetAxis("Mouse ScrollWheel") > 0f && transform.position.y > minHeight)
+        if (!isMoving)
         {
-            transform.position -= (transform.position - Pointer.transform.position).normalized * Time.deltaTime * zoomSpeed;
-        }
-        else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
-        {
-            transform.position += (transform.position - Pointer.transform.position).normalized * Time.deltaTime * zoomSpeed;
-        }
+            if (Input.GetAxis("Mouse ScrollWheel") > 0f && transform.position.y > minHeight)
+            {
+                transform.position -= (transform.position - Pointer.transform.position).normalized * Time.deltaTime * zoomSpeed;
+            }
+            else if (Input.GetAxis("Mouse ScrollWheel") < 0f && transform.position.y < maxHeight)
+            {
+                transform.position += (transform.position - Pointer.transform.position).normalized * Time.deltaTime * zoomSpeed;
+            }
 
-        if (Input.GetKey(KeyCode.W) && transform.position.y > minHeight)
-        {
-            transform.position += transform.up * Time.deltaTime * movementSpeed;
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            transform.position -= transform.up * Time.deltaTime * movementSpeed;
-        }
+            if (Input.GetKey(KeyCode.W) && transform.position.y < maxHeight)
+            {
+                transform.position += transform.up * Time.deltaTime * movementSpeed;
+            }
+            else if (Input.GetKey(KeyCode.S) && transform.position.y > minHeight)
+            {
+                transform.position -= transform.up * Time.deltaTime * movementSpeed;
+            }
 
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.position -= transform.right * Time.deltaTime * movementSpeed;
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            transform.position += transform.right * Time.deltaTime * movementSpeed;
+            if (Input.GetKey(KeyCode.A))
+            {
+                transform.position -= transform.right * Time.deltaTime * movementSpeed;
+            }
+            else if (Input.GetKey(KeyCode.D))
+            {
+                transform.position += transform.right * Time.deltaTime * movementSpeed;
+            }
         }
 
         if (isMoving)
@@ -182,6 +191,7 @@ public class cameraControl : MonoBehaviour
         mPitch = 90F;
         mHdg = transform.eulerAngles.y;
         gameObject.GetComponent<SecondaryCamera>().toggleActive();
+        Pointer.GetComponent<pointer>().toggleEmitter();
     }
 
     public bool checkActive()

@@ -3,25 +3,43 @@ using System.Collections;
 
 public class Pause : MonoBehaviour
 {
-    public GameObject pauseMenu;
     private bool isEnabled = false;
+    public GameObject pauseMenu;
+
+    void Start()
+    {
+        pauseMenu.SetActive(false);
+    }
+
 	void Update ()
     {
-        if (Input.GetKeyDown(KeyCode.P) && !isEnabled)
+        if (Input.GetKeyDown(KeyCode.P))
         {
-            if (Time.timeScale == 1)
+            if (pauseMenu.activeSelf == false)
             {
-                GameObject.FindWithTag("pauseMenu").SetActive(true);
-                isEnabled = true;
-                Time.timeScale = 0;
+                pause();
                 
             }
-            else if(isEnabled)
+            else if (pauseMenu.activeSelf == true)
             {
-                GameObject.FindWithTag("pauseMenu").SetActive(false);
-                isEnabled = false;
-                Time.timeScale = 1;
+                unpause();
             }
+
         }
     }
+
+    public void pause()
+    {
+        pauseMenu.SetActive(true);
+        isEnabled = true;
+        Time.timeScale = 0;
+    }
+
+    public void unpause()
+    {
+        pauseMenu.SetActive(false);
+        isEnabled = false;
+        Time.timeScale = 1;
+    }
+
 }

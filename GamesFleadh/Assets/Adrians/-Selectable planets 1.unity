@@ -160,7 +160,7 @@ Transform:
   m_Children:
   - {fileID: 1074564140}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1 &54966401
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,7 +192,7 @@ RectTransform:
   - {fileID: 532819786}
   - {fileID: 184445698}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -336,9 +336,10 @@ GameObject:
   - 4: {fileID: 201779672}
   - 114: {fileID: 201779671}
   - 114: {fileID: 201779673}
+  - 114: {fileID: 201779674}
   m_Layer: 0
   m_Name: Controller
-  m_TagString: Untagged
+  m_TagString: Controller
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -355,7 +356,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceDelay: 5
-  resources: 100
+  resources: 10000
+  planetStats: {fileID: 0}
+  satelliteStats: {fileID: 0}
+  resValText: {fileID: 0}
+  newSatelliteCost: 100
 --- !u!4 &201779672
 Transform:
   m_ObjectHideFlags: 0
@@ -367,7 +372,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!114 &201779673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,6 +387,18 @@ MonoBehaviour:
   Satelite: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
   Sun: {fileID: 52683797}
   dist: 0
+--- !u!114 &201779674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 201779670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f112ccd4850fe4f8ee8dbdc8614bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 1644649446}
 --- !u!1 &214516453
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,7 +843,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 35.0999985
+      value: 67.5
       objectReference: {fileID: 0}
     - target: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
       propertyPath: m_LocalPosition.y
@@ -834,7 +851,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -74.5
+      value: -78.5999985
       objectReference: {fileID: 0}
     - target: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
       propertyPath: m_LocalRotation.x
@@ -854,7 +871,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11454898, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
       propertyPath: sun
@@ -866,15 +883,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19849758, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
+      propertyPath: ShapeModule.randomDirection
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
@@ -1646,7 +1667,7 @@ GameObject:
   - 222: {fileID: 877669677}
   - 114: {fileID: 877669676}
   m_Layer: 5
-  m_Name: CostValue
+  m_Name: SatelliteCostValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1827,7 +1848,7 @@ GameObject:
   - 222: {fileID: 969419023}
   - 114: {fileID: 969419022}
   m_Layer: 5
-  m_Name: CostValue
+  m_Name: PlanetCostValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2084,7 +2105,7 @@ Transform:
   m_LocalScale: {x: 25, y: 25, z: 25}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!114 &1303573426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2145,9 +2166,10 @@ MonoBehaviour:
   sun: {fileID: 52683797}
   rotationSpeed: 0
   RandomSize: 0
-  allowOrbitDebug: 0
+  allowOrbitDebug: 1
   size: 0
   sizeKm: 0
+  ownRotateSpeed: 0
 --- !u!1 &1340599508
 GameObject:
   m_ObjectHideFlags: 0
@@ -2394,7 +2416,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 20
+  m_Text: 100
 --- !u!222 &1364157271
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2681,7 +2703,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1 &1525824358
 GameObject:
   m_ObjectHideFlags: 0
@@ -2864,6 +2886,33 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1598348957}
+--- !u!1 &1644649446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1644649447}
+  m_Layer: 0
+  m_Name: pauseMenu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1644649447
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1644649446}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.71049881, y: -770.367065, z: -3.54557729}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
 --- !u!1 &1700154208
 GameObject:
   m_ObjectHideFlags: 0
@@ -3166,7 +3215,7 @@ Transform:
   m_LocalScale: {x: 25, y: 25, z: 25}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!114 &1771178416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3198,9 +3247,10 @@ MonoBehaviour:
   sun: {fileID: 52683797}
   rotationSpeed: 0
   RandomSize: 0
-  allowOrbitDebug: 0
+  allowOrbitDebug: 1
   size: 0
   sizeKm: 0
+  ownRotateSpeed: 0
 --- !u!1 &1796650843
 GameObject:
   m_ObjectHideFlags: 0
@@ -3754,7 +3804,7 @@ Transform:
   m_LocalScale: {x: 25, y: 25, z: 25}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!114 &1954803684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3786,9 +3836,10 @@ MonoBehaviour:
   sun: {fileID: 52683797}
   rotationSpeed: 0
   RandomSize: 0
-  allowOrbitDebug: 0
+  allowOrbitDebug: 1
   size: 0
   sizeKm: 0
+  ownRotateSpeed: 0
 --- !u!1 &2004716724
 GameObject:
   m_ObjectHideFlags: 0
