@@ -382,6 +382,8 @@ MonoBehaviour:
   rotateSpeed: 0
   desiredRotateSpeed: 0
   height: 0
+  allowOrbitDebug: 0
+  selected: 0
   isAcc: 0
 --- !u!135 &13503572
 SphereCollider:
