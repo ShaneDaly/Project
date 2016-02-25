@@ -4,6 +4,7 @@ using System.Collections;
 public class ScrapGenerate : MonoBehaviour {
 
 	public GameObject scrap;
+	public GameObject[] scraps;
 
 	void Update()
 	{

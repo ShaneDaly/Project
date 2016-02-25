@@ -2,9 +2,10 @@
 using System.Collections;
 
 public class chase : MonoBehaviour {
-
-
+	
 	public int ammo;
+	public float fireRate;
+	private float nextFire;
 	public float timer = 6;             
 	private float rotSpeed= 4.0f;      
 	float pauseDuration = 5;
@@ -76,8 +77,11 @@ public class chase : MonoBehaviour {
 	
 	void Shooting ()
 	{
-		gameObject.GetComponent<Renderer>().material.color = new Color(255, 0, 0, 0);
-		Instantiate (lasershot, shotspawn.position, shotspawn.rotation);
+		if (Time.time > nextFire) {
+			gameObject.GetComponent<Renderer> ().material.color = new Color (255, 0, 0, 0);
+			nextFire = Time.time + fireRate;
+			Instantiate (lasershot, shotspawn.position, shotspawn.rotation);
+		}
 	}
 	
 	void Healing()

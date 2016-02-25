@@ -5,16 +5,14 @@ public class mover : MonoBehaviour {
 
 	public float speed;
 	public float timer = 2;
-	public GameObject other;
 
 	void Start () {
 		GetComponent<Rigidbody> ().velocity = transform.forward * speed;
-
 	}
 
 	void OnTriggerEnter(Collider other)
 	{
-		Destroy (gameObject);
+		Destroy(gameObject);
 	}
 
 	void Update () {

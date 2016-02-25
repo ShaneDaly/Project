@@ -88,7 +88,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 0}
   enemies: []
-  other: {fileID: 167036, guid: efc31530a39a66c43bf304481afa30ad, type: 2}
+  other: {fileID: 0}
   Speed: 40
   timer: 7
 --- !u!136 &13645260
@@ -118,7 +118,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: other
       value: 
-      objectReference: {fileID: 167036, guid: efc31530a39a66c43bf304481afa30ad, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: timer
       value: 7

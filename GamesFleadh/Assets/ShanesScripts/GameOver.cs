@@ -1,22 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GameOver : MonoBehaviour 
+public class GameOver : MonoBehaviour
 {
+
+	public string newScene;
 
 	void OnGUI()
 	{
-		const int buttonWidth = 120;
-		const int buttonHeight = 60;
+		int buttonWidth = 120;
+		int buttonHeight = 60;
 		
 		if (GUI.Button(new Rect(Screen.width / 2 - (buttonWidth / 2),(1 * Screen.height / 3) - (buttonHeight / 2),buttonWidth,buttonHeight),"Retry!"))
 		{
-			Application.LoadLevel("Stage1");
+			Application.LoadLevel("DemoScene");
 		}
 		
 		if (GUI.Button(new Rect(Screen.width / 2 - (buttonWidth / 2),(2 * Screen.height / 3) - (buttonHeight / 2),buttonWidth,buttonHeight),"Quit game"))
 		{
-			Application.LoadLevel("DemoScene");
+			Application.LoadLevel("-MainMenuScreen");
 		}
 	}
 	
