@@ -6,7 +6,7 @@ using System.Collections;
 public class ZoomScript : MonoBehaviour
 {
     float minFov = 15f;
-    float maxFov = 90f;
+    float maxFov = 140f;
     float sensitivity = 50f;
 
     void Update()

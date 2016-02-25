@@ -333,6 +333,31 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1207475027}
   m_RootOrder: 0
+--- !u!1 &578877815 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 150172, guid: 260bd76ac17ff614a9149ec45528e7df, type: 2}
+  m_PrefabInternal: {fileID: 1126923075}
+--- !u!114 &578877816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 578877815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f663dfceab13514fbc08f93a168468c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammo: 0
+  fireRate: 0
+  timer: 6
+  Planet: {fileID: 0}
+  MoveSpeed: 20
+  InvestigateSpeed: 35
+  range: 30
+  state: 0
+  lasershot: {fileID: 0}
+  shotspawn: {fileID: 0}
 --- !u!1001 &602637200
 Prefab:
   m_ObjectHideFlags: 0
@@ -401,7 +426,6 @@ GameObject:
   - 81: {fileID: 903576712}
   - 114: {fileID: 903576717}
   - 114: {fileID: 903576718}
-  - 114: {fileID: 903576719}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -496,17 +520,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2fd970d0a9f95554b9d90e6f5f69840a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &903576719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 903576711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d0fceb2d8029da4ca2a29b33034c9ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &986773278
@@ -836,7 +849,8 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 820108079}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11481102, guid: 260bd76ac17ff614a9149ec45528e7df, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 260bd76ac17ff614a9149ec45528e7df, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1207475026
