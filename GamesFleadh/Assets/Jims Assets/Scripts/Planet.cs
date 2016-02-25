@@ -127,6 +127,7 @@ public class Planet : MonoBehaviour
     {
         selected = true;
         //GetComponent("halo").enabled = false;
+    }
     public void unSelect()
     {
         selected = false;
