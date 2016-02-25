@@ -3,17 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-<<<<<<< HEAD
   tags:
   - Planet
-  - Enemy
   - sun
-  - HUD
+  - Enemy
   - Satellite
-  - Controller
-=======
-  tags: []
->>>>>>> 43265bcd1f53ef49492e22208f338097535b3f2f
+  - pointer
+  - New Tag
   layers:
   - Default
   - TransparentFX
