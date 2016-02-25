@@ -18,6 +18,8 @@ public class Planet : MonoBehaviour
 
     private Vector3 sunVec;
 
+    public bool selected;
+
     // 10km = 1 Scale
     public float size;
     public float sizeKm;
@@ -32,14 +34,20 @@ public class Planet : MonoBehaviour
     float rps;
     float rotateSpeed;
 
-	// Use this for initialization
-	void Start () 
+    public float ownRotateSpeed;
+    public GameObject halo;
+
+
+
+    // Use this for initialization
+    void Start () 
 	{
         sunVec = sun.transform.position;
         if (RandomSize)
         {
             setPlanetSize();
         }
+        gameObject.tag = "planet";
 	}
 	
 	// Update is called once per frame
@@ -50,7 +58,8 @@ public class Planet : MonoBehaviour
         {
             calcOrbit();
         }
-	}
+        transform.RotateAround(transform.position, Vector3.up, ownRotateSpeed * Time.deltaTime);
+    }
 
     // Sets the Sun to orbit
     public void setSun(GameObject nSun)
@@ -95,13 +104,32 @@ public class Planet : MonoBehaviour
         transform.localScale = new Vector3(rSize, rSize, rSize);
     }
 
+
+
     private void OnDrawGizmos()
     {
+        if (!selected)
+        {
+            UnityEditor.Handles.color = Color.white;
+        }
+        else
+        {
+            UnityEditor.Handles.color = Color.blue;
+        }
         if (allowOrbitDebug)
         {
-            UnityEditor.Handles.color = Color.yellow;
             float distance = Vector3.Distance(transform.position, sun.transform.position);
             UnityEditor.Handles.DrawWireDisc(sun.transform.position, Vector3.up, distance);
         }
+    }
+
+    public void setSelected()
+    {
+        selected = true;
+        //GetComponent("halo").enabled = false;
+    }
+    public void unSelect()
+    {
+        selected = false;
     }
 }

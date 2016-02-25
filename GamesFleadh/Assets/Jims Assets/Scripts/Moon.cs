@@ -15,7 +15,7 @@ public class Moon : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        UnityEditor.Handles.color = Color.green;
+        UnityEditor.Handles.color = Color.white;
         float distance = Vector3.Distance(transform.position, transform.parent.position);
         UnityEditor.Handles.DrawWireDisc(transform.parent.position, Vector3.up, distance);
     }

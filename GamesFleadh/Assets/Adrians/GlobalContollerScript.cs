@@ -25,19 +25,26 @@ public class GlobalContollerScript : MonoBehaviour
     Text util;
     Text satOff;
     Text satDef;
-    PlanetStats planetStats;
-    SatelliteStats satelliteStats;
+    public PlanetStats planetStats;
+    public SatelliteStats satelliteStats;
     GameObject resVal;
-    Text resValText;
+    public Text resValText;
     GameObject[] satellite = null;
     GameObject[] planets = null;
     GameObject costTxtPlanet;
     GameObject costTxtSatellite;
     Text costValPlanet;
     Text costValSatellite;
+    public int newSatelliteCost = 100;
+    GameObject newSatelliteCost2;
+
+
 
     void Start () 
     {
+        newSatelliteCost2 = GameObject.Find("SatCostValue");
+        Text newSatelliteCostTxt = newSatelliteCost2.GetComponent<Text>();
+        newSatelliteCostTxt.text = "" + newSatelliteCost;
         costTxtPlanet = GameObject.Find("PlanetCostValue");
         costValPlanet = costTxtPlanet.GetComponent<Text>();
         costTxtSatellite = GameObject.Find("SatelliteCostValue");
@@ -111,6 +118,7 @@ public class GlobalContollerScript : MonoBehaviour
             }
             else
             {
+
                 //Debug.Log("Nothing hit");
             }
         }

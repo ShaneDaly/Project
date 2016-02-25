@@ -3,6 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< HEAD
   tags:
   - Rocket
   - Enemy
@@ -10,6 +11,9 @@ TagManager:
   - waypoint
   - Satellite
   - Waypoint
+=======
+  tags: []
+>>>>>>> 3d0d48a767b52173e9f60dfb2a02c5b8c07cf428
   layers:
   - Default
   - TransparentFX
