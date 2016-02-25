@@ -137,7 +137,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shot: {fileID: 175474, guid: f1f06ae9bb5e1b546811e43490a46ea6, type: 2}
-  Damage: 15
   ammo: 10
 --- !u!114 &11479128
 MonoBehaviour:
@@ -157,7 +156,6 @@ MonoBehaviour:
   stopDistance: .109999999
   dist: 0
   astDist: 0
-  GuiObject: {fileID: 0}
 --- !u!135 &13556802
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -194,6 +192,14 @@ Prefab:
       propertyPath: shot
       value: 
       objectReference: {fileID: 175474, guid: f1f06ae9bb5e1b546811e43490a46ea6, type: 2}
+    - target: {fileID: 0}
+      propertyPath: health
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: price
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 152820}
