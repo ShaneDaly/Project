@@ -3,26 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-<<<<<<< HEAD
-  tags:
-  - Planet
-  - Satellite
-  - Sun
-  - Enemy
-  - New Tag
-=======
-<<<<<<< HEAD
-  tags:
-  - Rocket
-  - Enemy
-  - Planet
-  - waypoint
-  - Satellite
-  - Waypoint
-=======
   tags: []
->>>>>>> 3d0d48a767b52173e9f60dfb2a02c5b8c07cf428
->>>>>>> 6b1ac4b9b4921fb2b24709c9e8e8e76e9cc8f52f
   layers:
   - Default
   - TransparentFX

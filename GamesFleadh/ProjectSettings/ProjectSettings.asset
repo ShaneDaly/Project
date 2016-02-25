@@ -12,15 +12,7 @@ PlayerSettings:
   companyName: DefaultCompany
   productName: GamesFleadh
   defaultCursor: {fileID: 0}
-<<<<<<< HEAD
   cursorHotspot: {x: 0, y: 0}
-=======
-<<<<<<< HEAD
-  cursorHotspot: {x: 1.40129846e-44, y: 1.40129846e-44}
-=======
-  cursorHotspot: {x: NaN, y: NaN}
->>>>>>> 3d0d48a767b52173e9f60dfb2a02c5b8c07cf428
->>>>>>> 6b1ac4b9b4921fb2b24709c9e8e8e76e9cc8f52f
   m_ShowUnitySplashScreen: 1
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
@@ -86,15 +78,7 @@ PlayerSettings:
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
   virtualRealitySupported: 0
-<<<<<<< HEAD
-  productGUID: 84094ccbabf00a14c9408d7fa19ab0ae
-=======
-<<<<<<< HEAD
-  productGUID: c38ec5061e393b9429c762f8c54c8daf
-=======
-  productGUID: 4731487d2ed98a0488cbd791a9f7e04d
->>>>>>> 3d0d48a767b52173e9f60dfb2a02c5b8c07cf428
->>>>>>> 6b1ac4b9b4921fb2b24709c9e8e8e76e9cc8f52f
+  productGUID: 18fab9d0b146d7541ae3fde133b2ff1c
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
@@ -133,15 +117,7 @@ PlayerSettings:
   iOSLaunchScreenLandscape: {fileID: 0}
   iOSLaunchScreenBackgroundColor:
     serializedVersion: 2
-<<<<<<< HEAD
-    rgba: 1932489588
-=======
-<<<<<<< HEAD
-    rgba: 3688222204
-=======
-    rgba: 4294967040
->>>>>>> 3d0d48a767b52173e9f60dfb2a02c5b8c07cf428
->>>>>>> 6b1ac4b9b4921fb2b24709c9e8e8e76e9cc8f52f
+    rgba: 0
   iOSLaunchScreenFillPct: 100
   iOSLaunchScreenSize: 100
   iOSLaunchScreenCustomXibPath: 
@@ -226,7 +202,7 @@ PlayerSettings:
   ps4ApplicationParam3: 0
   ps4ApplicationParam4: 0
   ps4GarlicHeapSize: 2048
-  ps4Passcode: 1O8YFOGKjxRrJBdT3hVOfoaMeAjSWfch
+  ps4Passcode: frAQBc8Wsa1xVPfvJcrgRYwTiizs2trQ
   ps4pnSessions: 1
   ps4pnPresence: 1
   ps4pnFriends: 1
@@ -250,7 +226,7 @@ PlayerSettings:
   psp2LiveAreaTrialPath: 
   psp2PatchChangeInfoPath: 
   psp2PatchOriginalPackage: 
-  psp2PackagePassword: oZYFYZ5B6kzMCk8R6BEuZMrF6cI6NX8D
+  psp2PackagePassword: F69AzBlax3CF3EDNhm3soLBPh71Yexui
   psp2KeystoneFile: 
   psp2MemoryExpansionMode: 0
   psp2DRMType: 0
