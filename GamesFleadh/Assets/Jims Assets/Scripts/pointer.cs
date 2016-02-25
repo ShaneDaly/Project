@@ -18,6 +18,11 @@ public class pointer : MonoBehaviour
     public bool prevSet;
     public bool mainActive;
 
+    public bool emitterSecondaryActive;
+
+    public GameObject emitter;
+    public GameObject emitterSeconday;
+
     void start()
     {
         isTracking = false;
@@ -25,6 +30,16 @@ public class pointer : MonoBehaviour
     }
     void Update () 
     {
+        if (emitterSecondaryActive)
+        {
+            emitter.GetComponent<ParticleSystem>().enableEmission = false;
+            emitterSeconday.GetComponent<ParticleSystem>().enableEmission = true;
+        }
+        else
+        {
+            emitter.GetComponent<ParticleSystem>().enableEmission = true;
+            emitterSeconday.GetComponent<ParticleSystem>().enableEmission = false;
+        }
         Plane plane = new Plane(Vector3.up, 0);
         float dist;
         
@@ -114,5 +129,17 @@ public class pointer : MonoBehaviour
         distance = Vector3.Distance(border, sun.transform.position);
         UnityEditor.Handles.color = Color.red;
         UnityEditor.Handles.DrawWireDisc(sun.transform.position, Vector3.up, distance);
+    }
+
+    public void toggleEmitter()
+    {
+        if (emitterSecondaryActive)
+        {
+            emitterSecondaryActive = false;
+        }
+        else
+        {
+            emitterSecondaryActive = true;
+        }
     }
 }

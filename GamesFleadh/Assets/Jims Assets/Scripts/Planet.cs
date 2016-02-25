@@ -32,8 +32,12 @@ public class Planet : MonoBehaviour
     float rps;
     float rotateSpeed;
 
-	// Use this for initialization
-	void Start () 
+    public float ownRotateSpeed;
+
+
+
+    // Use this for initialization
+    void Start () 
 	{
         sunVec = sun.transform.position;
         if (RandomSize)
@@ -50,7 +54,8 @@ public class Planet : MonoBehaviour
         {
             calcOrbit();
         }
-	}
+        transform.RotateAround(transform.position, Vector3.up, ownRotateSpeed * Time.deltaTime);
+    }
 
     // Sets the Sun to orbit
     public void setSun(GameObject nSun)

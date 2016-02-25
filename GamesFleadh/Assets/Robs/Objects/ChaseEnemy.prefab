@@ -115,9 +115,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  max: 100
   damage: 0
   rocket: {fileID: 175474, guid: f1f06ae9bb5e1b546811e43490a46ea6, type: 2}
   scrap: {fileID: 156382, guid: e4a8a15934b9d844ba33b8caa06a2687, type: 2}
+  healthBar: {fileID: 0}
 --- !u!114 &11476104
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -12,17 +12,20 @@ public class PlanetStats : MonoBehaviour {
 
     public void upgradeOffence()
     {
-        Debug.Log("offence upgraded!");
+        Debug.Log("Planet offence upgraded!");
         offence += 1;
+        cost += 1;
     }
     public void upgradeDefence()
     {
-        Debug.Log("defence upgraded!");
+        Debug.Log("Planet defence upgraded!");
         defence += 1;
+        cost += 1;
     }
     public void upgradeUtility()
     {
-        Debug.Log("utility upgraded!");
+        Debug.Log("Planet utility upgraded!");
         utility += 1;
+        cost += 1;
     }
 }
