@@ -3,19 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-<<<<<<< HEAD
   tags: []
-=======
-  tags:
-<<<<<<< HEAD
-  - Rocket
-=======
-  - Planet
-  - sun
-  - Enemy
-  - Satellite
->>>>>>> b5c81137d8b7c77b31524175fe25d8694a68954b
->>>>>>> 5897ed932fd31f01550726b21f82d08a75db53f1
   layers:
   - Default
   - TransparentFX
