@@ -70,6 +70,15 @@
      <Compile Include="Assets\MaxP\Shaders\Scripts\DirtyLensFlare.cs" />
      <Compile Include="Assets\Pause.cs" />
      <Compile Include="Assets\PickUpItem.cs" />
+     <Compile Include="Assets\Robs\Scripts\Camera Script\CameraBounds.cs" />
+     <Compile Include="Assets\Robs\Scripts\Camera Script\CameraLimit.cs" />
+     <Compile Include="Assets\Robs\Scripts\Camera Script\Movement.cs" />
+     <Compile Include="Assets\Robs\Scripts\Camera Script\Movement2.cs" />
+     <Compile Include="Assets\Robs\Scripts\Camera Script\ZoomScript.cs" />
+     <Compile Include="Assets\Robs\Scripts\Ojects\Chaser.cs" />
+     <Compile Include="Assets\Robs\Scripts\Ojects\OrbitScript.cs" />
+     <Compile Include="Assets\Robs\Scripts\ReverseOrbit.cs" />
+     <Compile Include="Assets\Robs\Scripts\TestScripts\Rotate.cs" />
      <Compile Include="Assets\ShanesScripts\Coloniser.cs" />
      <Compile Include="Assets\ShanesScripts\DestroyByContact.cs" />
      <Compile Include="Assets\ShanesScripts\DestroyByTime.cs" />
