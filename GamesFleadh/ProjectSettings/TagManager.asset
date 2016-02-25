@@ -4,17 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< HEAD
   - Rocket
   - Enemy
   - Planet
-=======
+  - waypoint
   - Satellite
-  - Enemy
-  - Planet
-  - HUD
-  - sun
->>>>>>> aec387d476ea9a72015a2374e758d7b4310b085c
+  - Waypoint
   layers:
   - Default
   - TransparentFX

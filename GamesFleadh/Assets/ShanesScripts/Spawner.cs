@@ -6,7 +6,7 @@ public class Spawner : MonoBehaviour
      
 	public GameObject enemy;                
 	public float spawnTime = 3f;   
-	public int max;
+	public int maxEn;
 	public Transform[] spawnPoints;         
 	
 	
@@ -18,17 +18,18 @@ public class Spawner : MonoBehaviour
 
 	public void ReduceMax ()
 	{
-		max = max - 1;
+		maxEn = maxEn - 1;
 	}
 	
 	void Spawn ()
 	{	
-		if (max <= 5) {
+		if (maxEn <= 5) {
 			// Find a random index between zero and one less than the number of spawn points.
 			int spawnPointIndex = Random.Range (0, spawnPoints.Length);
-			max += 1;
+			maxEn += 1;
 			// Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
 			Instantiate (enemy, spawnPoints [spawnPointIndex].position, spawnPoints [spawnPointIndex].rotation);
+
 		}
 	}
 }

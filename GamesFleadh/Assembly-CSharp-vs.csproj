@@ -96,7 +96,6 @@
      <Compile Include="Assets\ShanesScripts\ScrapGenerate.cs" />
      <Compile Include="Assets\ShanesScripts\Spawner.cs" />
      <Compile Include="Assets\ShanesScripts\Spawner1.cs" />
-     <Compile Include="Assets\ShanesScripts\SunShield.cs" />
      <Compile Include="Assets\ShanesScripts\TurretRotation.cs" />
      <Compile Include="Assets\ShanesScripts\TurretShoot.cs" />
      <Compile Include="Assets\ShanesScripts\WinOrLose.cs" />
