@@ -9,11 +9,25 @@ public class pointer : MonoBehaviour
     public Vector3 border;
     private float distance;
 
-	void Update () 
+    public bool isTracking;
+    public GameObject objectTracking;
+
+    public Vector3 objectTrackingPrev;
+    public Vector3 difference;
+
+    public bool prevSet;
+    public bool mainActive;
+
+    void start()
+    {
+        isTracking = false;
+        prevSet = false;
+    }
+    void Update () 
     {
         Plane plane = new Plane(Vector3.up, 0);
         float dist;
-
+        
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         if (plane.Raycast(ray, out dist))
@@ -49,13 +63,50 @@ public class pointer : MonoBehaviour
                     {
                         Camera.main.GetComponent<cameraControl>().goTo(point);
                         Camera.main.transform.parent = null;
+                        isTracking = false;
                     }
                     if (hit)
                     {
-                        Camera.main.transform.parent = hitInfo.transform;
+                        Camera.main.GetComponent<cameraControl>().goTo(point);
+                        Camera.main.transform.parent = null;
+                        isTracking = false;
                     }
                 }
             }
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (plane.Raycast(ray, out dist))
+            {
+                bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
+                Vector3 point = ray.GetPoint(dist);
+                if ((Vector3.Distance(sun.transform.position, point)) < (Vector3.Distance(border, sun.transform.position)))
+                {
+                    if (!hit)
+                    {
+
+                    }
+                    if (hit)
+                    {
+                        prevSet = false;
+                        isTracking = true;
+                        objectTracking = hitInfo.transform.gameObject;
+                    }
+                }
+            }
+        }
+
+        if (isTracking)
+        {
+            if (!prevSet)
+            {
+                objectTrackingPrev = objectTracking.transform.position;
+                prevSet = true;
+            }
+            difference = objectTracking.transform.position - objectTrackingPrev;
+            objectTrackingPrev = objectTracking.transform.position;
+            mCamera.transform.position = (mCamera.transform.position + difference);
         }
     }
     private void OnDrawGizmos()

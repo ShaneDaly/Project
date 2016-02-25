@@ -29,8 +29,7 @@ public class Satelite : MonoBehaviour
     private float circumference;
     [SerializeField]
     private float rps;
-    [SerializeField]
-    private float rotateSpeed;
+    public float rotateSpeed;
     [SerializeField]
     private float desiredRotateSpeed;
 

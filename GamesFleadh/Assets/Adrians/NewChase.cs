@@ -12,7 +12,7 @@ public class NewChase : MonoBehaviour {
 	private float MoveSpeed= 50;
 	private float RetreatSpeed = 15;
 	private float InvestigateSpeed = 35;
-	private int MaxDist= 100;
+	private int MaxDist= 10;
 	public int InvestigateDist = 100;
 	public enum State {PatrolState,ShootState,InvestState,RetreatState,HealingState}
 	public State state;
@@ -38,8 +38,14 @@ public class NewChase : MonoBehaviour {
 		state = State.InvestState;
 	}
 
+	void Awake ()
+	{
+		planet = GameObject.FindWithTag("Planet").transform;
+	}
+
 	void  Update ()
 	{
+		TargetDistance ();
         detectClosestEnemy();
 		if (health <= 0) {
 			this.gameObject.SetActive (false);
@@ -86,6 +92,7 @@ public class NewChase : MonoBehaviour {
 	{
         Quaternion finalrotation = Quaternion.LookRotation(planet.transform.position - transform.position, Vector3.up);
 		gameObject.GetComponent<Renderer>().material.color = new Color(255, 0, 0, 0);
+		transform.position += transform.forward*InvestigateSpeed*Time.deltaTime;
 		Instantiate (lasershot, shotspawn.position, finalrotation);
 		//ammo -= 1;	
 	}
@@ -136,9 +143,9 @@ public class NewChase : MonoBehaviour {
 			state = State.PatrolState;
 		}
 	}
-	public void ApplyDamage(int damage)
+	public void ApplyDamage()
 	{
-		health = health - damage;
+		health = health - 20;
 	}
 
 	public void destroySelf()

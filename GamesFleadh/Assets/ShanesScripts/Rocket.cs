@@ -19,7 +19,7 @@ public class Rocket : MonoBehaviour {
     void OnTriggerEnter(Collider enemy)
     {
         Destroy(gameObject);
-		GetComponent<NewChase>().destroySelf ();
+		GetComponent<NewChase>().ApplyDamage ();
     }
 
     void Update () 

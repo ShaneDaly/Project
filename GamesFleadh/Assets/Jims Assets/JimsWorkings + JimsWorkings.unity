@@ -37,9 +37,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
---- !u!127 &3
-LevelGameManager:
-  m_ObjectHideFlags: 0
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -68,6 +65,7 @@ LightmapSettings:
     m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
+    m_ReflectionCompression: 2
   m_LightmapSnapshot: {fileID: 0}
   m_RuntimeCPUUsage: 25
 --- !u!196 &5
@@ -1705,6 +1703,7 @@ GameObject:
   - 92: {fileID: 477500727}
   - 81: {fileID: 477500726}
   - 114: {fileID: 477500731}
+  - 114: {fileID: 477500732}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -1774,7 +1773,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 477500725}
   m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
-  m_LocalPosition: {x: 748, y: 2389, z: -2455}
+  m_LocalPosition: {x: 39, y: 1287, z: -2455}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1792,14 +1791,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensitivityX: 8
   sensitivityY: 8
+  mHdg: 0
+  mPitch: 90
+  goToLocation: {x: 0, y: 0, z: 0}
   target: {fileID: 0}
   speed: 1200
-  isMoving: 0
-  goToLocation: {x: 0, y: 0, z: 0}
   movementSpeed: 1000
-  mode: 0
-  sun: {fileID: 265839406}
   zoomOutY: 2389
+  mode: 0
+  minHeight: 0
+  zoomSpeed: 1500
+  GotoHeight: 1300
+  isMoving: 0
+  active: 1
+  sun: {fileID: 265839406}
+  Pointer: {fileID: 1291719018}
+--- !u!114 &477500732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 477500725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d40467deb8df6d449bd03efd99c9acb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  inPosition: 0
+  inRotation: 0
+  minHeight: 750
+  maxHeight: 5000
+  movementSpeed: 1400
+  goToHeight: 2000
+  speed: 1000
+  rotationSpeed: 2
+  zoomSpeed: 1500
+  targetLoc: {x: 0, y: 0, z: 0}
 --- !u!1 &639241856
 GameObject:
   m_ObjectHideFlags: 0
@@ -2466,6 +2494,12 @@ MonoBehaviour:
   mCamera: {fileID: 477500725}
   sun: {fileID: 265839406}
   border: {x: 0, y: 400, z: 1169}
+  isTracking: 0
+  objectTracking: {fileID: 0}
+  objectTrackingPrev: {x: 0, y: 0, z: 0}
+  difference: {x: 0, y: 0, z: 0}
+  prevSet: 0
+  mainActive: 0
 --- !u!4 &1291719020
 Transform:
   m_ObjectHideFlags: 0
@@ -2656,9 +2690,14 @@ Prefab:
       propertyPath: m_TagString
       value: Planet
       objectReference: {fileID: 0}
+    - target: {fileID: 10814628, guid: 1e2ec26a55678f54d8fffbf34fa96828, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11414808, guid: 1e2ec26a55678f54d8fffbf34fa96828, type: 2}
     - {fileID: 11464570, guid: 1e2ec26a55678f54d8fffbf34fa96828, type: 2}
+    - {fileID: 10814628, guid: 1e2ec26a55678f54d8fffbf34fa96828, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 1e2ec26a55678f54d8fffbf34fa96828, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1733496161
@@ -2689,7 +2728,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Satelite: {fileID: 686962884}
-  pSatelite: {fileID: 0}
   Sun: {fileID: 265839406}
   dist: 0
 --- !u!4 &1733496163
@@ -3014,6 +3052,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
+--- !u!1 &1860464792 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 133454, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
+  m_PrefabInternal: {fileID: 2083914404}
+--- !u!135 &1860464793
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1860464792}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 13
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1880655972
 GameObject:
   m_ObjectHideFlags: 0

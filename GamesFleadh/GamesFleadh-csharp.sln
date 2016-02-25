@@ -23,13 +23,16 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-<<<<<<< HEAD
-																																																																								GlobalSection(MonoDevelopProperties) = preSolution
+																																																																																																							GlobalSection(MonoDevelopProperties) = preSolution
 =======
 <<<<<<< HEAD
-																																																																					GlobalSection(MonoDevelopProperties) = preSolution
+																																																																																											GlobalSection(MonoDevelopProperties) = preSolution
 =======
-																																																																																							GlobalSection(MonoDevelopProperties) = preSolution
+																																																																																	GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> 94662968f4d56123167c9ae7232cab857accde08
+=======
+																																																																																						GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> 698550933a199a5872cd66757164a2eb048b427f
 =======
 <<<<<<< HEAD
 																																																																																					GlobalSection(MonoDevelopProperties) = preSolution
@@ -63,19 +66,16 @@ Global
 =======
 <<<<<<< HEAD
 																																																																					GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> 378782451af07312204f45aae03176ea88a873d1
 =======
 <<<<<<< HEAD
 																																																																					GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> 742246944c8a0c580ca05d7a77343f81aa203705
->>>>>>> 378782451af07312204f45aae03176ea88a873d1
 =======
 																																																																								GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> 7c1e87c382f098faa03c882eac351f3823be1fa0
 >>>>>>> 5f29cebe13de95832fd18a75d0c46c936d99224e
-<<<<<<< HEAD
-=======
 >>>>>>> 7ca2d00648a4ca02883b2e996127325672d00392
->>>>>>> 378782451af07312204f45aae03176ea88a873d1
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
