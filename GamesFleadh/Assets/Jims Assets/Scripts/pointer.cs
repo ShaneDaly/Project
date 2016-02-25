@@ -67,6 +67,28 @@ public class pointer : MonoBehaviour
                     }
                     if (hit)
                     {
+                        Camera.main.GetComponent<cameraControl>().goTo(point);
+                        Camera.main.transform.parent = null;
+                        isTracking = false;
+                    }
+                }
+            }
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (plane.Raycast(ray, out dist))
+            {
+                bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
+                Vector3 point = ray.GetPoint(dist);
+                if ((Vector3.Distance(sun.transform.position, point)) < (Vector3.Distance(border, sun.transform.position)))
+                {
+                    if (!hit)
+                    {
+
+                    }
+                    if (hit)
+                    {
                         prevSet = false;
                         isTracking = true;
                         objectTracking = hitInfo.transform.gameObject;
