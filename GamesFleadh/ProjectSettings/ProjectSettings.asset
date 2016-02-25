@@ -12,7 +12,7 @@ PlayerSettings:
   companyName: DefaultCompany
   productName: GamesFleadh
   defaultCursor: {fileID: 0}
-  cursorHotspot: {x: 0, y: 0}
+  cursorHotspot: {x: 0, y: 1.40129846e-44}
   m_ShowUnitySplashScreen: 1
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
@@ -60,12 +60,6 @@ PlayerSettings:
   xboxSpeechDB: 0
   xboxEnableHeadOrientation: 0
   xboxEnableGuest: 0
-<<<<<<< HEAD
-  n3dsDisableStereoscopicView: 0
-  n3dsEnableSharedListOpt: 1
-  n3dsEnableVSync: 0
-=======
->>>>>>> e2ad8c0c1e5d71993479e7ed53c07933a970388e
   xboxOneResolution: 0
   ps3SplashScreen: {fileID: 0}
   videoMemoryForVertexBuffers: 0
@@ -84,7 +78,7 @@ PlayerSettings:
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
   virtualRealitySupported: 0
-  productGUID: bed865991b0efc84687bdf030a1d1afc
+  productGUID: 445e3c942bdd20b41916ef9567fc82be
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
@@ -123,7 +117,7 @@ PlayerSettings:
   iOSLaunchScreenLandscape: {fileID: 0}
   iOSLaunchScreenBackgroundColor:
     serializedVersion: 2
-    rgba: 0
+    rgba: 3688222204
   iOSLaunchScreenFillPct: 100
   iOSLaunchScreenSize: 100
   iOSLaunchScreenCustomXibPath: 
@@ -141,19 +135,7 @@ PlayerSettings:
     banner: {fileID: 0}
   androidGamepadSupportLevel: 0
   resolutionDialogBanner: {fileID: 0}
-  m_BuildTargetIcons:
-  - m_BuildTarget: 
-    m_Icons:
-    - m_Icon: {fileID: 0}
-<<<<<<< HEAD
-      m_Size: 0
-=======
-<<<<<<< HEAD
-      m_Size: 28612
-=======
-      m_Size: 28619
->>>>>>> aec387d476ea9a72015a2374e758d7b4310b085c
->>>>>>> e2ad8c0c1e5d71993479e7ed53c07933a970388e
+  m_BuildTargetIcons: []
   m_BuildTargetBatching: []
   m_BuildTargetGraphicsAPIs: []
   webPlayerTemplate: APPLICATION:Default
@@ -210,6 +192,8 @@ PlayerSettings:
   ps4SaveDataImagePath: 
   ps4BGMPath: 
   ps4ShareFilePath: 
+  ps4ShareOverlayImagePath: 
+  ps4PrivacyGuardImagePath: 
   ps4NPtitleDatPath: 
   ps4RemotePlayKeyAssignment: -1
   ps4EnterButtonAssignment: 1
@@ -224,14 +208,6 @@ PlayerSettings:
   ps4pnFriends: 1
   ps4pnGameCustomData: 1
   playerPrefsSupport: 0
-<<<<<<< HEAD
-  ps4ReprojectionSupport: 0
-  ps4attribUserManagement: 0
-  ps4attribMoveSupport: 0
-  ps4attrib3DSupport: 0
-  ps4attribShareSupport: 0
-=======
->>>>>>> e2ad8c0c1e5d71993479e7ed53c07933a970388e
   monoEnv: 
   psp2Splashimage: {fileID: 0}
   psp2NPTrophyPackPath: 
@@ -396,7 +372,6 @@ PlayerSettings:
   XboxOneAllowedProductIds: []
   XboxOnePersistentLocalStorageSize: 0
   intPropertyNames:
-  - Android::ScriptingBackend
   - Metro::ScriptingBackend
   - Standalone::ScriptingBackend
   - WP8::ScriptingBackend
@@ -408,7 +383,6 @@ PlayerSettings:
   - iOS::Architecture
   - iOS::EnableIncrementalBuildSupportForIl2cpp
   - iOS::ScriptingBackend
-  Android::ScriptingBackend: 0
   Metro::ScriptingBackend: 2
   Standalone::ScriptingBackend: 0
   WP8::ScriptingBackend: 2
