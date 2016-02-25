@@ -3,50 +3,52 @@ using System.Collections;
 
 public class HealthScript : MonoBehaviour {
 	
-	public int max = 10000;
-	public int health = 10000;
+	public float max = 10000;
+	public float health = 10000;
 	public float Length;
-	public float timer = 2;
+	public float timer = 10;
 	public GameObject other;
+	public GameObject healthBar;
 	public GameObject scrap;
 
+
 	void OnTriggerEnter(Collider other)
+	{
+		decreaseHealth ();
+		float calc_Health = health / max;
+		SetHealthBar (calc_Health);
+	}
+
+	void decreaseHealth ()
 	{
 		health -= 1;
 	}
 
-	public void UpdateHealth(int adj) {
-		health += adj;	
-		
-		if(health < 0)
-			health = 0;
-		
-		if(health > max)
-			health = max;
-
-		if(max < 1)
-			max = 1;
-		Length = (Screen.width / 2) * (health / (float)max);
+	public void SetHealthBar (float myHealth)
+	{
+		healthBar.transform.localScale = new Vector3(Mathf.Clamp(myHealth,0f ,1f), healthBar.transform.localScale.y, healthBar.transform.localScale.z);
 	}
-	
+
+
 	void Update () {
 		
-		UpdateHealth(0);
+		//UpdateHealth(0);
 		
-		if (health <= 300) {
+		if (health < max) {
 			timer -= Time.deltaTime;
 			
 			if (timer <= 0) {
-				timer = 2;
-				health -= 20;
+				health += 1;
+				if(health == max)
+				{
+					timer = 30;
+				}
 
 			}
 		} 
 		if (health <= 0) {
-			if (timer <= 0){
-				timer = 2;
-			}
 			Destroy (gameObject);
+			//GetComponent<SunShield>().ReduceNum();
 			Instantiate(scrap, transform.position, transform.rotation);
 		}
 	}

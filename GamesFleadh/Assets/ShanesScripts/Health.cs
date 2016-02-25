@@ -4,18 +4,33 @@ using System.Collections;
 public class Health : MonoBehaviour {
 
 	public int health = 1000;
+	public GameObject[] planets;
 	public GameObject laser;
+	public float timer = 5;
+	public string newScene;
+
+	public int num;
+	
+	void Awake ()
+	{
+		planets = GameObject.FindGameObjectsWithTag ("Planet");
+		num = planets.Length;
+	}
 
 	void OnTriggerEnter (Collider laser)
 	{
-		health -= 1;
+		if (num <= 0){
+			health -= 1;
+		}
 	}
 
 	void Update ()
 	{
 		if (health <= 0) {
-			//Application.LoadLevel("GameOver");
-			transform.parent.gameObject.AddComponent<GameOver>();
+			timer -= Time.deltaTime;
+			if(timer <=0){
+				Application.LoadLevel(newScene);
+			}
 		}
 	}
 }

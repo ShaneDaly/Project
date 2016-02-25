@@ -3,9 +3,12 @@ using System.Collections;
 
 public class SecondaryCamera : MonoBehaviour
 {
-    [SerializeField] private bool active;
+    [SerializeField]
+    private bool active;
 
+    [SerializeField]
     private bool inPosition;
+    [SerializeField]
     private bool inRotation;
 
     public float minHeight;
@@ -13,8 +16,10 @@ public class SecondaryCamera : MonoBehaviour
     public float movementSpeed;
     public float goToHeight;
     public float speed;
+    public float rotationSpeed;
+    public float zoomSpeed;
 
-    Vector3 targetLoc;
+    public Vector3 targetLoc;
 
     void Start ()
     {
@@ -23,6 +28,7 @@ public class SecondaryCamera : MonoBehaviour
 	
 	void Update ()
     {
+        targetLoc = new Vector3(transform.position.x, goToHeight, transform.position.z);
         if (active)
         {
 
@@ -30,11 +36,29 @@ public class SecondaryCamera : MonoBehaviour
             {
                 if (transform.position == targetLoc)
                 {
-                    inPosition = false;
+                    inPosition = true;
                 }
 
-                float step = speed * Time.deltaTime;
-                transform.position = Vector3.MoveTowards(transform.position, targetLoc, step);
+                if (!inPosition)
+                {
+                    float step = speed * Time.deltaTime;
+                    transform.position = Vector3.MoveTowards(transform.position, targetLoc, step);
+                }
+
+                if (!inRotation)
+                {
+                    Vector3 targetDir = new Vector3(0,-90,0) ;
+                    float step = rotationSpeed * Time.deltaTime;
+                    Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0F);
+                    Debug.DrawRay(transform.position, newDir, Color.red);
+                    transform.rotation = Quaternion.LookRotation(newDir);
+                    Debug.Log(transform.eulerAngles.x);
+                    if (transform.eulerAngles.x == 90)
+                    {
+                        inRotation = true;
+                    }
+                }
+
             }
             else
             {
@@ -47,20 +71,20 @@ public class SecondaryCamera : MonoBehaviour
     {
         if (Input.GetAxis("Mouse ScrollWheel") > 0f && transform.position.y > minHeight)
         {
-            transform.position += transform.forward * Time.deltaTime * movementSpeed;
+            transform.position += transform.forward * Time.deltaTime * zoomSpeed;
         }
-        else if (Input.GetAxis("Mouse ScrollWheel") < 0f && transform.position.y > maxHeight)
+        else if (Input.GetAxis("Mouse ScrollWheel") < 0f && transform.position.y < maxHeight)
         {
-            transform.position -= transform.forward * Time.deltaTime * movementSpeed;
+            transform.position -= transform.forward * Time.deltaTime * zoomSpeed;
         }
 
         if (Input.GetKey(KeyCode.W) && transform.position.y > minHeight)
         {
-            transform.position += Vector3.forward * Time.deltaTime * movementSpeed;
+            transform.position += transform.up * Time.deltaTime * movementSpeed;
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            transform.position -= Vector3.forward * Time.deltaTime * movementSpeed;
+            transform.position -= transform.up * Time.deltaTime * movementSpeed;
         }
 
         if (Input.GetKey(KeyCode.A))
@@ -71,8 +95,6 @@ public class SecondaryCamera : MonoBehaviour
         {
             transform.position += transform.right * Time.deltaTime * movementSpeed;
         }
-
-        
     }
 
     public void toggleActive()
@@ -82,12 +104,10 @@ public class SecondaryCamera : MonoBehaviour
             active = false;
             inPosition = false;
             inRotation = false;
-
-            targetLoc = new Vector3(transform.position.x, goToHeight, transform.position.z);
         }
-        if (!active)
+        else if (!active)
         {
-            active = false;
+            active = true;
         }
     }
 }

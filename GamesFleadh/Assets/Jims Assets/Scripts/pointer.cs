@@ -18,13 +18,31 @@ public class pointer : MonoBehaviour
     public bool prevSet;
     public bool mainActive;
 
+    public bool emitterSecondaryActive;
+
+    public GameObject emitter;
+    public GameObject emitterSeconday;
+
+    public bool orbiterSelected;
+
     void start()
     {
         isTracking = false;
         prevSet = false;
+        gameObject.tag = "pointer";
     }
     void Update () 
     {
+        if (emitterSecondaryActive)
+        {
+            emitter.GetComponent<ParticleSystem>().enableEmission = false;
+            emitterSeconday.GetComponent<ParticleSystem>().enableEmission = true;
+        }
+        else
+        {
+            emitter.GetComponent<ParticleSystem>().enableEmission = true;
+            emitterSeconday.GetComponent<ParticleSystem>().enableEmission = false;
+        }
         Plane plane = new Plane(Vector3.up, 0);
         float dist;
         
@@ -67,9 +85,62 @@ public class pointer : MonoBehaviour
                     }
                     if (hit)
                     {
+                        Camera.main.GetComponent<cameraControl>().goTo(point);
+                        Camera.main.transform.parent = null;
+                        isTracking = false;
+                    }
+                }
+            }
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (plane.Raycast(ray, out dist))
+            {
+                bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
+                Vector3 point = ray.GetPoint(dist);
+                if ((Vector3.Distance(sun.transform.position, point)) < (Vector3.Distance(border, sun.transform.position)))
+                {
+                    if (!hit)
+                    {
+                        orbiterSelected = false;
+                    }
+                    if (hit)
+                    {
+                        try
+                        {
+                            foreach (GameObject planets in GameObject.FindGameObjectsWithTag("planet"))
+                            {
+                                planets.GetComponent<Planet>().unSelect();
+                            }
+                        }
+                        catch (System.Exception e)
+                        {
+                        }
+
+                        try
+                        {
+                            foreach (GameObject sats in GameObject.FindGameObjectsWithTag("satellite"))
+                            {
+                                sats.GetComponent<Planet>().unSelect();
+                            }
+                        }
+                        catch (System.Exception e)
+                        {
+                        }
+
+                        orbiterSelected = true;
                         prevSet = false;
                         isTracking = true;
                         objectTracking = hitInfo.transform.gameObject;
+                        if (hitInfo.transform.gameObject.tag == "planet")
+                        {
+                            hitInfo.transform.GetComponent<Planet>().setSelected();
+                        }
+                        if (hitInfo.transform.gameObject.tag == "satellite")
+                        {
+                            hitInfo.transform.GetComponent<Satelite>().setSelected();
+                        }
                     }
                 }
             }
@@ -92,5 +163,22 @@ public class pointer : MonoBehaviour
         distance = Vector3.Distance(border, sun.transform.position);
         UnityEditor.Handles.color = Color.red;
         UnityEditor.Handles.DrawWireDisc(sun.transform.position, Vector3.up, distance);
+    }
+
+    public void toggleEmitter()
+    {
+        if (emitterSecondaryActive)
+        {
+            emitterSecondaryActive = false;
+        }
+        else
+        {
+            emitterSecondaryActive = true;
+        }
+    }
+
+    public bool getOrbiterSelected()
+    {
+        return orbiterSelected;
     }
 }

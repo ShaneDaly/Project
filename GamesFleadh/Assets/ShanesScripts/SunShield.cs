@@ -13,9 +13,14 @@ public class SunShield : MonoBehaviour {
 		num = planets.Length;
 	}
 
+	public void ReduceNum()
+	{
+		num = num - 1;
+	}
+
 	void Update ()
 	{
-		if (planets.Length <= 0) {
+		if (num <= 0) {
 			Destroy (gameObject);
 		}
 
