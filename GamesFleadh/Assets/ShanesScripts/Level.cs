@@ -3,5 +3,5 @@ using System.Collections;
 
 public class Level : MonoBehaviour {
 
-	public int lastLevel;
+	public int enemynum = 0;
 }

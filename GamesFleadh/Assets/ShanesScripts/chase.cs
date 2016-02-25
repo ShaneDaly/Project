@@ -27,7 +27,7 @@ public class chase : MonoBehaviour {
 	void  Start ()
 	{
 		character = GetComponent<CharacterController>();
-		Planet = GameObject.FindWithTag("Planet").transform;
+		//Planet = GameObject.FindWithTag("Planet").transform;
 		state = State.InvestState;
 	}
 

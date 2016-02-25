@@ -36,6 +36,9 @@ public class Satelite : MonoBehaviour
     [SerializeField]
     private float height;
 
+    public bool allowOrbitDebug;
+    public bool selected;
+
     //public GameObject emitter;
 
     [SerializeField]
@@ -114,8 +117,27 @@ public class Satelite : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        UnityEditor.Handles.color = Color.blue;
-        float distance = Vector3.Distance(transform.position, sun.transform.position);
-        UnityEditor.Handles.DrawWireDisc(sun.transform.position, Vector3.up, distance);
+        if (!selected)
+        {
+            UnityEditor.Handles.color = Color.white;
+        }
+        else
+        {
+            UnityEditor.Handles.color = Color.blue;
+        }
+        if (allowOrbitDebug)
+        {
+            float distance = Vector3.Distance(transform.position, sun.transform.position);
+            UnityEditor.Handles.DrawWireDisc(sun.transform.position, Vector3.up, distance);
+        }
+    }
+
+    public void setSelected()
+    {
+        selected = true;
+    }
+    public void unSelect()
+    {
+        selected = false;
     }
 }

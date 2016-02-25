@@ -5,17 +5,21 @@ public class EnemyHealth : MonoBehaviour {
 
 	public float health = 100;
 	public float max = 100;
-	public int damage;
+
 	public GameObject rocket;
 	public GameObject scrap;
-	public GameObject healthBar;
 
 	void Awake ()
 	{
 		rocket = GameObject.FindGameObjectWithTag("Rocket") ;
 	}
 
-	void OnTriggerEnter (Collider rocket){
+	void OnTriggerEnter (Collider rocket)
+	{
+		ApplyDamage ();
+	}
+
+	public void ApplyDamage (){
 		health -= 10;
 	}
 
@@ -23,8 +27,8 @@ public class EnemyHealth : MonoBehaviour {
 	void Update () {
 
 		if (health <= 0) {
+			GetComponent<Spawner>().ReduceMax ();
 			Destroy (gameObject);
-			//GetComponent<Spawner>().ReduceMax ();
 			Instantiate(scrap, transform.position, transform.rotation);
 		}
 	
