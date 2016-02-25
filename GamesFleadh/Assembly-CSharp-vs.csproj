@@ -104,6 +104,7 @@
      <Compile Include="Assets\ShanesScripts\flying.cs" />
      <Compile Include="Assets\ShanesScripts\mover.cs" />
      <Compile Include="Assets\Stats.cs" />
+     <Compile Include="Assets\circle.cs" />
      <None Include="Assets\MaxP\Shaders\_Source\Shaders\Resources\Blur.shader" />
      <None Include="Assets\sky5X\README.txt" />
      <None Include="Assets\Materials\UI-Default-No-Alpha.shader" />
