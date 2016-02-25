@@ -1,76 +1,142 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class cameraControl : MonoBehaviour {
-
+public class cameraControl : MonoBehaviour
+{
     public float sensitivityX = 8F;
     public float sensitivityY = 8F;
-    float mHdg = 0F;
-    float mPitch = 90F;
+    public float mHdg = 0F;
+    public float mPitch = 90F;
 
+    public Vector3 goToLocation;
     public Transform target;
     public float speed;
 
-    public bool isMoving;
-    public Vector3 goToLocation;
-
     public float movementSpeed;
-
+    public float zoomOutY;
     public int mode;
+    public float minHeight;
+    public float zoomSpeed;
+    public float GotoHeight;
+
+    public bool isMoving;
+    public bool active;
 
     public GameObject sun;
-
-    public float zoomOutY;
+    public GameObject Pointer;
 
     void start()
     {
         mode = 0;
+        active = true;
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            if (mode == 0)
+            if (active)
             {
-                mode = 1;
+                active = false;
+                gameObject.GetComponent<SecondaryCamera>().toggleActive();
             }
-            else if (mode == 1)
+            else if (!active)
             {
-                mode = 0;
+                enableMain();
             }
-
-            isMoving = true;
-            goToLocation = new Vector3(sun.transform.position.x, zoomOutY, sun.transform.position.z);
-            mPitch = 90;
+            return;
         }
-
-        if (mode == 0)
+        if (active)
         {
-            if (Input.GetAxis("Mouse ScrollWheel") > 0f)
-            {
-                transform.position += transform.forward * Time.deltaTime * movementSpeed;
-            }
-            else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
-            {
-                transform.position -= transform.forward * Time.deltaTime * movementSpeed;
-            }
+            moveCamera();
+        }
+    }
 
-            if (Input.GetKey(KeyCode.W)) {
-                transform.position += transform.forward * Time.deltaTime * movementSpeed;
-            }
-            else if (Input.GetKey(KeyCode.S)) {
-                transform.position -= transform.forward * Time.deltaTime * movementSpeed;
-            }
+    void MoveForwards(float aVal)
+    {
+        Vector3 fwd = transform.forward;
+        fwd.y = 0;
+        fwd.Normalize();
+        transform.position += aVal * fwd;
+    }
+
+    void Strafe(float aVal)
+    {
+        transform.position += aVal * transform.right;
+    }
+    void ChangeHeight(float aVal)
+    {
+        transform.position += aVal * Vector3.up;
+    }
+    void ChangeHeading(float aVal)
+    {
+        mHdg += aVal;
+        WrapAngle(ref mHdg);
+        transform.localEulerAngles = new Vector3(mPitch, mHdg, 0);
+    }
+    void ChangePitch(float aVal)
+    {
+        mPitch += aVal;
+        WrapAngle(ref mPitch);
+        transform.localEulerAngles = new Vector3(mPitch, mHdg, 0);
+    }
+    public static void WrapAngle(ref float angle)
+    {
+        if (angle < -360F)
+        {
+            angle += 360F;
+        }
+        if (angle > 360F)
+        {
+            angle -= 360F;
+        }
+    }
+
+    public void goTo(Vector3 newLocation)
+    {
+        goToLocation = newLocation;
+        isMoving = true;
+        float h;
+        if (active)
+        {
+            h = transform.position.y;
+        }
+        else
+        {
+            enableMain();
+            h = GotoHeight;
+        }
+        goToLocation.y = h;
+    }
+
+    void moveCamera()
+    {
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f && transform.position.y > minHeight)
+        {
+            transform.position -= (transform.position - Pointer.transform.position).normalized * Time.deltaTime * zoomSpeed;
+        }
+        else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
+        {
+            transform.position += (transform.position - Pointer.transform.position).normalized * Time.deltaTime * zoomSpeed;
         }
 
-        if (Input.GetKey(KeyCode.A)) {
+        if (Input.GetKey(KeyCode.W) && transform.position.y > minHeight)
+        {
+            transform.position += transform.up * Time.deltaTime * movementSpeed;
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            transform.position -= transform.up * Time.deltaTime * movementSpeed;
+        }
+
+        if (Input.GetKey(KeyCode.A))
+        {
             transform.position -= transform.right * Time.deltaTime * movementSpeed;
         }
-        else if (Input.GetKey(KeyCode.D)) {
+        else if (Input.GetKey(KeyCode.D))
+        {
             transform.position += transform.right * Time.deltaTime * movementSpeed;
         }
-
 
         if (isMoving)
         {
@@ -110,50 +176,16 @@ public class cameraControl : MonoBehaviour {
         }
     }
 
-    void MoveForwards(float aVal)
+    public void enableMain()
     {
-        Vector3 fwd = transform.forward;
-        fwd.y = 0;
-        fwd.Normalize();
-        transform.position += aVal * fwd;
+        active = true;
+        mPitch = 90F;
+        mHdg = transform.eulerAngles.y;
+        gameObject.GetComponent<SecondaryCamera>().toggleActive();
     }
 
-    void Strafe(float aVal)
+    public bool checkActive()
     {
-        transform.position += aVal * transform.right;
-    }
-    void ChangeHeight(float aVal)
-    {
-        transform.position += aVal * Vector3.up;
-    }
-    void ChangeHeading(float aVal)
-    {
-        mHdg += aVal;
-        WrapAngle(ref mHdg);
-        transform.localEulerAngles = new Vector3(mPitch, mHdg, 0);
-    }
-    void ChangePitch(float aVal)
-    {
-        mPitch += aVal;
-        WrapAngle(ref mPitch);
-        transform.localEulerAngles = new Vector3(mPitch, mHdg, 0);
-    }
-    public static void WrapAngle(ref float angle)
-     {
-         if (angle < -360F)
-            {
-                angle += 360F;
-            }
-         if (angle > 360F)
-            {
-                angle -= 360F;
-            }
-     }
-
-    public void goTo(Vector3 newLocation)
-    {
-        goToLocation = newLocation;
-        isMoving = true;
-        goToLocation.y = transform.position.y;
+        return active;
     }
 }

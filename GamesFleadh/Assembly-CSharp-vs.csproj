@@ -58,6 +58,7 @@
      <Compile Include="Assets\Jims Assets\Scripts\Planet.cs" />
      <Compile Include="Assets\Jims Assets\Scripts\Satelite.cs" />
      <Compile Include="Assets\Jims Assets\Scripts\SateliteCreator.cs" />
+     <Compile Include="Assets\Jims Assets\Scripts\SecondaryCamera.cs" />
      <Compile Include="Assets\Jims Assets\Scripts\ShipController.cs" />
      <Compile Include="Assets\Jims Assets\Scripts\WaypointInput.cs" />
      <Compile Include="Assets\Jims Assets\Scripts\cameraControl.cs" />
@@ -69,14 +70,6 @@
      <Compile Include="Assets\MaxP\Shaders\Scripts\DirtyLensFlare.cs" />
      <Compile Include="Assets\Pause.cs" />
      <Compile Include="Assets\PickUpItem.cs" />
-     <Compile Include="Assets\Robs\Assets\Scripts\Camera Script\CameraBounds.cs" />
-     <Compile Include="Assets\Robs\Assets\Scripts\Camera Script\Movement.cs" />
-     <Compile Include="Assets\Robs\Assets\Scripts\Camera Script\Movement2.cs" />
-     <Compile Include="Assets\Robs\Assets\Scripts\Camera Script\ZoomScript.cs" />
-     <Compile Include="Assets\Robs\Assets\Scripts\Ojects\Chaser.cs" />
-     <Compile Include="Assets\Robs\Assets\Scripts\Ojects\OrbitScript.cs" />
-     <Compile Include="Assets\Robs\Assets\Scripts\ReverseOrbit.cs" />
-     <Compile Include="Assets\Robs\Assets\Scripts\TestScripts\Rotate.cs" />
      <Compile Include="Assets\ShanesScripts\Coloniser.cs" />
      <Compile Include="Assets\ShanesScripts\DestroyByContact.cs" />
      <Compile Include="Assets\ShanesScripts\DestroyByTime.cs" />
