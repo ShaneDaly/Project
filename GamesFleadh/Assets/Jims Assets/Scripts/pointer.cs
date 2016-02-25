@@ -23,10 +23,13 @@ public class pointer : MonoBehaviour
     public GameObject emitter;
     public GameObject emitterSeconday;
 
+    public bool orbiterSelected;
+
     void start()
     {
         isTracking = false;
         prevSet = false;
+        gameObject.tag = "pointer";
     }
     void Update () 
     {
@@ -100,13 +103,44 @@ public class pointer : MonoBehaviour
                 {
                     if (!hit)
                     {
-
+                        orbiterSelected = false;
                     }
                     if (hit)
                     {
+                        try
+                        {
+                            foreach (GameObject planets in GameObject.FindGameObjectsWithTag("planet"))
+                            {
+                                planets.GetComponent<Planet>().unSelect();
+                            }
+                        }
+                        catch (System.Exception e)
+                        {
+                        }
+
+                        try
+                        {
+                            foreach (GameObject sats in GameObject.FindGameObjectsWithTag("satellite"))
+                            {
+                                sats.GetComponent<Planet>().unSelect();
+                            }
+                        }
+                        catch (System.Exception e)
+                        {
+                        }
+
+                        orbiterSelected = true;
                         prevSet = false;
                         isTracking = true;
                         objectTracking = hitInfo.transform.gameObject;
+                        if (hitInfo.transform.gameObject.tag == "planet")
+                        {
+                            hitInfo.transform.GetComponent<Planet>().setSelected();
+                        }
+                        if (hitInfo.transform.gameObject.tag == "satellite")
+                        {
+                            hitInfo.transform.GetComponent<Satelite>().setSelected();
+                        }
                     }
                 }
             }
@@ -141,5 +175,10 @@ public class pointer : MonoBehaviour
         {
             emitterSecondaryActive = true;
         }
+    }
+
+    public bool getOrbiterSelected()
+    {
+        return orbiterSelected;
     }
 }

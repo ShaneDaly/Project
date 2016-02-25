@@ -1443,6 +1443,7 @@ MonoBehaviour:
   rotationSpeed: 0
   RandomSize: 0
   allowOrbitDebug: 1
+  selected: 0
   size: 0
   sizeKm: 0
   ownRotateSpeed: 9
@@ -1634,6 +1635,7 @@ MonoBehaviour:
   rotationSpeed: 0
   RandomSize: 0
   allowOrbitDebug: 1
+  selected: 0
   size: 0
   sizeKm: 0
   ownRotateSpeed: 0
@@ -1689,7 +1691,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 281, y: 0, z: -547}
   m_LocalScale: {x: 14, y: 14, z: 14}
-  m_Children: []
+  m_Children:
+  - {fileID: 1958905002}
   m_Father: {fileID: 739330550}
   m_RootOrder: 4
 --- !u!1 &477500725
@@ -3124,7 +3127,7 @@ GameObject:
   - 114: {fileID: 925632712}
   m_Layer: 0
   m_Name: Neptune
-  m_TagString: Planet
+  m_TagString: planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3156,6 +3159,7 @@ MonoBehaviour:
   rotationSpeed: 0
   RandomSize: 0
   allowOrbitDebug: 1
+  selected: 0
   size: 0
   sizeKm: 0
   ownRotateSpeed: 9
@@ -3248,6 +3252,7 @@ MonoBehaviour:
   rotationSpeed: 0
   RandomSize: 0
   allowOrbitDebug: 1
+  selected: 0
   size: 0
   sizeKm: 0
   ownRotateSpeed: 9
@@ -3308,7 +3313,7 @@ GameObject:
   - 114: {fileID: 1113132454}
   m_Layer: 0
   m_Name: Uranus
-  m_TagString: Planet
+  m_TagString: planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3340,6 +3345,7 @@ MonoBehaviour:
   rotationSpeed: 0
   RandomSize: 0
   allowOrbitDebug: 1
+  selected: 0
   size: 0
   sizeKm: 0
   ownRotateSpeed: 9
@@ -3400,7 +3406,7 @@ GameObject:
   - 114: {fileID: 1212261041}
   m_Layer: 0
   m_Name: Pluto
-  m_TagString: Planet
+  m_TagString: planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3432,6 +3438,7 @@ MonoBehaviour:
   rotationSpeed: 0
   RandomSize: 0
   allowOrbitDebug: 1
+  selected: 0
   size: 0
   sizeKm: 0
   ownRotateSpeed: 9
@@ -3588,7 +3595,7 @@ GameObject:
   - 114: {fileID: 1291719021}
   m_Layer: 0
   m_Name: pointer
-  m_TagString: Untagged
+  m_TagString: pointer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3616,6 +3623,7 @@ MonoBehaviour:
   emitterSecondaryActive: 0
   emitter: {fileID: 352827119}
   emitterSeconday: {fileID: 873672962}
+  orbiterSelected: 0
 --- !u!4 &1291719020
 Transform:
   m_ObjectHideFlags: 0
@@ -3961,6 +3969,7 @@ MonoBehaviour:
   rotationSpeed: 0
   RandomSize: 0
   allowOrbitDebug: 1
+  selected: 0
   size: 0
   sizeKm: 0
   ownRotateSpeed: 9
@@ -4035,6 +4044,7 @@ MonoBehaviour:
   rotationSpeed: 0
   RandomSize: 0
   allowOrbitDebug: 1
+  selected: 0
   size: 0
   sizeKm: 0
   ownRotateSpeed: 9
@@ -4092,6 +4102,45 @@ Halo:
     serializedVersion: 2
     rgba: 4292335320
   m_Size: 200
+--- !u!1 &1958905001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1958905002}
+  - 122: {fileID: 1958905003}
+  m_Layer: 0
+  m_Name: halo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1958905002
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1958905001}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -.0579999983}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 461546546}
+  m_RootOrder: 0
+--- !u!122 &1958905003
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1958905001}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4286611584
+  m_Size: 35
 --- !u!1001 &2083914404
 Prefab:
   m_ObjectHideFlags: 0
@@ -4176,6 +4225,7 @@ MonoBehaviour:
   rotationSpeed: 0
   RandomSize: 0
   allowOrbitDebug: 1
+  selected: 0
   size: 0
   sizeKm: 0
   ownRotateSpeed: 9
