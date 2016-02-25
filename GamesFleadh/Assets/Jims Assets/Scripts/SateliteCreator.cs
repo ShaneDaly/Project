@@ -9,10 +9,13 @@ public class SateliteCreator : MonoBehaviour {
     private Vector3 sunVec;
     RaycastHit hitInfo;
     bool createSat;
-
+    GlobalContollerScript controlScript;
+    GameObject controller;
     void Start()
     {
         createSat = false;
+        controller = GameObject.Find("Controller");
+        controlScript = controller.GetComponent<GlobalContollerScript>();
     }
 
     public void enableCreateSat()
@@ -36,18 +39,27 @@ public class SateliteCreator : MonoBehaviour {
 
                 float dist;
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                if (plane.Raycast(ray, out dist))
+                if (controlScript.resources >= controlScript.newSatelliteCost)
                 {
-                    bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
-                    Vector3 point = ray.GetPoint(dist);
-                    if (!hit)
+                    
+                    if (plane.Raycast(ray, out dist))
                     {
-                        Instantiate(Satelite, point, Quaternion.identity);
-                    }
-                    if (hit)
-                    {
+                        bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
+                        Vector3 point = ray.GetPoint(dist);
+                        if (!hit)
+                        {
+                            Instantiate(Satelite, point, Quaternion.identity);
+                            createSat = false;
+                            controlScript.resources -= controlScript.newSatelliteCost;
+                            controlScript.resValText.text = "" + controlScript.resources;
+
+                        }
+                        if (hit)
+                        {
+                        }
                     }
                 }
+                
             }
         }
     }
