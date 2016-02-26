@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SateliteCreator : MonoBehaviour {
 
-    public Transform Satelite;
+    public GameObject Satelite;
     public GameObject Sun;
     public float dist;
     private Vector3 sunVec;
@@ -52,6 +52,7 @@ public class SateliteCreator : MonoBehaviour {
                             createSat = false;
                             controlScript.resources -= controlScript.newSatelliteCost;
                             controlScript.resValText.text = "" + controlScript.resources;
+
 
                         }
                         if (hit)

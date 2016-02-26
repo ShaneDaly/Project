@@ -14,12 +14,12 @@ public class Health : MonoBehaviour {
 	void Awake ()
 	{
 		planets = GameObject.FindGameObjectsWithTag ("Planet");
-		num = planets.Length;
+
 	}
 
 	void OnTriggerEnter (Collider laser)
 	{
-		if (num <= 0){
+		if (num == planets.Length){
 			health -= 1;
 		}
 	}

@@ -27,6 +27,7 @@ public class TurretShoot : MonoBehaviour {
 				{
 					if (ammo >= 1)
 					{
+						//gameObject.GetComponent<Renderer> ().material.color = new Color (255, 0, 0, 0);
 						timer=2f;
 						ammo -=1;
 						GameObject rocket = (GameObject)Instantiate(shot,hit.point-fk, Quaternion.LookRotation(hit.normal));
