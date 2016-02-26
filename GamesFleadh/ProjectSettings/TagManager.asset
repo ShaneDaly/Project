@@ -4,7 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
+  - Rocket
+  - Enemy
+=======
   - Satellite
+>>>>>>> bb14964fade44b74bd34141d85c3e886de00cbd7
   layers:
   - Default
   - TransparentFX
