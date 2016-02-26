@@ -12,11 +12,7 @@ PlayerSettings:
   companyName: DefaultCompany
   productName: GamesFleadh
   defaultCursor: {fileID: 0}
-<<<<<<< HEAD
-  cursorHotspot: {x: 1.40129846e-44, y: 1.40129846e-44}
-=======
-  cursorHotspot: {x: NaN, y: NaN}
->>>>>>> 3d0d48a767b52173e9f60dfb2a02c5b8c07cf428
+  cursorHotspot: {x: 0, y: 0}
   m_ShowUnitySplashScreen: 1
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
@@ -82,11 +78,7 @@ PlayerSettings:
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
   virtualRealitySupported: 0
-<<<<<<< HEAD
-  productGUID: c38ec5061e393b9429c762f8c54c8daf
-=======
-  productGUID: 4731487d2ed98a0488cbd791a9f7e04d
->>>>>>> 3d0d48a767b52173e9f60dfb2a02c5b8c07cf428
+  productGUID: fecbe6e795fa0a34c85b786ed81816d9
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
@@ -125,11 +117,7 @@ PlayerSettings:
   iOSLaunchScreenLandscape: {fileID: 0}
   iOSLaunchScreenBackgroundColor:
     serializedVersion: 2
-<<<<<<< HEAD
-    rgba: 3688222204
-=======
-    rgba: 4294967040
->>>>>>> 3d0d48a767b52173e9f60dfb2a02c5b8c07cf428
+    rgba: 0
   iOSLaunchScreenFillPct: 100
   iOSLaunchScreenSize: 100
   iOSLaunchScreenCustomXibPath: 
