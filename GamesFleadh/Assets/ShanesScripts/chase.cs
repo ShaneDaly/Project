@@ -78,7 +78,7 @@ public class chase : MonoBehaviour {
 	void Shooting ()
 	{
 		if (Time.time > nextFire) {
-			gameObject.GetComponent<Renderer> ().material.color = new Color (255, 0, 0, 0);
+			//gameObject.GetComponent<Renderer> ().material.color = new Color (255, 0, 0, 0);
 			nextFire = Time.time + fireRate;
 			Instantiate (lasershot, shotspawn.position, shotspawn.rotation);
 		}
@@ -108,7 +108,7 @@ public class chase : MonoBehaviour {
 	void  Investigating ()
 	{
 		transform.LookAt(Planet);
-		gameObject.GetComponent<Renderer> ().material.color = new Color (255,255,0,0);
+		//gameObject.GetComponent<Renderer> ().material.color = new Color (255,255,0,0);
 		transform.position += transform.forward*InvestigateSpeed*Time.deltaTime;
 	}
 	

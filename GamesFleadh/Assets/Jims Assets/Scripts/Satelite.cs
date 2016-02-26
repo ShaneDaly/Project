@@ -49,7 +49,7 @@ public class Satelite : MonoBehaviour
     {
         isAcc = true;
 
-        sun = GameObject.FindGameObjectWithTag("sun");
+        sun = GameObject.FindGameObjectWithTag("Sun");
     }
 
     // Update is called once per frame

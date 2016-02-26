@@ -47,7 +47,7 @@ public class Planet : MonoBehaviour
         {
             setPlanetSize();
         }
-        gameObject.tag = "planet";
+        gameObject.tag = "Planet";
 	}
 	
 	// Update is called once per frame

@@ -84,7 +84,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167036}
   m_LocalRotation: {x: 0, y: -.745972693, z: 0, w: .665976524}
-  m_LocalPosition: {x: 255.399994, y: 0, z: 11.3000002}
+  m_LocalPosition: {x: 47.2999992, y: 0, z: 45.2999992}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 483192}
@@ -145,7 +145,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167036}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: 9863d77239e042646984ee132349b947, type: 3}
 --- !u!33 &3388470
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -176,15 +176,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f663dfceab13514fbc08f93a168468c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  ammo: 0
+  ammo: 100
+  fireRate: 0
   timer: 6
   Planet: {fileID: 0}
   MoveSpeed: 20
   InvestigateSpeed: 35
   range: 60
   state: 0
-  lasershot: {fileID: 176082, guid: b8c80c700bac8214fbd741979af0ff5f, type: 2}
+  lasershot: {fileID: 191316, guid: b53d4d90bae12b441a2c27a42e0ae747, type: 2}
   shotspawn: {fileID: 412194}
 --- !u!136 &13649686
 CapsuleCollider:
@@ -259,6 +259,10 @@ Prefab:
       propertyPath: lasershot
       value: 
       objectReference: {fileID: 176082, guid: b8c80c700bac8214fbd741979af0ff5f, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 9863d77239e042646984ee132349b947, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 167036}
