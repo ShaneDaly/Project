@@ -48,7 +48,7 @@ public class HealthScript : MonoBehaviour {
 		} 
 		if (health <= 0) {
 			Destroy (gameObject);
-			//GetComponent<SunShield>().ReduceNum();
+			//GetComponent<Health>().num += 1;
 			Instantiate(scrap, transform.position, transform.rotation);
 		}
 	}

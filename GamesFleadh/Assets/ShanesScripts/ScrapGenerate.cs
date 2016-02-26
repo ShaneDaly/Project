@@ -5,6 +5,7 @@ public class ScrapGenerate : MonoBehaviour {
 
 	public GameObject scrap;
 	public GameObject[] scraps;
+	//public int range = Random.value (1, 3);
 
 	void Update()
 	{
@@ -12,6 +13,7 @@ public class ScrapGenerate : MonoBehaviour {
 		{
 			Destroy(gameObject);
 			Instantiate(scrap, transform.position, transform.rotation);
+			//Instantiate(scrap, transform.position, transform.rotation);
 		}
 	}
 }

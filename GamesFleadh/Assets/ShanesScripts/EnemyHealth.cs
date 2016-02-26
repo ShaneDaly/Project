@@ -16,18 +16,13 @@ public class EnemyHealth : MonoBehaviour {
 
 	void OnTriggerEnter (Collider rocket)
 	{
-		ApplyDamage ();
-	}
-
-	public void ApplyDamage (){
 		health -= 10;
 	}
-
 
 	void Update () {
 
 		if (health <= 0) {
-			GetComponent<Spawner>().ReduceMax ();
+			//GetComponent<Spawner>().ReduceMax ();
 			Destroy (gameObject);
 			Instantiate(scrap, transform.position, transform.rotation);
 		}
