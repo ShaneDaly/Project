@@ -13,9 +13,6 @@ PlayerSettings:
   productName: GamesFleadh
   defaultCursor: {fileID: 0}
 <<<<<<< HEAD
-  cursorHotspot: {x: 0, y: 0}
-=======
-<<<<<<< HEAD
   cursorHotspot: {x: -5.89056208e+29, y: -5.89056208e+29}
 =======
 <<<<<<< HEAD
@@ -24,7 +21,6 @@ PlayerSettings:
   cursorHotspot: {x: 0, y: 0}
 >>>>>>> bb14964fade44b74bd34141d85c3e886de00cbd7
 >>>>>>> 6f28eebc870bf604791985dba10a0acfc36ab86d
->>>>>>> efb7d2414a42c540bde195b0d08c32d85cc3cbef
   m_ShowUnitySplashScreen: 1
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
@@ -91,9 +87,6 @@ PlayerSettings:
   xboxOneDisableKinectGpuReservation: 0
   virtualRealitySupported: 0
 <<<<<<< HEAD
-  productGUID: ba49a9538b5817d478983bf833f97db4
-=======
-<<<<<<< HEAD
   productGUID: 5a7e607c443aa11439d1d9f7cf9e7c31
 =======
 <<<<<<< HEAD
@@ -110,7 +103,6 @@ PlayerSettings:
 >>>>>>> bb14964fade44b74bd34141d85c3e886de00cbd7
 >>>>>>> b0fda5e2ac02bc3f7d121a563c1a034ac06fe896
 >>>>>>> 6f28eebc870bf604791985dba10a0acfc36ab86d
->>>>>>> efb7d2414a42c540bde195b0d08c32d85cc3cbef
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
@@ -150,9 +142,6 @@ PlayerSettings:
   iOSLaunchScreenBackgroundColor:
     serializedVersion: 2
 <<<<<<< HEAD
-    rgba: 0
-=======
-<<<<<<< HEAD
     rgba: 4008437756
 =======
 <<<<<<< HEAD
@@ -161,7 +150,6 @@ PlayerSettings:
     rgba: 0
 >>>>>>> bb14964fade44b74bd34141d85c3e886de00cbd7
 >>>>>>> 6f28eebc870bf604791985dba10a0acfc36ab86d
->>>>>>> efb7d2414a42c540bde195b0d08c32d85cc3cbef
   iOSLaunchScreenFillPct: 100
   iOSLaunchScreenSize: 100
   iOSLaunchScreenCustomXibPath: 
