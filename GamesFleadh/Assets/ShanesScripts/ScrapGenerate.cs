@@ -13,7 +13,6 @@ public class ScrapGenerate : MonoBehaviour {
 		{
 			Destroy(gameObject);
 			Instantiate(scrap, transform.position, transform.rotation);
-			//Instantiate(scrap, transform.position, transform.rotation);
 		}
 	}
 }

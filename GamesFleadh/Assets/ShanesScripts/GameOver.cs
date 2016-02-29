@@ -5,6 +5,7 @@ public class GameOver : MonoBehaviour
 {
 
 	public string newScene;
+	string level;
 
 	void OnGUI()
 	{
@@ -13,7 +14,8 @@ public class GameOver : MonoBehaviour
 		
 		if (GUI.Button(new Rect(Screen.width / 2 - (buttonWidth / 2),(1 * Screen.height / 3) - (buttonHeight / 2),buttonWidth,buttonHeight),"Retry!"))
 		{
-			Application.LoadLevel("DemoScene");
+			level = LevelManager.getLastLevel();
+			Application.LoadLevel(level);
 		}
 		
 		if (GUI.Button(new Rect(Screen.width / 2 - (buttonWidth / 2),(2 * Screen.height / 3) - (buttonHeight / 2),buttonWidth,buttonHeight),"Quit game"))
