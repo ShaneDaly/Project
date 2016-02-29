@@ -11,11 +11,11 @@ public class chase : MonoBehaviour {
 	float pauseDuration = 5;
 	public Transform Planet;
 	public float MoveSpeed= 20;
-	private float RetreatSpeed = 15;
+	public float RetreatSpeed = 20;
 	public float InvestigateSpeed = 35;
 	private int MaxDist= 2000;
 	public int range = 30;
-	public enum State {PatrolState,ShootState,InvestState,RetreatState,HealingState}
+	public enum State {ShootState,InvestState,RetreatState}
 	public State state;
 	private float curTime;
 	public GameObject lasershot;
@@ -27,7 +27,6 @@ public class chase : MonoBehaviour {
 	void  Start ()
 	{
 		character = GetComponent<CharacterController>();
-		//Planet = GameObject.FindWithTag("Planet").transform;
 		state = State.InvestState;
 	}
 
@@ -52,11 +51,6 @@ public class chase : MonoBehaviour {
 			Investigating ();
 			break;
 		}
-		case(State.PatrolState):
-		{
-			Patrol ();
-			break;
-		}
 		case(State.ShootState):
 		{
 			Shooting ();
@@ -67,48 +61,35 @@ public class chase : MonoBehaviour {
 			Retreat();
 			break;
 		}
-		case(State.HealingState):
-		{
-			Healing();
-			break;
-		}
 		}	
 	}
 	
 	void Shooting ()
 	{
 		if (Time.time > nextFire) {
-			//gameObject.GetComponent<Renderer> ().material.color = new Color (255, 0, 0, 0);
 			nextFire = Time.time + fireRate;
 			Instantiate (lasershot, shotspawn.position, shotspawn.rotation);
 		}
 	}
 	
-	void Healing()
-	{
-		gameObject.GetComponent<Renderer> ().material.color = new Color (255,192,203,0);
-		transform.position += (transform.forward * -1)*RetreatSpeed*Time.deltaTime;
-		timer -= Time.deltaTime;
-		if (timer <= 0)
-		{
-			timer = 6;
-			state = State.PatrolState;
-		}
 
-	}
+	public Transform CommandShip;
 	void Retreat()
 	{
-		gameObject.GetComponent<Renderer> ().material.color = new Color (0,0,0,0);
-		transform.LookAt(Planet);
-		transform.position += (transform.forward * -1)*MoveSpeed*Time.deltaTime;
+		CommandShip = GameObject.FindWithTag("Ship").transform;
+		transform.LookAt(CommandShip);
+		//transform.position += (transform.forward * -1)*MoveSpeed*Time.deltaTime;
+		transform.position += transform.forward*RetreatSpeed*Time.deltaTime;
+		timer -= Time.deltaTime;
+		if (timer <= 0) {
+			//ammo = ammo + 1;
+			timer = 6;
+		}
 	}
-	void  Patrol ()
-	{	  
-	}
+
 	void  Investigating ()
 	{
 		transform.LookAt(Planet);
-		//gameObject.GetComponent<Renderer> ().material.color = new Color (255,255,0,0);
 		transform.position += transform.forward*InvestigateSpeed*Time.deltaTime;
 	}
 	
@@ -124,7 +105,7 @@ public class chase : MonoBehaviour {
 		}
 		else 
 		{
-			state = State.PatrolState;
+			state = State.RetreatState;
 		}
 	}
 	public void detectClosestEnemy()

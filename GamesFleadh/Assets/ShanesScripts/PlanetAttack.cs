@@ -5,11 +5,18 @@ public class PlanetAttack : MonoBehaviour {
 
     public GameObject enemy;
     public GameObject rocket;
-    public Transform planet;
+    public GameObject planet;
     public float timer;
     public Transform shotspawn;
     public GameObject[] enemies;
     float closestDist = -2;
+
+
+    void Start()
+    {
+        planet = this.gameObject;
+    }
+
 
 	void Update () {
 
@@ -21,7 +28,7 @@ public class PlanetAttack : MonoBehaviour {
             timer -= Time.deltaTime;
             if (distance <= 200 && timer <= 0)
             {
-                Instantiate(rocket, shotspawn.position, shotspawn.rotation);
+                Instantiate(rocket, planet.transform.position, planet.transform.rotation);
                 timer = 3;
             }
         }
