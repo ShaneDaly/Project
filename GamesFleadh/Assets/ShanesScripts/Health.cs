@@ -30,6 +30,7 @@ public class Health : MonoBehaviour {
 			timer -= Time.deltaTime;
 			if(timer <=0){
 				Application.LoadLevel(newScene);
+				LevelManager.setLastLevel(Application.loadedLevelName);
 			}
 		}
 	}

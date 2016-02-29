@@ -81,6 +81,7 @@
      <Compile Include="Assets\Robs\Scripts\ReverseOrbit.cs" />
      <Compile Include="Assets\Robs\Scripts\TestScripts\Rotate.cs" />
      <Compile Include="Assets\ShanesScripts\Coloniser.cs" />
+     <Compile Include="Assets\ShanesScripts\CommandShip.cs" />
      <Compile Include="Assets\ShanesScripts\DestroyByContact.cs" />
      <Compile Include="Assets\ShanesScripts\DestroyByTime.cs" />
      <Compile Include="Assets\ShanesScripts\EnemyHealth.cs" />
@@ -91,6 +92,7 @@
      <Compile Include="Assets\ShanesScripts\HealthScript.cs" />
      <Compile Include="Assets\ShanesScripts\HealthScript2.cs" />
      <Compile Include="Assets\ShanesScripts\Level.cs" />
+     <Compile Include="Assets\ShanesScripts\LevelManager.cs" />
      <Compile Include="Assets\ShanesScripts\PlanetAttack.cs" />
      <Compile Include="Assets\ShanesScripts\Rocket.cs" />
      <Compile Include="Assets\ShanesScripts\Rotator.cs" />
@@ -100,6 +102,7 @@
      <Compile Include="Assets\ShanesScripts\TurretRotation.cs" />
      <Compile Include="Assets\ShanesScripts\TurretShoot.cs" />
      <Compile Include="Assets\ShanesScripts\WinOrLose.cs" />
+     <Compile Include="Assets\ShanesScripts\YouWin.cs" />
      <Compile Include="Assets\ShanesScripts\chase.cs" />
      <Compile Include="Assets\ShanesScripts\flying.cs" />
      <Compile Include="Assets\ShanesScripts\mover.cs" />
