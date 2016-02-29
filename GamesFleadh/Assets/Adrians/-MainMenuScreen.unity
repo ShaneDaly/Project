@@ -1628,6 +1628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31f112ccd4850fe4f8ee8dbdc8614bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 1808622258}
 --- !u!114 &821181057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1847,7 +1848,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1774593974}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -365, y: 1758, z: 4924}
+  m_LocalPosition: {x: -27, y: 1567, z: 4924}
   m_LocalScale: {x: 1000, y: 1000, z: 1000}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1892,14 +1893,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1774593974}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a89f23058f5cab443878ac56b1d165aa, type: 3}
+  m_Script: {fileID: 11500000, guid: e03b3e09036eab34fb0f059764206898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sun: {fileID: 2074039062}
   rotationSpeed: 0
   RandomSize: 0
+  allowOrbitDebug: 0
+  selected: 0
   size: 0
   sizeKm: 0
+  ownRotateSpeed: 0
+  halo: {fileID: 0}
 --- !u!123 &1774593978
 LensFlare:
   m_ObjectHideFlags: 0
@@ -1923,7 +1928,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1808622260}
-  - 114: {fileID: 1808622259}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -1931,19 +1935,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1808622259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1808622258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 191cea6a2cb0e91499bcaeeaff9b98b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  level: 1
-  delay: 10
 --- !u!4 &1808622260
 Transform:
   m_ObjectHideFlags: 0
@@ -2123,6 +2114,7 @@ GameObject:
   - 33: {fileID: 2074039065}
   - 135: {fileID: 2074039064}
   - 23: {fileID: 2074039063}
+  - 114: {fileID: 2074039067}
   m_Layer: 0
   m_Name: Planet
   m_TagString: Planet
@@ -2185,3 +2177,16 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!114 &2074039067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2074039062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 191cea6a2cb0e91499bcaeeaff9b98b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 1
+  delay: 10
