@@ -849,6 +849,7 @@ MonoScript:
 GameObject:
   m_PrefabParentObject: {fileID: 142462, guid: fcdfe34cefb7304439e8b2d5c23f6726, type: 2}
   m_PrefabInternal: {fileID: 953878624}
+<<<<<<< HEAD
 --- !u!1 &1316675794 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 116200, guid: d4ed5999726c54e47aeb51848b3e033b, type: 2}
@@ -866,6 +867,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   min: 2
   max: 3
+=======
+>>>>>>> 0dd3b02987f3952e64b701300b780fef28afbbae
 --- !u!1 &1374002573
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,6 +1086,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1374002580}
   m_RootOrder: 0
+<<<<<<< HEAD
 --- !u!1 &1661786713 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 156184, guid: d4ed5999726c54e47aeb51848b3e033b, type: 2}
@@ -1115,6 +1119,8 @@ MonoScript:
   m_Namespace: UnityEngine.UI
   m_AssemblyName: UnityEngine.UI.dll
   m_IsEditorScript: 0
+=======
+>>>>>>> 0dd3b02987f3952e64b701300b780fef28afbbae
 --- !u!1 &1731110264
 GameObject:
   m_ObjectHideFlags: 0
@@ -1272,7 +1278,11 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: 62
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11436974, guid: d4ed5999726c54e47aeb51848b3e033b, type: 2}
+    - {fileID: 11449528, guid: d4ed5999726c54e47aeb51848b3e033b, type: 2}
+    - {fileID: 11432954, guid: d4ed5999726c54e47aeb51848b3e033b, type: 2}
+    - {fileID: 11408588, guid: d4ed5999726c54e47aeb51848b3e033b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d4ed5999726c54e47aeb51848b3e033b, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1989843832
