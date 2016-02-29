@@ -3,12 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< HEAD
   tags:
   - waypoint
   - Planet
   - Rocket
   - Enemy
   - Ship
+=======
+  tags: []
+>>>>>>> 94cdcc66f0d97031beca9da810c67b6a2ba7d0fd
   layers:
   - Default
   - TransparentFX
