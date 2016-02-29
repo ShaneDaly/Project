@@ -53,6 +53,7 @@
      <Compile Include="Assets\Adrians\PlanetStats.cs" />
      <Compile Include="Assets\Adrians\RocketOther.cs" />
      <Compile Include="Assets\Adrians\SatelliteStats.cs" />
+     <Compile Include="Assets\Bounds.cs" />
      <Compile Include="Assets\HealthBar.cs" />
      <Compile Include="Assets\Jims Assets\Scripts\Moon.cs" />
      <Compile Include="Assets\Jims Assets\Scripts\Planet.cs" />
