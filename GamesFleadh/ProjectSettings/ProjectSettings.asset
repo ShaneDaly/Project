@@ -12,7 +12,11 @@ PlayerSettings:
   companyName: DefaultCompany
   productName: GamesFleadh
   defaultCursor: {fileID: 0}
+<<<<<<< HEAD
   cursorHotspot: {x: -5.35656554e+23, y: -5.35665634e+23}
+=======
+  cursorHotspot: {x: 0, y: 0}
+>>>>>>> a5d96422088dabf69a6b3359ef570855e66073a9
   m_ShowUnitySplashScreen: 1
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
@@ -60,6 +64,12 @@ PlayerSettings:
   xboxSpeechDB: 0
   xboxEnableHeadOrientation: 0
   xboxEnableGuest: 0
+<<<<<<< HEAD
+=======
+  n3dsDisableStereoscopicView: 0
+  n3dsEnableSharedListOpt: 1
+  n3dsEnableVSync: 0
+>>>>>>> a5d96422088dabf69a6b3359ef570855e66073a9
   xboxOneResolution: 0
   ps3SplashScreen: {fileID: 0}
   videoMemoryForVertexBuffers: 0
@@ -78,7 +88,23 @@ PlayerSettings:
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
   virtualRealitySupported: 0
+<<<<<<< HEAD
   productGUID: 297206f214e1cc645ba75a7487641d6c
+=======
+<<<<<<< HEAD
+  productGUID: def3deec6c51ad741bd9a0067ff87c0d
+=======
+<<<<<<< HEAD
+  productGUID: d18108a535e991245a54d95f03d7c551
+=======
+<<<<<<< HEAD
+  productGUID: 23a1fe0be1824964992ac51dc0811443
+=======
+  productGUID: d18108a535e991245a54d95f03d7c551
+>>>>>>> bdf57f9d5c6794921fcdee23b2a95fba46524730
+>>>>>>> 0dd3b02987f3952e64b701300b780fef28afbbae
+>>>>>>> 4faa157315d41094ac5389d0a40aaa20edc0358d
+>>>>>>> a5d96422088dabf69a6b3359ef570855e66073a9
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
@@ -117,7 +143,23 @@ PlayerSettings:
   iOSLaunchScreenLandscape: {fileID: 0}
   iOSLaunchScreenBackgroundColor:
     serializedVersion: 2
+<<<<<<< HEAD
     rgba: 0
+=======
+<<<<<<< HEAD
+    rgba: 0
+=======
+<<<<<<< HEAD
+    rgba: 3974751740
+=======
+<<<<<<< HEAD
+    rgba: 538976288
+=======
+    rgba: 3974751740
+>>>>>>> bdf57f9d5c6794921fcdee23b2a95fba46524730
+>>>>>>> 0dd3b02987f3952e64b701300b780fef28afbbae
+>>>>>>> 4faa157315d41094ac5389d0a40aaa20edc0358d
+>>>>>>> a5d96422088dabf69a6b3359ef570855e66073a9
   iOSLaunchScreenFillPct: 100
   iOSLaunchScreenSize: 100
   iOSLaunchScreenCustomXibPath: 
@@ -192,8 +234,6 @@ PlayerSettings:
   ps4SaveDataImagePath: 
   ps4BGMPath: 
   ps4ShareFilePath: 
-  ps4ShareOverlayImagePath: 
-  ps4PrivacyGuardImagePath: 
   ps4NPtitleDatPath: 
   ps4RemotePlayKeyAssignment: -1
   ps4EnterButtonAssignment: 1
@@ -208,6 +248,14 @@ PlayerSettings:
   ps4pnFriends: 1
   ps4pnGameCustomData: 1
   playerPrefsSupport: 0
+<<<<<<< HEAD
+=======
+  ps4ReprojectionSupport: 0
+  ps4attribUserManagement: 0
+  ps4attribMoveSupport: 0
+  ps4attrib3DSupport: 0
+  ps4attribShareSupport: 0
+>>>>>>> a5d96422088dabf69a6b3359ef570855e66073a9
   monoEnv: 
   psp2Splashimage: {fileID: 0}
   psp2NPTrophyPackPath: 
@@ -372,6 +420,7 @@ PlayerSettings:
   XboxOneAllowedProductIds: []
   XboxOnePersistentLocalStorageSize: 0
   intPropertyNames:
+  - Android::ScriptingBackend
   - Metro::ScriptingBackend
   - Standalone::ScriptingBackend
   - WP8::ScriptingBackend
@@ -381,8 +430,8 @@ PlayerSettings:
   - WebGL::memorySize
   - WebPlayer::ScriptingBackend
   - iOS::Architecture
-  - iOS::EnableIncrementalBuildSupportForIl2cpp
   - iOS::ScriptingBackend
+  Android::ScriptingBackend: 0
   Metro::ScriptingBackend: 2
   Standalone::ScriptingBackend: 0
   WP8::ScriptingBackend: 2
@@ -392,7 +441,6 @@ PlayerSettings:
   WebGL::memorySize: 256
   WebPlayer::ScriptingBackend: 0
   iOS::Architecture: 2
-  iOS::EnableIncrementalBuildSupportForIl2cpp: 0
   iOS::ScriptingBackend: 1
   boolPropertyNames:
   - WebGL::analyzeBuildSize
