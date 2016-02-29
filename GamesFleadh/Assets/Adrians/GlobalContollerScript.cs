@@ -7,7 +7,7 @@ public class GlobalContollerScript : MonoBehaviour
     public float resourceDelay;
     public int resources = 0;
     GameObject selectedPlanet = null;
-    GameObject selectedSatellite = null;
+    public GameObject selectedSatellite = null;
     GameObject sidebarPlanet;
     GameObject sidebarSatellite;
     GameObject sidebarPlanetUpgrades;

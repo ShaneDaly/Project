@@ -47,7 +47,6 @@
   <ItemGroup>
      <Compile Include="Assets\MaxP\Shaders\Scripts\Editor\DirtyLensFlareEditor.cs" />
      <None Include="Assets\MaxP\Shaders\_Source\Shaders\Resources\Blur.shader" />
-     <None Include="Assets\sky5X\README.txt" />
      <None Include="Assets\Materials\UI-Default-No-Alpha.shader" />
      <None Include="Assets\MaxP\Shaders\_Source\Shaders\Resources\DirtyLensFlare.shader" />
  <Reference Include="UnityEngine.Advertisements">

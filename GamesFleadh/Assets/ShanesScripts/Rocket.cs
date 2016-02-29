@@ -6,29 +6,27 @@ public class Rocket : MonoBehaviour {
 
     public GameObject enemy;
     public GameObject[] enemies;
-    public GameObject other;
     public int Speed; 
 	public float timer = 5;
     float closestDist = -2;
 
-	void Start ()
+
+	void Awake ()
 	{
-		enemy=GameObject.FindGameObjectWithTag("Enemy");
+		enemies=GameObject.FindGameObjectsWithTag("Enemy");
 	}
 
-    void OnTriggerEnter(Collider enemy)
+    void OnTriggerEnter(Collider enemies)
     {
         Destroy(gameObject);
-		GetComponent<NewChase>().ApplyDamage ();
+		//GetComponent<EnemyHealth>().ApplyDamage ();
     }
 
     void Update () 
     {
         detectClosestEnemy();
         if (enemy != null)
-        {
-
-            
+        {            
             timer -= Time.deltaTime;
             if (timer <= 0)
             {

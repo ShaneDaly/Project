@@ -28,6 +28,7 @@ GameObject:
   - 23: {fileID: 2348266}
   - 114: {fileID: 11462462}
   - 114: {fileID: 11464840}
+  - 143: {fileID: 14309330}
   m_Layer: 0
   m_Name: ChaseEnemy
   m_TagString: Enemy
@@ -98,7 +99,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184906}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -135,12 +136,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65bb2ec933ef7254c873e46ea6271af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 100
   max: 100
-  damage: 0
-  rocket: {fileID: 175474, guid: f1f06ae9bb5e1b546811e43490a46ea6, type: 2}
+  rocket: {fileID: 0}
   scrap: {fileID: 156382, guid: e4a8a15934b9d844ba33b8caa06a2687, type: 2}
-  healthBar: {fileID: 130704, guid: fcdfe34cefb7304439e8b2d5c23f6726, type: 2}
+--- !u!143 &14309330
+CharacterController:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184906}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1
+  m_Radius: .5
+  m_SlopeLimit: 45
+  m_StepOffset: .300000012
+  m_SkinWidth: .0799999982
+  m_MinMoveDistance: .00100000005
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -156,6 +172,18 @@ Prefab:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 130704, guid: fcdfe34cefb7304439e8b2d5c23f6726, type: 2}
+    - target: {fileID: 0}
+      propertyPath: rocket
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: health
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 184906}

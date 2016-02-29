@@ -9,7 +9,7 @@ public class TurretRotation : MonoBehaviour
 	public int yO=0;
 	public int zO=0;
 	public Transform target;
-	float range = 50.0f;
+	float range = 60.0f;
 	public float stopDistance = 0.11f;
 	public float dist;
 	public float astDist;
