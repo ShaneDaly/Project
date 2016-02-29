@@ -4,12 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< HEAD
+  - waypoint
+  - Planet
   - Rocket
   - Enemy
-=======
-  - Satellite
->>>>>>> bb14964fade44b74bd34141d85c3e886de00cbd7
+  - Ship
   layers:
   - Default
   - TransparentFX
