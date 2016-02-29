@@ -3,14 +3,46 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< HEAD
   tags: []
+=======
+<<<<<<< HEAD
+  tags: []
+=======
+<<<<<<< HEAD
+  tags:
+  - Sun
+  - Planet
+  - Button
+  - Enemy
+  - Pointer
+  - Satellite
+  - waypoint
+=======
+<<<<<<< HEAD
+  tags: []
+=======
+<<<<<<< HEAD
+  tags:
+  - Enemy
+  - Planet
+=======
+<<<<<<< HEAD
+  tags:
+  - waypoint
+  - Planet
+  - Rocket
+  - Enemy
+  - Ship
+=======
+  tags: []
+>>>>>>> 94cdcc66f0d97031beca9da810c67b6a2ba7d0fd
+>>>>>>> 14826e530df047d17197d3ec90181971bfbf841e
+>>>>>>> f551a8376ad69066a0794a1c2a0fa8ad1c2c7cb5
+>>>>>>> bdf57f9d5c6794921fcdee23b2a95fba46524730
+>>>>>>> e96a63ab83e494d51a26a02ddeb8fd00043e925e
+>>>>>>> 4faa157315d41094ac5389d0a40aaa20edc0358d
   layers:
-  - Default
-  - TransparentFX
-  - Ignore Raycast
-  - 
-  - Water
-  - UI
   - 
   - 
   - 
@@ -37,7 +69,10 @@ TagManager:
   - 
   - 
   - 
-  m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers: []
