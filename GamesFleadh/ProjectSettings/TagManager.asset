@@ -3,18 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-<<<<<<< HEAD
-  - planet
-  - pointer
-=======
-  - Planet
-  - sun
-  - Enemy
-  - Satellite
-  - pointer
-  - New Tag
->>>>>>> 12f62acd95045a63e8f619a914acf7052dd5f474
+  tags: []
   layers:
   - Default
   - TransparentFX
