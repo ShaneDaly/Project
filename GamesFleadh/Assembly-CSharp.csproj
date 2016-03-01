@@ -95,6 +95,8 @@
      <Compile Include="Assets\ShanesScripts\PlanetAttack.cs" />
      <Compile Include="Assets\ShanesScripts\Rocket.cs" />
      <Compile Include="Assets\ShanesScripts\Rotator.cs" />
+     <Compile Include="Assets\ShanesScripts\SatelliteAttack.cs" />
+     <Compile Include="Assets\ShanesScripts\SatelliteRocket.cs" />
      <Compile Include="Assets\ShanesScripts\ScrapGenerate.cs" />
      <Compile Include="Assets\ShanesScripts\Spawner.cs" />
      <Compile Include="Assets\ShanesScripts\Spawner1.cs" />

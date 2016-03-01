@@ -11,7 +11,10 @@ public class WinScreen : MonoBehaviour
         }
         else
         {
+<<<<<<< HEAD
             //null;
+=======
+>>>>>>> c7a750b27c3eb47548b7e219d493c83a347893c1
         }
     }
     void Update()

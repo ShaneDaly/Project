@@ -24,7 +24,7 @@ public class chase : MonoBehaviour {
 	{
 		character = GetComponent<CharacterController>();
 		state = State.InvestState;
-		Waypoint = GameObject.FindWithTag("Waypoint").transform;
+		//Waypoint = GameObject.FindWithTag("Waypoint").transform;
 	}
 
 	void Awake ()
@@ -73,7 +73,7 @@ public class chase : MonoBehaviour {
 
 	void Patrolling ()
 	{
-		transform.LookAt(Waypoint);
+		//transform.LookAt(Waypoint);
 		transform.position += transform.forward*Speed*Time.deltaTime;
 	}
 	
