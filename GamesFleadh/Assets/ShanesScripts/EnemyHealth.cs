@@ -22,13 +22,12 @@ public class EnemyHealth : MonoBehaviour {
 	void Update () {
 
 		if (health <= 0) {
-<<<<<<< HEAD
+
 			//gameObject.SetActive(false);
 			Destroy(gameObject);
-=======
+
             //GetComponent<Spawner>().ReduceMax ();
             gameObject.SetActive(false);
->>>>>>> 713328e4d1d173ed98a72932a3578dc440112160
 			Instantiate(scrap, transform.position, transform.rotation);
 		}
 	

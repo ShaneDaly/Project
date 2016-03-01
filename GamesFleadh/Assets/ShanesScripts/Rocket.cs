@@ -14,11 +14,7 @@ public class Rocket : MonoBehaviour {
 
     void OnTriggerEnter(Collider enemies)
     {
-<<<<<<< HEAD
-        Destroy(gameObject);
-=======
         gameObject.SetActive(false);
->>>>>>> 713328e4d1d173ed98a72932a3578dc440112160
     }
 
     void Update () 
