@@ -54,6 +54,7 @@
      <Compile Include="Assets\Adrians\RocketOther.cs" />
      <Compile Include="Assets\Adrians\SatelliteStats.cs" />
      <Compile Include="Assets\Bounds.cs" />
+     <Compile Include="Assets\Collect.cs" />
      <Compile Include="Assets\HealthBar.cs" />
      <Compile Include="Assets\Jims Assets\Scripts\Moon.cs" />
      <Compile Include="Assets\Jims Assets\Scripts\Planet.cs" />
@@ -85,8 +86,6 @@
      <Compile Include="Assets\ShanesScripts\DestroyByContact.cs" />
      <Compile Include="Assets\ShanesScripts\DestroyByTime.cs" />
      <Compile Include="Assets\ShanesScripts\EnemyHealth.cs" />
-     <Compile Include="Assets\ShanesScripts\EnemyScript.cs" />
-     <Compile Include="Assets\ShanesScripts\EnemyShooting.cs" />
      <Compile Include="Assets\ShanesScripts\GameOver.cs" />
      <Compile Include="Assets\ShanesScripts\Health.cs" />
      <Compile Include="Assets\ShanesScripts\HealthScript.cs" />
@@ -96,6 +95,8 @@
      <Compile Include="Assets\ShanesScripts\PlanetAttack.cs" />
      <Compile Include="Assets\ShanesScripts\Rocket.cs" />
      <Compile Include="Assets\ShanesScripts\Rotator.cs" />
+     <Compile Include="Assets\ShanesScripts\SatelliteAttack.cs" />
+     <Compile Include="Assets\ShanesScripts\SatelliteRocket.cs" />
      <Compile Include="Assets\ShanesScripts\ScrapGenerate.cs" />
      <Compile Include="Assets\ShanesScripts\Spawner.cs" />
      <Compile Include="Assets\ShanesScripts\Spawner1.cs" />
@@ -106,7 +107,7 @@
      <Compile Include="Assets\ShanesScripts\chase.cs" />
      <Compile Include="Assets\ShanesScripts\flying.cs" />
      <Compile Include="Assets\ShanesScripts\mover.cs" />
-     <Compile Include="Assets\Stats.cs" />
+     <Compile Include="Assets\WinScreen.cs" />
      <Compile Include="Assets\circle.cs" />
      <None Include="Assets\MaxP\Shaders\_Source\Shaders\Resources\Blur.shader" />
      <None Include="Assets\Materials\UI-Default-No-Alpha.shader" />

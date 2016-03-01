@@ -28,7 +28,7 @@ GameObject:
   - 23: {fileID: 2348266}
   - 114: {fileID: 11462462}
   - 114: {fileID: 11464840}
-  - 143: {fileID: 14326738}
+  - 143: {fileID: 14319412}
   m_Layer: 0
   m_Name: ChaseEnemy
   m_TagString: Enemy
@@ -142,7 +142,7 @@ MonoBehaviour:
   max: 100
   rocket: {fileID: 0}
   scrap: {fileID: 156382, guid: e4a8a15934b9d844ba33b8caa06a2687, type: 2}
---- !u!143 &14326738
+--- !u!143 &14319412
 CharacterController:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

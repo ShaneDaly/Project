@@ -5,7 +5,7 @@ public class PlanetStats : MonoBehaviour {
 
     public string planetName = null;
     public int offence = 0;
-    public int defence = 0;
+    public float defence = 0;
     public int utility = 0;
     public int cost = 20;
     public bool colonised = true;

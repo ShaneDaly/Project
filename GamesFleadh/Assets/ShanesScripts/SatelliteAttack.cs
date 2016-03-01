@@ -1,20 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlanetAttack : MonoBehaviour {
+public class SatelliteAttack : MonoBehaviour {
 
     public GameObject enemy;
     public GameObject rocket;
-    public GameObject planet;
+    public GameObject satellite;
     public float timer;
     public Transform shotspawn;
     public GameObject[] enemies;
     float closestDist = -2;
-    Rocket rocketCode;
+    SatelliteRocket rocketCode;
 
     void Start()
     {
-        planet = this.gameObject;
+        satellite = this.gameObject;
     }
 
 
@@ -24,14 +24,14 @@ public class PlanetAttack : MonoBehaviour {
         if (enemy.tag == "Enemy")
         {
 
-            float distance = Vector3.Distance(enemy.transform.position, planet.transform.position);
+            float distance = Vector3.Distance(enemy.transform.position, satellite.transform.position);
             timer -= Time.deltaTime;
             if (distance <= 200 && timer <= 0)
             {
                 
-                rocketCode = rocket.GetComponent<Rocket>();
-                rocketCode.homePlanet = planet;
-                Instantiate(rocket, planet.transform.position, planet.transform.rotation);
+                rocketCode = rocket.GetComponent<SatelliteRocket>();
+                rocketCode.homeSatellite = satellite;
+                Instantiate(rocket, satellite.transform.position, satellite.transform.rotation);
                 timer = 3;
             }
         }

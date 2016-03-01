@@ -90,7 +90,11 @@ PlayerSettings:
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
   virtualRealitySupported: 0
+<<<<<<< HEAD
   productGUID: 119cacf8b8cb0bb438318db768c54c60
+=======
+  productGUID: e8d3edc7a58d1ab4195ed9c3be0e7522
+>>>>>>> 351dc6497384bfeaf02950d25f4f0bbd53d67650
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
@@ -131,7 +135,11 @@ PlayerSettings:
   iOSLaunchScreenLandscape: {fileID: 0}
   iOSLaunchScreenBackgroundColor:
     serializedVersion: 2
+<<<<<<< HEAD
     rgba: 4294967040
+=======
+    rgba: 4059032828
+>>>>>>> 351dc6497384bfeaf02950d25f4f0bbd53d67650
   iOSLaunchScreenFillPct: 100
   iOSLaunchScreenSize: 100
   iOSLaunchScreenCustomXibPath: 

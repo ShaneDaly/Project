@@ -2,25 +2,21 @@
 using System.Collections;
 
 public class chase : MonoBehaviour {
-	
-	public int ammo;
+
 	public float fireRate;
 	private float nextFire;
-	public float timer = 6;             
-	private float rotSpeed= 4.0f;      
-	float pauseDuration = 5;
+	public float timer = 6;                  
 	public Transform Planet;
-	public float MoveSpeed= 20;
-	public float RetreatSpeed = 20;
-	public float InvestigateSpeed = 35;
+	public float Speed= 60;
 	private int MaxDist= 2000;
 	public int range = 30;
-	public enum State {ShootState,InvestState,RetreatState}
+	public enum State {PatrolState,ShootState,InvestState}
 	public State state;
 	private float curTime;
 	public GameObject lasershot;
 	public Transform shotspawn;
 	GameObject[] planets = null;
+	Transform Waypoint;
 	float closestDist = -2;
 	private CharacterController character;	
 
@@ -28,6 +24,7 @@ public class chase : MonoBehaviour {
 	{
 		character = GetComponent<CharacterController>();
 		state = State.InvestState;
+		//Waypoint = GameObject.FindWithTag("Waypoint").transform;
 	}
 
 	void Awake ()
@@ -38,11 +35,6 @@ public class chase : MonoBehaviour {
 	{
 		TargetDistance ();
 		detectClosestEnemy ();
-		if (ammo <= 20) {
-			state = State.RetreatState;
-		} else {
-			TargetDistance ();
-		}
 
 		switch (state)
 		{
@@ -56,13 +48,14 @@ public class chase : MonoBehaviour {
 			Shooting ();
 			break;
 		}
-		case(State.RetreatState):
+		case(State.PatrolState):
 		{
-			Retreat();
+			Patrolling ();
 			break;
 		}
+			
 		}	
-	}
+	}	
 	
 	void Shooting ()
 	{
@@ -71,41 +64,30 @@ public class chase : MonoBehaviour {
 			Instantiate (lasershot, shotspawn.position, shotspawn.rotation);
 		}
 	}
-	
-
-	public Transform CommandShip;
-	void Retreat()
-	{
-		CommandShip = GameObject.FindWithTag("Ship").transform;
-		transform.LookAt(CommandShip);
-		//transform.position += (transform.forward * -1)*MoveSpeed*Time.deltaTime;
-		transform.position += transform.forward*RetreatSpeed*Time.deltaTime;
-		timer -= Time.deltaTime;
-		if (timer <= 0) {
-			//ammo = ammo + 1;
-			timer = 6;
-		}
-	}
 
 	void  Investigating ()
 	{
 		transform.LookAt(Planet);
-		transform.position += transform.forward*InvestigateSpeed*Time.deltaTime;
+		transform.position += transform.forward*Speed*Time.deltaTime;
+	}
+
+	void Patrolling ()
+	{
+		//transform.LookAt(Waypoint);
+		transform.position += transform.forward*Speed*Time.deltaTime;
 	}
 	
 	public void TargetDistance()
 	{
-		if (Vector3.Distance (transform.position, Planet.transform.position) <= MaxDist && (Vector3.Distance(transform.position, Planet.transform.position) >= range) )
-		{
+		if (Vector3.Distance (transform.position, Planet.transform.position) <= MaxDist && (Vector3.Distance (transform.position, Planet.transform.position) >= range)) {
 			state = State.InvestState;
 		} 
-		else if (Vector3.Distance (transform.position, Planet.transform.position) <= range) 
-		{
+		else if (Vector3.Distance (transform.position, Planet.transform.position) <= range) {
 			state = State.ShootState;
-		}
+		} 
 		else 
 		{
-			state = State.RetreatState;
+			state = State.PatrolState;
 		}
 	}
 	public void detectClosestEnemy()
@@ -128,14 +110,5 @@ public class chase : MonoBehaviour {
 			
 		}
 	}
-	public void ApplyDamage(int damage)
-	{
-		//health = health - damage;
-	}
 
-	public void destroySelf()
-	{
-		Destroy (gameObject);
-	}
-	
 }

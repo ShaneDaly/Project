@@ -1,41 +1,46 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
-public class PlanetAttack : MonoBehaviour {
+public class SatelliteRocket : MonoBehaviour {
 
     public GameObject enemy;
-    public GameObject rocket;
-    public GameObject planet;
-    public float timer;
-    public Transform shotspawn;
     public GameObject[] enemies;
+    public int Speed; 
+	public float timer = 5;
     float closestDist = -2;
-    Rocket rocketCode;
+    public GameObject homeSatellite;
+    SatelliteStats homeSatelliteStats;
+    public int damage;
 
     void Start()
     {
-        planet = this.gameObject;
+
+        homeSatelliteStats = homeSatellite.GetComponent<SatelliteStats>();
+        damage = homeSatelliteStats.offence;
     }
 
+    void OnTriggerEnter(Collider enemies)
+    {
+        gameObject.SetActive(false);
+        EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
+        enemyHealth.health -= damage;
+    }
 
-	void Update () {
-
+    void Update () 
+    {
         detectClosestEnemy();
-        if (enemy.tag == "Enemy")
-        {
-
-            float distance = Vector3.Distance(enemy.transform.position, planet.transform.position);
+        if (enemy != null)
+        {            
             timer -= Time.deltaTime;
-            if (distance <= 200 && timer <= 0)
+            if (timer <= 0)
             {
-                
-                rocketCode = rocket.GetComponent<Rocket>();
-                rocketCode.homePlanet = planet;
-                Instantiate(rocket, planet.transform.position, planet.transform.rotation);
-                timer = 3;
+                gameObject.SetActive(false);
             }
+            transform.LookAt(enemy.transform);
+            transform.position += transform.forward * Speed * Time.deltaTime;
         }
-	}
+    }
 
     public void detectClosestEnemy()
     {
