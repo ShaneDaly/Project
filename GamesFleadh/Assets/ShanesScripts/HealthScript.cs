@@ -30,24 +30,10 @@ public class HealthScript : MonoBehaviour {
 	}
 
 
-	void Update () {
-		
-		//UpdateHealth(0);
-		
-		if (health < max) {
-			timer -= Time.deltaTime;
-			
-			if (timer <= 0) {
-				health += 1;
-				if(health == max)
-				{
-					timer = 30;
-				}
-
-			}
-		} 
+	void Update () 
+    {
 		if (health <= 0) {
-			Destroy (gameObject);
+			gameObject.SetActive(false);
 			//GetComponent<Health>().num += 1;
 			Instantiate(scrap, transform.position, transform.rotation);
 		}
