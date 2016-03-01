@@ -3,6 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< HEAD
   tags:
   - Enemy
   - Rocket
@@ -12,6 +13,9 @@ TagManager:
   - Ship
   - Sun
   - Scrap
+=======
+  tags: []
+>>>>>>> 713328e4d1d173ed98a72932a3578dc440112160
   layers:
   - Default
   - TransparentFX

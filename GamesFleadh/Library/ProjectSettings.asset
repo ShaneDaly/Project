@@ -12,7 +12,15 @@ PlayerSettings:
   companyName: DefaultCompany
   productName: GamesFleadh
   defaultCursor: {fileID: 0}
+<<<<<<< HEAD
   cursorHotspot: {x: -5.35656554e+23, y: -5.35665634e+23}
+=======
+<<<<<<< HEAD
+  cursorHotspot: {x: 1.40129846e-44, y: 1.40129846e-44}
+=======
+  cursorHotspot: {x: NaN, y: NaN}
+>>>>>>> 2e2416f1b97d723194dc9ae6b10d2f96ca0ac98a
+>>>>>>> 713328e4d1d173ed98a72932a3578dc440112160
   m_ShowUnitySplashScreen: 1
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
@@ -78,7 +86,19 @@ PlayerSettings:
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
   virtualRealitySupported: 0
+<<<<<<< HEAD
   productGUID: a1b615e5457c1fa44b8b198e20d962e2
+=======
+<<<<<<< HEAD
+  productGUID: 82505ddb6a162d646a207e7a1a5d80af
+=======
+<<<<<<< HEAD
+  productGUID: 80e628d39ed09214786136c81258acdb
+=======
+  productGUID: a910155d8da32284fa402dbd9bd09560
+>>>>>>> 17870f0775af2e45a0256df22ad8882b7d4cb56e
+>>>>>>> 2e2416f1b97d723194dc9ae6b10d2f96ca0ac98a
+>>>>>>> 713328e4d1d173ed98a72932a3578dc440112160
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
@@ -117,7 +137,19 @@ PlayerSettings:
   iOSLaunchScreenLandscape: {fileID: 0}
   iOSLaunchScreenBackgroundColor:
     serializedVersion: 2
+<<<<<<< HEAD
     rgba: 0
+=======
+<<<<<<< HEAD
+    rgba: 3688222204
+=======
+<<<<<<< HEAD
+    rgba: 0
+=======
+    rgba: 4059032828
+>>>>>>> 17870f0775af2e45a0256df22ad8882b7d4cb56e
+>>>>>>> 2e2416f1b97d723194dc9ae6b10d2f96ca0ac98a
+>>>>>>> 713328e4d1d173ed98a72932a3578dc440112160
   iOSLaunchScreenFillPct: 100
   iOSLaunchScreenSize: 100
   iOSLaunchScreenCustomXibPath: 
@@ -135,7 +167,11 @@ PlayerSettings:
     banner: {fileID: 0}
   androidGamepadSupportLevel: 0
   resolutionDialogBanner: {fileID: 0}
-  m_BuildTargetIcons: []
+  m_BuildTargetIcons:
+  - m_BuildTarget: 
+    m_Icons:
+    - m_Icon: {fileID: 0}
+      m_Size: 128
   m_BuildTargetBatching: []
   m_BuildTargetGraphicsAPIs: []
   webPlayerTemplate: APPLICATION:Default
@@ -202,7 +238,7 @@ PlayerSettings:
   ps4ApplicationParam3: 0
   ps4ApplicationParam4: 0
   ps4GarlicHeapSize: 2048
-  ps4Passcode: frAQBc8Wsa1xVPfvJcrgRYwTiizs2trQ
+  ps4Passcode: eaoEiIgxIX4a2dREbbSqWy6yhKIDCdJO
   ps4pnSessions: 1
   ps4pnPresence: 1
   ps4pnFriends: 1
@@ -226,7 +262,7 @@ PlayerSettings:
   psp2LiveAreaTrialPath: 
   psp2PatchChangeInfoPath: 
   psp2PatchOriginalPackage: 
-  psp2PackagePassword: F69AzBlax3CF3EDNhm3soLBPh71Yexui
+  psp2PackagePassword: yapnxrpMCARCr4zdGc81tBDKsMlaZTXC
   psp2KeystoneFile: 
   psp2MemoryExpansionMode: 0
   psp2DRMType: 0

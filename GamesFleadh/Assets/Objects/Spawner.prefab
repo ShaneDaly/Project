@@ -26,7 +26,11 @@ GameObject:
   - 4: {fileID: 455940}
   - 23: {fileID: 2393726}
   - 33: {fileID: 3365122}
+<<<<<<< HEAD
+  - 114: {fileID: 11408588}
+=======
   - 114: {fileID: 11442366}
+>>>>>>> 0dd3b02987f3952e64b701300b780fef28afbbae
   m_Layer: 0
   m_Name: ship
   m_TagString: Ship
@@ -44,7 +48,11 @@ GameObject:
   - 4: {fileID: 419344}
   - 33: {fileID: 3333360}
   - 23: {fileID: 2344906}
+<<<<<<< HEAD
+  - 114: {fileID: 11432954}
+=======
   - 114: {fileID: 11491624}
+>>>>>>> 0dd3b02987f3952e64b701300b780fef28afbbae
   m_Layer: 0
   m_Name: ship
   m_TagString: Ship
@@ -289,6 +297,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+--- !u!114 &11408588
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 113814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b53e844d36453fa4fb5848ea9731067e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  min: 2
+  max: 3
+=======
+>>>>>>> 0dd3b02987f3952e64b701300b780fef28afbbae
 --- !u!114 &11414634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -315,12 +339,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   min: 2
   max: 3
+<<<<<<< HEAD
+--- !u!114 &11432954
+=======
 --- !u!114 &11442366
+>>>>>>> 0dd3b02987f3952e64b701300b780fef28afbbae
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 116200}
+=======
   m_GameObject: {fileID: 113814}
+>>>>>>> 0dd3b02987f3952e64b701300b780fef28afbbae
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b53e844d36453fa4fb5848ea9731067e, type: 3}

@@ -11,14 +11,14 @@ public class Rocket : MonoBehaviour {
     float closestDist = -2;
 
 
-	void Awake ()
-	{
-		enemies=GameObject.FindGameObjectsWithTag("Enemy");
-	}
 
     void OnTriggerEnter(Collider enemies)
     {
+<<<<<<< HEAD
         Destroy(gameObject);
+=======
+        gameObject.SetActive(false);
+>>>>>>> 713328e4d1d173ed98a72932a3578dc440112160
     }
 
     void Update () 
@@ -29,7 +29,7 @@ public class Rocket : MonoBehaviour {
             timer -= Time.deltaTime;
             if (timer <= 0)
             {
-                Destroy(gameObject);
+                gameObject.SetActive(false);
             }
             transform.LookAt(enemy.transform);
             transform.position += transform.forward * Speed * Time.deltaTime;

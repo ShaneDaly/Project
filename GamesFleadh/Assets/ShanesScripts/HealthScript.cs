@@ -38,11 +38,19 @@ public class HealthScript : MonoBehaviour {
 
 	void Update () {	
 
+<<<<<<< HEAD
 		if (health <= 0) 
 		{
 			gameObject.SetActive(false);
 			//Destroy (gameObject);
 			//GetComponent<chase>().detectClosestEnemy();
+=======
+	void Update () 
+    {
+		if (health <= 0) {
+			gameObject.SetActive(false);
+			//GetComponent<Health>().num += 1;
+>>>>>>> 713328e4d1d173ed98a72932a3578dc440112160
 			Instantiate(scrap, transform.position, transform.rotation);
 		}
 	}
