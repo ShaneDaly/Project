@@ -8,18 +8,20 @@ public class Health : MonoBehaviour {
 	public GameObject laser;
 	public float timer = 5;
 	public string newScene;
-
-	public int num;
+	public int size;
+	public static int num;
 	
 	void Awake ()
 	{
 		planets = GameObject.FindGameObjectsWithTag ("Planet");
-
+		size = planets.Length;
 	}
+	
 
 	void OnTriggerEnter (Collider laser)
 	{
-		if (num == planets.Length){
+		if (num == size){
+			gameObject.tag = "Planet";
 			health -= 1;
 		}
 	}

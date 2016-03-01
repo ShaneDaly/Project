@@ -3,14 +3,20 @@ using System.Collections;
 
 public class HealthScript : MonoBehaviour {
 	
-	public float max = 10000;
-	public float health = 10000;
+	public float max = 500;
+	public float health = 500;
 	public float Length;
 	public float timer = 10;
 	public GameObject other;
 	public GameObject healthBar;
 	public GameObject scrap;
 
+	private static int h;
+
+	void Start ()
+	{
+		//h = GetComponent<Health>();
+	}
 
 	void OnTriggerEnter(Collider other)
 	{
@@ -28,27 +34,15 @@ public class HealthScript : MonoBehaviour {
 	{
 		healthBar.transform.localScale = new Vector3(Mathf.Clamp(myHealth,0f ,1f), healthBar.transform.localScale.y, healthBar.transform.localScale.z);
 	}
+	
 
+	void Update () {	
 
-	void Update () {
-		
-		//UpdateHealth(0);
-		
-		if (health < max) {
-			timer -= Time.deltaTime;
-			
-			if (timer <= 0) {
-				health += 1;
-				if(health == max)
-				{
-					timer = 30;
-				}
-
-			}
-		} 
-		if (health <= 0) {
-			Destroy (gameObject);
-			//GetComponent<Health>().num += 1;
+		if (health <= 0) 
+		{
+			gameObject.SetActive(false);
+			//Destroy (gameObject);
+			//GetComponent<chase>().detectClosestEnemy();
 			Instantiate(scrap, transform.position, transform.rotation);
 		}
 	}

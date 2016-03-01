@@ -19,7 +19,6 @@ public class Rocket : MonoBehaviour {
     void OnTriggerEnter(Collider enemies)
     {
         Destroy(gameObject);
-		//GetComponent<EnemyHealth>().ApplyDamage ();
     }
 
     void Update () 
