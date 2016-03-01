@@ -85,8 +85,6 @@
      <Compile Include="Assets\ShanesScripts\DestroyByContact.cs" />
      <Compile Include="Assets\ShanesScripts\DestroyByTime.cs" />
      <Compile Include="Assets\ShanesScripts\EnemyHealth.cs" />
-     <Compile Include="Assets\ShanesScripts\EnemyScript.cs" />
-     <Compile Include="Assets\ShanesScripts\EnemyShooting.cs" />
      <Compile Include="Assets\ShanesScripts\GameOver.cs" />
      <Compile Include="Assets\ShanesScripts\Health.cs" />
      <Compile Include="Assets\ShanesScripts\HealthScript.cs" />
@@ -107,6 +105,7 @@
      <Compile Include="Assets\ShanesScripts\flying.cs" />
      <Compile Include="Assets\ShanesScripts\mover.cs" />
      <Compile Include="Assets\Stats.cs" />
+     <Compile Include="Assets\WinScreen.cs" />
      <Compile Include="Assets\circle.cs" />
      <None Include="Assets\MaxP\Shaders\_Source\Shaders\Resources\Blur.shader" />
      <None Include="Assets\Materials\UI-Default-No-Alpha.shader" />
