@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class HealthScript : MonoBehaviour 
 {
 
@@ -18,11 +19,14 @@ public class HealthScript : MonoBehaviour
     private float defence;
     PlanetStats planetStats;
 
+	Health Health;
+
     void Start()
     {
         planetStats = gameObject.GetComponent<PlanetStats>();
         defence = (planetStats.defence / 10.0f) + 1;
     }
+
 	void OnTriggerEnter(Collider other)
 	{
 		decreaseHealth ();
@@ -40,6 +44,7 @@ public class HealthScript : MonoBehaviour
 		healthBar.transform.localScale = new Vector3(Mathf.Clamp(myHealth,0f ,1f), healthBar.transform.localScale.y, healthBar.transform.localScale.z);
 	}
 	
+	
 
 
 	void Update () 
@@ -52,7 +57,7 @@ public class HealthScript : MonoBehaviour
 		if (health <= 0) 
         {
 			gameObject.SetActive(false);
-			//GetComponent<Health>().num += 1;
+			GetComponent<Health>().num += 1;
 			Instantiate(scrap, transform.position, transform.rotation);
 		}
 	}

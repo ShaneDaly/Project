@@ -12,6 +12,7 @@ GameObject:
   - 114: {fileID: 11454898}
   - 135: {fileID: 13503572}
   - 114: {fileID: 11429984}
+  - 114: {fileID: 11423566}
   m_Layer: 0
   m_Name: satellite
   m_TagString: Satellite
@@ -341,6 +342,23 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &11423566
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 133454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4af284b3d3b63a4c8eb934f5d362fd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
+  rocket: {fileID: 175474, guid: df8b8823927a30d4aabc06a9662e63a4, type: 2}
+  satellite: {fileID: 0}
+  timer: 0
+  shotspawn: {fileID: 0}
+  enemies: []
 --- !u!114 &11429984
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1572,6 +1590,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: rocket
+      value: 
+      objectReference: {fileID: 175474, guid: df8b8823927a30d4aabc06a9662e63a4, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 133454}

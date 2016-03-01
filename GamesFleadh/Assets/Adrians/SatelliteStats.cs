@@ -15,6 +15,7 @@ public class SatelliteStats : MonoBehaviour
         offence += 1;
         cost += 1;
     }
+
     public void upgradeDefence()
     {
         Debug.Log("Satellite defence upgraded!");

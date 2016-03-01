@@ -193,6 +193,25 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &447961001 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 184906, guid: b7960e926ddc16d45b5848a0257d4aba, type: 2}
+  m_PrefabInternal: {fileID: 1526902901}
+--- !u!54 &447961002
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 447961001}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &488824667
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,13 +457,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebfd3977e25c4ce4e89b7e12c7c79a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 500
+  health: 1000
   planets: []
   laser: {fileID: 0}
   timer: 5
   newScene: 
   size: 0
-  num: 0
+--- !u!1 &1287291861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 863144697}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1287291862}
+  m_Layer: 0
+  m_Name: Missing Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1287291862
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 863144697}
+  m_GameObject: {fileID: 1287291861}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
 --- !u!1001 &1298138695
 Prefab:
   m_ObjectHideFlags: 0
@@ -586,7 +631,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 426976, guid: b7960e926ddc16d45b5848a0257d4aba, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 122.496338
+      value: 146.399994
       objectReference: {fileID: 0}
     - target: {fileID: 426976, guid: b7960e926ddc16d45b5848a0257d4aba, type: 2}
       propertyPath: m_LocalPosition.z
@@ -912,7 +957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e03b3e09036eab34fb0f059764206898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sun: {fileID: 1202265614}
+  sun: {fileID: 0}
   rotationSpeed: 0
   RandomSize: 0
   allowOrbitDebug: 0
@@ -932,11 +977,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dfeef214c80c084d927ebbaf899f03f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max: 600
-  health: 200
+  max: 500
+  health: 500
   Length: 0
   timer: 10
   other: {fileID: 0}
   healthBar: {fileID: 0}
   scrap: {fileID: 0}
-  h: {fileID: 0}

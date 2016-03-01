@@ -4,7 +4,8 @@ using System.Collections;
 public class LevelManager : MonoBehaviour
 {
 	private static string lastLevel;
-	
+	public static string nextLevel;
+
 	public static void setLastLevel(string level)
 	{
 		lastLevel = level;
@@ -19,4 +20,5 @@ public class LevelManager : MonoBehaviour
 	{
 		Application.LoadLevel(lastLevel);
 	}
+	
 }
