@@ -14,10 +14,6 @@ public class EnemyHealth : MonoBehaviour {
 		rocket = GameObject.FindGameObjectWithTag("Rocket") ;
 	}
 
-	void OnTriggerEnter (Collider rocket)
-	{
-		health -= 10;
-	}
 
 	void Update () {
 

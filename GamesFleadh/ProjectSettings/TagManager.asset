@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Rocket
+  - Enemy
+  - Planet
+  - Sun
+  - scrap
+  - Satellite
   layers:
   - Default
   - TransparentFX

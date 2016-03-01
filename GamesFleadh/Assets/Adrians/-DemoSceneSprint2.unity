@@ -1688,6 +1688,14 @@ Prefab:
       propertyPath: m_Name
       value: GameObject
       objectReference: {fileID: 0}
+    - target: {fileID: 6516240, guid: 6007fbe24fef57c44b7a7e3ecb6e5aa7, type: 2}
+      propertyPath: m_Size.x
+      value: 8.29029083
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516240, guid: 6007fbe24fef57c44b7a7e3ecb6e5aa7, type: 2}
+      propertyPath: m_Center.x
+      value: .145687103
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6007fbe24fef57c44b7a7e3ecb6e5aa7, type: 2}
   m_IsPrefabParent: 0
@@ -3017,7 +3025,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planetName: Earth
   offence: 1
-  defence: 1
+  defence: 5
   utility: 5
   cost: 20
   colonised: 1
@@ -3032,13 +3040,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dfeef214c80c084d927ebbaf899f03f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max: 100
-  health: 100
+  startHealth: 1000
+  max: 0
+  health: 0
   Length: 0
   timer: 10
   other: {fileID: 0}
   healthBar: {fileID: 130704, guid: fcdfe34cefb7304439e8b2d5c23f6726, type: 2}
   scrap: {fileID: 156382, guid: e4a8a15934b9d844ba33b8caa06a2687, type: 2}
+  defence: 0
 --- !u!1 &1525391276
 GameObject:
   m_ObjectHideFlags: 0
@@ -4178,13 +4188,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dfeef214c80c084d927ebbaf899f03f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max: 100
-  health: 100
+  startHealth: 1000
+  max: 0
+  health: 0
   Length: 0
   timer: 10
   other: {fileID: 0}
   healthBar: {fileID: 130704, guid: fcdfe34cefb7304439e8b2d5c23f6726, type: 2}
   scrap: {fileID: 156382, guid: e4a8a15934b9d844ba33b8caa06a2687, type: 2}
+  defence: 0
 --- !u!1 &2064910082
 GameObject:
   m_ObjectHideFlags: 0
