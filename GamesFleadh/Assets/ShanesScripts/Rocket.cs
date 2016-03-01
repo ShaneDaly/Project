@@ -23,11 +23,8 @@ public class Rocket : MonoBehaviour {
     void OnTriggerEnter(Collider enemies)
     {
         gameObject.SetActive(false);
-<<<<<<< HEAD
-=======
         EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
         enemyHealth.health -= damage;
->>>>>>> c7a750b27c3eb47548b7e219d493c83a347893c1
     }
 
     void Update () 

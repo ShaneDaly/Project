@@ -11,15 +11,9 @@ public class EnemyHealth : MonoBehaviour {
 
 	void Update () {
 
-		if (health <= 0) {
-<<<<<<< HEAD
+		if (health <= 0) 
+        {
 
-			//gameObject.SetActive(false);
-			Destroy(gameObject);
-
-            //GetComponent<Spawner>().ReduceMax ();
-=======
->>>>>>> c7a750b27c3eb47548b7e219d493c83a347893c1
             gameObject.SetActive(false);
 			Instantiate(scrap, transform.position, transform.rotation);
 		}
