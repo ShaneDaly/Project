@@ -11,15 +11,10 @@ public class Rocket : MonoBehaviour {
     float closestDist = -2;
 
 
-	void Awake ()
-	{
-		enemies=GameObject.FindGameObjectsWithTag("Enemy");
-	}
 
     void OnTriggerEnter(Collider enemies)
     {
-        Destroy(gameObject);
-		//GetComponent<EnemyHealth>().ApplyDamage ();
+        gameObject.SetActive(false);
     }
 
     void Update () 
@@ -30,7 +25,7 @@ public class Rocket : MonoBehaviour {
             timer -= Time.deltaTime;
             if (timer <= 0)
             {
-                Destroy(gameObject);
+                gameObject.SetActive(false);
             }
             transform.LookAt(enemy.transform);
             transform.position += transform.forward * Speed * Time.deltaTime;

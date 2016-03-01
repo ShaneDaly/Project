@@ -83,12 +83,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 175474}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1a0efb6c546975418880b61fa9897f0, type: 3}
+  m_Script: {fileID: 11500000, guid: 51ae3918f5ec1754c9b180c66cb463f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 0}
   enemies: []
-  other: {fileID: 167036, guid: efc31530a39a66c43bf304481afa30ad, type: 2}
   Speed: 40
   timer: 7
 --- !u!136 &13645260
