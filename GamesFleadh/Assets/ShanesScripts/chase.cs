@@ -67,6 +67,7 @@ public class chase : MonoBehaviour {
 
 	void  Investigating ()
 	{
+		detectClosestEnemy ();
 		transform.LookAt(Planet);
 		transform.position += transform.forward*Speed*Time.deltaTime;
 	}
