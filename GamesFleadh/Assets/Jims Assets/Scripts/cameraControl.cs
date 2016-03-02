@@ -47,7 +47,7 @@ public class cameraControl : MonoBehaviour
             {
                 active = false;
                 gameObject.GetComponent<SecondaryCamera>().toggleActive();
-                Pointer.GetComponent<pointer>().toggleEmitter();
+                Pointer.GetComponent<pointer>().enableMainSecondary();
                 isMoving = false;
             }
             else if (!active)
@@ -187,7 +187,7 @@ public class cameraControl : MonoBehaviour
     {
         active = true;
         gameObject.GetComponent<SecondaryCamera>().toggleActive();
-        Pointer.GetComponent<pointer>().toggleEmitter();
+        Pointer.GetComponent<pointer>().enableMainEmitter();
     }
 
     public bool checkActive()
