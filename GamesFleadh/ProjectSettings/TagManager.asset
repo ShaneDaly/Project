@@ -3,6 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< HEAD
   tags:
   - Satellite
   - Button
@@ -11,6 +12,9 @@ TagManager:
   - Rocket
   - Enemy
   - Sun
+=======
+  tags: []
+>>>>>>> d017959a01afaefe2dc4120b5c0062f8c422e4a0
   layers:
   - Default
   - TransparentFX

@@ -92,7 +92,10 @@ MonoBehaviour:
   timer: 7
   homePlanet: {fileID: 0}
   damage: 0
+<<<<<<< HEAD
   rocketExpolsion: {fileID: 189506, guid: 873b6b2e07651ae479e576b0fcc19426, type: 2}
+=======
+>>>>>>> d017959a01afaefe2dc4120b5c0062f8c422e4a0
 --- !u!136 &13645260
 CapsuleCollider:
   m_ObjectHideFlags: 1
