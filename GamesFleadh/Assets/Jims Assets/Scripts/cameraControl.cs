@@ -24,6 +24,9 @@ public class cameraControl : MonoBehaviour
     public bool isMoving;
     public bool active;
 
+    public float newX;
+    public float newY;
+
     public GameObject sun;
     public GameObject Pointer;
 
@@ -73,9 +76,6 @@ public class cameraControl : MonoBehaviour
             transform.position += aVal * Vector3.up;
         }
     }
-
-    public float newX;
-    public float newY;
 
     void ChangeHeading(float aVal)
     {
