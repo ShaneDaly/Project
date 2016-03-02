@@ -3,42 +3,33 @@ using System.Collections;
 
 public class Satelite : MonoBehaviour 
 {
-    [SerializeField] private GameObject sun;
+    public GameObject sun;
 
-    [SerializeField] private Vector3 sunVec;
+    public Vector3 sunVec;
     public float rotationSpeed;
 
     // 10km = 1 Scale
-    [SerializeField]
-    private float size;
-    [SerializeField]
-    private float sizeKm;
-
-    [SerializeField]
+    public float size;
+    public float sizeKm;
+    
     private float g;
-    [SerializeField]
     private float m;
-    [SerializeField]
     private float gm;
-    [SerializeField]
     private float gmOverRadius;
-    [SerializeField]
     private float orbitV;
-
-    [SerializeField]
+    
     private float circumference;
-    [SerializeField]
     private float rps;
     public float rotateSpeed;
-    [SerializeField]
-    private float desiredRotateSpeed;
-
-    [SerializeField]
+    public float desiredRotateSpeed;
+    
     private float height;
 
     public bool allowOrbitDebug;
     public bool selected;
 
+    public Vector3 direction;
+    public Vector3 prevPos;
     //public GameObject emitter;
 
     [SerializeField]
@@ -65,7 +56,7 @@ public class Satelite : MonoBehaviour
             //emitter.GetComponent<ParticleSystem>().enableEmission = false;
         }
         transform.position.Set(transform.position.x, height, transform.position.z);
-        //transform.up = GetComponent<Rigidbody>().velocity;
+        getDirection();
     }
 
 
@@ -139,5 +130,12 @@ public class Satelite : MonoBehaviour
     public void unSelect()
     {
         selected = false;
+    }
+
+    public void getDirection()
+    {
+        direction = (transform.position - prevPos).normalized;
+        prevPos = transform.position;
+        transform.LookAt(direction);
     }
 }

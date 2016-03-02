@@ -23,19 +23,23 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+<<<<<<< HEAD
 																																																																																																																																																																									GlobalSection(MonoDevelopProperties) = preSolution
 =======
-																																																																																																																																																																									GlobalSection(MonoDevelopProperties) = preSolution
+																																																																																																																																																								GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> c18ef6d113c364c1993ffbbc724a21d1cdb89787
+=======
+																																																																																																																																																																								GlobalSection(MonoDevelopProperties) = preSolution
 =======
 <<<<<<< HEAD
 																																																																																																																																																								GlobalSection(MonoDevelopProperties) = preSolution
->>>>>>> c7a750b27c3eb47548b7e219d493c83a347893c1
 =======
 <<<<<<< HEAD
 																																																																																																																																													GlobalSection(MonoDevelopProperties) = preSolution
 =======
 <<<<<<< HEAD
 																																																																																																																																										GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> 351dc6497384bfeaf02950d25f4f0bbd53d67650
 =======
 																																																																																																																																																									GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> 18bed36e4a9358f2600e52f9da725d49c95c7465

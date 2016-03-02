@@ -2,36 +2,29 @@
 using System.Collections;
 
 
-public class HealthScript : MonoBehaviour 
+public class SatelliteHealth : MonoBehaviour 
 {
 
     public float startHealth;
-    float orgHealth;
-    float orgMax;
 	[SerializeField]
     private float max;
     [SerializeField]
     private float health;
 	public float Length;
 	public float timer = 10;
-	public GameObject healthBar;
 	public GameObject other;
+	public GameObject healthBar;
 	public GameObject scrap;
     [SerializeField]
     private float defence;
-    float startDefence;
-    PlanetStats planetStats;
-
+    SatelliteStats satelliteStats;
 
 	Health Health;
 
     void Start()
     {
-        planetStats = gameObject.GetComponent<PlanetStats>();
-        defence = (planetStats.defence / 10.0f) + 1; 
-        max = defence * startHealth;
-        health = defence * startHealth;
-        startDefence = defence;
+        satelliteStats = gameObject.GetComponent<SatelliteStats>();
+        defence = (satelliteStats.defence / 10.0f) + 1;
     }
 
 	void OnTriggerEnter(Collider other)
@@ -56,19 +49,15 @@ public class HealthScript : MonoBehaviour
 
 	void Update () 
     {
-        defence = (planetStats.defence / 10.0f) + 1;
-        if (defence != startDefence)
-        {
-            max = defence * max;
-            health = defence * health;
-            startDefence = defence;
-        }
-
+        max = startHealth;
+        health = startHealth;
+        defence = (satelliteStats.defence / 10.0f) + 1;
+        max = defence * startHealth;
+        health = defence * startHealth;
 		if (health <= 0) 
         {
-			Destroy(gameObject);
-			//gameObject.SetActive(false);
-			//gameObject.tag = "Untagged";
+			gameObject.SetActive(false);
+			GetComponent<Health>().num += 1;
 			Instantiate(scrap, transform.position, transform.rotation);
 		}
 	}

@@ -11,6 +11,7 @@ public class PlanetAttack : MonoBehaviour {
     float closestDist = -2;
 	private Vector3 fwd;
     Rocket rocketCode;
+    public float range = 100;
 
     void Start()
     {
@@ -21,9 +22,10 @@ public class PlanetAttack : MonoBehaviour {
 	void Update () {
 
         detectClosestEnemy();
-        if (enemy.tag == "Enemy")
+        if (enemy.activeSelf == true)
         {
             float distance = Vector3.Distance(enemy.transform.position, planet.transform.position);
+<<<<<<< HEAD
 			fwd = transform.TransformDirection (Vector3.up);
 			float dist = Vector3.Distance (enemy.transform.position, transform.position);
 			if (dist < 100) 
@@ -36,6 +38,17 @@ public class PlanetAttack : MonoBehaviour {
 					Instantiate (rocket, shotspawn.position, shotspawn.rotation);
 				}
 			}
+=======
+            timer -= Time.deltaTime;
+            if (distance <= range && timer <= 0)
+            {
+                
+                rocketCode = rocket.GetComponent<Rocket>();
+                rocketCode.homePlanet = planet;
+                Instantiate(rocket, planet.transform.position, planet.transform.rotation);
+                timer = 3;
+            }
+>>>>>>> c18ef6d113c364c1993ffbbc724a21d1cdb89787
         }
 	}
 
