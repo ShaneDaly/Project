@@ -2,12 +2,10 @@
 using System.Collections;
 
 
-public class HealthScript : MonoBehaviour 
+public class SatelliteHealth : MonoBehaviour 
 {
 
     public float startHealth;
-    float orgHealth;
-    float orgMax;
 	[SerializeField]
     private float max;
     [SerializeField]
@@ -19,18 +17,14 @@ public class HealthScript : MonoBehaviour
 	public GameObject scrap;
     [SerializeField]
     private float defence;
-    float startDefence;
-    PlanetStats planetStats;
+    SatelliteStats satelliteStats;
 
 	Health Health;
 
     void Start()
     {
-        planetStats = gameObject.GetComponent<PlanetStats>();
-        defence = (planetStats.defence / 10.0f) + 1; 
-        max = defence * startHealth;
-        health = defence * startHealth;
-        startDefence = defence;
+        satelliteStats = gameObject.GetComponent<SatelliteStats>();
+        defence = (satelliteStats.defence / 10.0f) + 1;
     }
 
 	void OnTriggerEnter(Collider other)
@@ -55,14 +49,11 @@ public class HealthScript : MonoBehaviour
 
 	void Update () 
     {
-        defence = (planetStats.defence / 10.0f) + 1;
-        if (defence != startDefence)
-        {
-            max = defence * max;
-            health = defence * health;
-            startDefence = defence;
-        }
-
+        max = startHealth;
+        health = startHealth;
+        defence = (satelliteStats.defence / 10.0f) + 1;
+        max = defence * startHealth;
+        health = defence * startHealth;
 		if (health <= 0) 
         {
 			gameObject.SetActive(false);

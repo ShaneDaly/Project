@@ -14,18 +14,18 @@ public class PlanetStats : MonoBehaviour {
     {
         Debug.Log("Planet offence upgraded!");
         offence += 1;
-        cost += 1;
+        cost += 5;
     }
     public void upgradeDefence()
     {
         Debug.Log("Planet defence upgraded!");
         defence += 1;
-        cost += 1;
+        cost += 5;
     }
     public void upgradeUtility()
     {
         Debug.Log("Planet utility upgraded!");
         utility += 1;
-        cost += 1;
+        cost += 5;
     }
 }
