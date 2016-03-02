@@ -5,8 +5,8 @@ public class chase : MonoBehaviour {
 
 	public float fireRate;
 	private float nextFire;
-	public float timer = 6;                  
-	public Transform Planet;
+	public float timer = 6;
+    public GameObject Planet;
 	public float Speed= 60;
 	private int MaxDist= 2000;
 	public int range = 30;
@@ -18,23 +18,22 @@ public class chase : MonoBehaviour {
 	GameObject[] planets = null;
 	Transform Waypoint;
 	float closestDist = -2;
-	private CharacterController character;	
+	private CharacterController character;
+    mover rocketMover;
 
 	void  Start ()
 	{
+
 		character = GetComponent<CharacterController>();
 		state = State.InvestState;
-		//Waypoint = GameObject.FindWithTag("Waypoint").transform;
+        //Waypoint = GameObject.FindWithTag("Waypoint").transform;
+        detectClosestEnemy();
 	}
 
-	void Awake ()
-	{
-		Planet = GameObject.FindWithTag("Planet").transform;
-	}
 	void  Update ()
-	{
+    {
+        detectClosestEnemy();
 		TargetDistance ();
-		detectClosestEnemy ();
 
 		switch (state)
 		{
@@ -59,23 +58,26 @@ public class chase : MonoBehaviour {
 	
 	void Shooting ()
 	{
-		if (Time.time > nextFire) {
+		if (Time.time > nextFire) 
+        {
 			nextFire = Time.time + fireRate;
+            rocketMover = lasershot.GetComponent<mover>();
+            rocketMover.target = Planet;
 			Instantiate (lasershot, shotspawn.position, shotspawn.rotation);
 		}
 	}
 
 	void  Investigating ()
 	{
-		transform.LookAt(Planet);
+		transform.LookAt(Planet.transform);
 		transform.position += transform.forward*Speed*Time.deltaTime;
 	}
 
-	void Patrolling ()
-	{
-		//transform.LookAt(Waypoint);
-		transform.position += transform.forward*Speed*Time.deltaTime;
-	}
+    void Patrolling()
+    {
+        //transform.LookAt(Waypoint);
+        transform.position += transform.forward * Speed * Time.deltaTime;
+    }
 	
 	public void TargetDistance()
 	{
@@ -101,11 +103,11 @@ public class chase : MonoBehaviour {
 			if (closestDist >= 0) {
 				if (newDist < closestDist) {
 					closestDist = dist;
-					Planet = element.transform;
+					Planet = element;
 				}
 			} else {
 				closestDist = dist;
-				Planet = element.transform;
+				Planet = element;
 			}
 			
 		}
