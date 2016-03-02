@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Satellite
+  - Button
+  - Planet
+  - scrap
+  - Rocket
+  - Enemy
+  - Sun
   layers:
   - Default
   - TransparentFX

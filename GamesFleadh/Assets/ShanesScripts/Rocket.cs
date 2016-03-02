@@ -12,6 +12,8 @@ public class Rocket : MonoBehaviour {
     public GameObject homePlanet;
     PlanetStats homePlanetStats;
     public int damage;
+    public GameObject rocketExpolsion;
+    RocketExplosion rocketExpolsionStats;
 
     void Start()
     {
@@ -22,9 +24,10 @@ public class Rocket : MonoBehaviour {
 
     void OnTriggerEnter(Collider enemies)
     {
+        rocketExpolsionStats = rocketExpolsion.GetComponent<RocketExplosion>();
+        rocketExpolsionStats.damage = damage;
+        Instantiate(rocketExpolsion, transform.position, rocketExpolsion.transform.rotation);
         gameObject.SetActive(false);
-        EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
-        enemyHealth.health -= damage;
     }
 
     void Update () 

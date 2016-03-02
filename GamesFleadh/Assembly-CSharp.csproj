@@ -80,6 +80,7 @@
      <Compile Include="Assets\Robs\Scripts\Ojects\OrbitScript.cs" />
      <Compile Include="Assets\Robs\Scripts\ReverseOrbit.cs" />
      <Compile Include="Assets\Robs\Scripts\TestScripts\Rotate.cs" />
+     <Compile Include="Assets\RocketExplosion.cs" />
      <Compile Include="Assets\ShanesScripts\Coloniser.cs" />
      <Compile Include="Assets\ShanesScripts\CommandShip.cs" />
      <Compile Include="Assets\ShanesScripts\DestroyByContact.cs" />
