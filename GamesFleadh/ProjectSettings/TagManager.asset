@@ -3,18 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-<<<<<<< HEAD
   tags:
-  - Satellite
-  - Button
-  - Planet
   - scrap
-  - Rocket
-  - Enemy
-  - Sun
-=======
-  tags: []
->>>>>>> d017959a01afaefe2dc4120b5c0062f8c422e4a0
+  - Laser
   layers:
   - Default
   - TransparentFX
