@@ -11,6 +11,7 @@ public class SatelliteAttack : MonoBehaviour {
     public GameObject[] enemies;
     float closestDist = -2;
     SatelliteRocket rocketCode;
+    public float range = 100;
 
     void Start()
     {
@@ -21,12 +22,12 @@ public class SatelliteAttack : MonoBehaviour {
 	void Update () {
 
         detectClosestEnemy();
-        if (enemy.tag == "Enemy")
+        if (enemy.activeSelf == true)
         {
 
             float distance = Vector3.Distance(enemy.transform.position, satellite.transform.position);
             timer -= Time.deltaTime;
-            if (distance <= 200 && timer <= 0)
+            if (distance <= range && timer <= 0)
             {
                 
                 rocketCode = rocket.GetComponent<SatelliteRocket>();

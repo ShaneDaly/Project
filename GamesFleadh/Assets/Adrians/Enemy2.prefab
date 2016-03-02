@@ -91,7 +91,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 192300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 43.3300018, y: 0, z: 86.4300003}
+  m_LocalPosition: {x: 146.300003, y: 0, z: -.800000012}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 421584}
@@ -203,10 +203,10 @@ BoxCollider:
   m_GameObject: {fileID: 192300}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 7.61618328, y: 2.32689285, z: 9.16932392}
-  m_Center: {x: .482746124, y: .663446426, z: -1.60015106}
+  m_Size: {x: 8.29029083, y: 2.32689285, z: 9.16932392}
+  m_Center: {x: .145687103, y: .663446426, z: -1.60015106}
 --- !u!114 &11422030
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -218,18 +218,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f663dfceab13514fbc08f93a168468c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammo: 100
   fireRate: 0
   timer: 6
   Planet: {fileID: 0}
-  MoveSpeed: 20
-  RetreatSpeed: 20
-  InvestigateSpeed: 35
+  Speed: 60
   range: 60
   state: 0
   lasershot: {fileID: 191316, guid: b53d4d90bae12b441a2c27a42e0ae747, type: 2}
   shotspawn: {fileID: 490752}
-  CommandShip: {fileID: 0}
 --- !u!114 &11429340
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -243,7 +239,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   max: 100
-  rocket: {fileID: 0}
   scrap: {fileID: 156382, guid: e4a8a15934b9d844ba33b8caa06a2687, type: 2}
 --- !u!136 &13677614
 CapsuleCollider:

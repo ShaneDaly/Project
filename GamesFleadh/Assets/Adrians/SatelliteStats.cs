@@ -13,13 +13,13 @@ public class SatelliteStats : MonoBehaviour
     {
         Debug.Log("Satellite offence upgraded!");
         offence += 1;
-        cost += 1;
+        cost += 5;
     }
 
     public void upgradeDefence()
     {
         Debug.Log("Satellite defence upgraded!");
         defence += 1;
-        cost += 1;
+        cost += 5;
     }
 }
