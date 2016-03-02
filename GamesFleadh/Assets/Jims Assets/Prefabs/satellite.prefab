@@ -12,6 +12,8 @@ GameObject:
   - 114: {fileID: 11454898}
   - 135: {fileID: 13503572}
   - 114: {fileID: 11429984}
+  - 114: {fileID: 11423566}
+  - 114: {fileID: 11419080}
   m_Layer: 0
   m_Name: satellite
   m_TagString: Satellite
@@ -140,7 +142,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 133454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.1000004, y: 37.5, z: -992}
+  m_LocalPosition: {x: -134, y: 0, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 461002}
@@ -341,6 +343,44 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &11419080
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 133454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899577d35db96c749a7cf6228d015215, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startHealth: 500
+  max: 0
+  health: 0
+  Length: 0
+  timer: 10
+  other: {fileID: 0}
+  healthBar: {fileID: 130704, guid: fcdfe34cefb7304439e8b2d5c23f6726, type: 2}
+  scrap: {fileID: 156382, guid: e4a8a15934b9d844ba33b8caa06a2687, type: 2}
+  defence: 0
+--- !u!114 &11423566
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 133454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4af284b3d3b63a4c8eb934f5d362fd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
+  rocket: {fileID: 175474, guid: df8b8823927a30d4aabc06a9662e63a4, type: 2}
+  satellite: {fileID: 0}
+  timer: 0
+  shotspawn: {fileID: 0}
+  enemies: []
+  range: 100
 --- !u!114 &11429984
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -372,18 +412,12 @@ MonoBehaviour:
   rotationSpeed: 0
   size: 0
   sizeKm: 0
-  g: 0
-  m: 0
-  gm: 0
-  gmOverRadius: 0
-  orbitV: 0
-  circumference: 0
-  rps: 0
   rotateSpeed: 0
   desiredRotateSpeed: 0
-  height: 0
   allowOrbitDebug: 0
   selected: 0
+  direction: {x: 0, y: 0, z: 0}
+  prevPos: {x: 0, y: 0, z: 0}
   isAcc: 0
 --- !u!135 &13503572
 SphereCollider:
@@ -1571,6 +1605,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: rocket
+      value: 
+      objectReference: {fileID: 175474, guid: df8b8823927a30d4aabc06a9662e63a4, type: 2}
+    - target: {fileID: 0}
+      propertyPath: startHealth
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -36,6 +36,7 @@ public class Planet : MonoBehaviour
 
     public float ownRotateSpeed;
     public GameObject halo;
+    
 
 
 
@@ -48,7 +49,9 @@ public class Planet : MonoBehaviour
             setPlanetSize();
         }
         gameObject.tag = "Planet";
-	}
+
+        
+    }
 	
 	// Update is called once per frame
 	void Update() 
@@ -59,6 +62,7 @@ public class Planet : MonoBehaviour
             calcOrbit();
         }
         transform.RotateAround(transform.position, Vector3.up, ownRotateSpeed * Time.deltaTime);
+
     }
 
     // Sets the Sun to orbit
@@ -132,4 +136,6 @@ public class Planet : MonoBehaviour
     {
         selected = false;
     }
+    
+    
 }

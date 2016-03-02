@@ -28,7 +28,7 @@ GameObject:
   - 23: {fileID: 2348266}
   - 114: {fileID: 11462462}
   - 114: {fileID: 11464840}
-  - 143: {fileID: 14309330}
+  - 143: {fileID: 14319412}
   m_Layer: 0
   m_Name: ChaseEnemy
   m_TagString: Enemy
@@ -43,7 +43,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184906}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 307.659729, y: 105.626663, z: 269.639648}
+  m_LocalPosition: {x: 93.5015182, y: 28.8754025, z: 48.7677193}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 429108}
@@ -115,12 +115,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f663dfceab13514fbc08f93a168468c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammo: 100
   fireRate: 0
   timer: 6
   Planet: {fileID: 0}
-  MoveSpeed: 30
-  InvestigateSpeed: 55
+  Speed: 60
   range: 60
   state: 0
   lasershot: {fileID: 191316, guid: b53d4d90bae12b441a2c27a42e0ae747, type: 2}
@@ -138,9 +136,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   max: 100
-  rocket: {fileID: 0}
   scrap: {fileID: 156382, guid: e4a8a15934b9d844ba33b8caa06a2687, type: 2}
---- !u!143 &14309330
+  rocket: {fileID: 175474, guid: f1f06ae9bb5e1b546811e43490a46ea6, type: 2}
+--- !u!143 &14319412
 CharacterController:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -175,7 +173,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: rocket
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 175474, guid: f1f06ae9bb5e1b546811e43490a46ea6, type: 2}
     - target: {fileID: 0}
       propertyPath: m_IsTrigger
       value: 1

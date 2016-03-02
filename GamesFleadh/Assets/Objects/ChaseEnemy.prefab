@@ -30,7 +30,7 @@ GameObject:
   - 65: {fileID: 6562998}
   - 23: {fileID: 2305124}
   - 143: {fileID: 14341624}
-  - 114: {fileID: 11435582}
+  - 114: {fileID: 11421618}
   m_Layer: 0
   m_Name: ChaseEnemy
   m_TagString: Enemy
@@ -83,9 +83,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167036}
-  m_LocalRotation: {x: 0, y: -.745972693, z: 0, w: .665976524}
-  m_LocalPosition: {x: 47.2999992, y: 0, z: 45.2999992}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106709}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 483192}
   - {fileID: 412194}
@@ -165,7 +165,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &11435582
+--- !u!114 &11421618
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -173,19 +173,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 167036}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f663dfceab13514fbc08f93a168468c, type: 3}
+  m_Script: {fileID: 11500000, guid: 65bb2ec933ef7254c873e46ea6271af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammo: 100
-  fireRate: 0
-  timer: 6
-  Planet: {fileID: 0}
-  MoveSpeed: 20
-  InvestigateSpeed: 35
-  range: 60
-  state: 0
-  lasershot: {fileID: 191316, guid: b53d4d90bae12b441a2c27a42e0ae747, type: 2}
-  shotspawn: {fileID: 412194}
+  health: 100
+  max: 100
+  rocket: {fileID: 0}
+  scrap: {fileID: 156382, guid: e4a8a15934b9d844ba33b8caa06a2687, type: 2}
 --- !u!136 &13649686
 CapsuleCollider:
   m_ObjectHideFlags: 1

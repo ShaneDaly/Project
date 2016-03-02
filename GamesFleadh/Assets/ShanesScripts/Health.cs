@@ -6,30 +6,34 @@ public class Health : MonoBehaviour {
 	public int health = 1000;
 	public GameObject[] planets;
 	public GameObject laser;
-	public float timer = 5;
+	public float time = 5;
 	public string newScene;
-
-	public int num;
+	public int size;
+	public int num = 0;
+	Health h;
 	
 	void Awake ()
 	{
 		planets = GameObject.FindGameObjectsWithTag ("Planet");
-
+		h = gameObject.GetComponent<Health> ();
+		size = planets.Length;
 	}
+	
 
 	void OnTriggerEnter (Collider laser)
 	{
-		if (num == planets.Length){
-			health -= 1;
-		}
+		health -= 1;
 	}
 
 	void Update ()
 	{
+
+
 		if (health <= 0) {
-			timer -= Time.deltaTime;
-			if(timer <=0){
+			time -= Time.deltaTime;
+			if(time <=0){
 				Application.LoadLevel(newScene);
+				LevelManager.setLastLevel(Application.loadedLevelName);
 			}
 		}
 	}

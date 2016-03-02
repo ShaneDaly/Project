@@ -19,9 +19,11 @@ public class pointer : MonoBehaviour
     public bool mainActive;
 
     public bool emitterSecondaryActive;
+    public bool planetHit;
 
     public GameObject emitter;
     public GameObject emitterSeconday;
+
 
     public bool orbiterSelected;
 
@@ -33,16 +35,26 @@ public class pointer : MonoBehaviour
     }
     void Update () 
     {
-        if (emitterSecondaryActive)
+        if (planetHit)
         {
             emitter.GetComponent<ParticleSystem>().enableEmission = false;
-            emitterSeconday.GetComponent<ParticleSystem>().enableEmission = true;
+            emitterSeconday.GetComponent<ParticleSystem>().enableEmission = false;
         }
         else
         {
-            emitter.GetComponent<ParticleSystem>().enableEmission = true;
-            emitterSeconday.GetComponent<ParticleSystem>().enableEmission = false;
+            if (emitterSecondaryActive)
+            {
+                emitter.GetComponent<ParticleSystem>().enableEmission = false;
+                emitterSeconday.GetComponent<ParticleSystem>().enableEmission = true;
+            }
+            else
+            {
+                emitter.GetComponent<ParticleSystem>().enableEmission = true;
+                emitterSeconday.GetComponent<ParticleSystem>().enableEmission = false;
+            }
         }
+
+
         Plane plane = new Plane(Vector3.up, 0);
         float dist;
         
@@ -58,12 +70,14 @@ public class pointer : MonoBehaviour
                 if (!hit)
                 {
                     transform.position = new Vector3(point.x, -50, point.z);
+
+                    planetHit = false;
                 }
                 if (hit)
                 {
-                    if (hitInfo.transform.gameObject.tag == "Planet")
+                    if (hitInfo.transform.gameObject.tag == "Planet" || hitInfo.transform.gameObject.tag == "Satellite" || hitInfo.transform.gameObject.tag == "Sun")
                     {
-
+                        planetHit = true;
                     }
                 }
             }

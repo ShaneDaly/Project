@@ -9,17 +9,25 @@ public class Rocket : MonoBehaviour {
     public int Speed; 
 	public float timer = 5;
     float closestDist = -2;
+    public GameObject homePlanet;
+    PlanetStats homePlanetStats;
+    public int damage;
+    public GameObject rocketExpolsion;
+    RocketExplosion rocketExpolsionStats;
 
+    void Start()
+    {
 
-	void Awake ()
-	{
-		enemies=GameObject.FindGameObjectsWithTag("Enemy");
-	}
+        homePlanetStats = homePlanet.GetComponent<PlanetStats>();
+        damage = homePlanetStats.offence;
+    }
 
     void OnTriggerEnter(Collider enemies)
     {
-        Destroy(gameObject);
-		//GetComponent<EnemyHealth>().ApplyDamage ();
+        rocketExpolsionStats = rocketExpolsion.GetComponent<RocketExplosion>();
+        rocketExpolsionStats.damage = damage;
+        Instantiate(rocketExpolsion, transform.position, rocketExpolsion.transform.rotation);
+        gameObject.SetActive(false);
     }
 
     void Update () 
@@ -30,7 +38,7 @@ public class Rocket : MonoBehaviour {
             timer -= Time.deltaTime;
             if (timer <= 0)
             {
-                Destroy(gameObject);
+                gameObject.SetActive(false);
             }
             transform.LookAt(enemy.transform);
             transform.position += transform.forward * Speed * Time.deltaTime;

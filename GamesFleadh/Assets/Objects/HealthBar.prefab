@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 22409908}
   - 222: {fileID: 22208086}
-  - 114: {fileID: 11404456}
+  - 114: {fileID: 11400010}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -43,7 +43,8 @@ GameObject:
   m_Component:
   - 224: {fileID: 22452144}
   - 222: {fileID: 22274000}
-  - 114: {fileID: 11424776}
+  - 114: {fileID: 11480086}
+  - 114: {fileID: 11468586}
   m_Layer: 0
   m_Name: Health
   m_TagString: Untagged
@@ -61,6 +62,7 @@ GameObject:
   - 224: {fileID: 22419020}
   - 222: {fileID: 22219762}
   - 223: {fileID: 22389098}
+  - 114: {fileID: 11496212}
   m_Layer: 0
   m_Name: Border
   m_TagString: Untagged
@@ -68,7 +70,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &11404456
+--- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -80,7 +82,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: .977941155, g: .0287630018, b: .0287630018, a: 1}
   m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -89,7 +91,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &11424776
+--- !u!114 &11468586
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -101,7 +103,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .117241383, g: 1, b: 0, a: 1}
+  m_Color: {r: 0, g: 1, b: .420689583, a: 1}
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!114 &11480086
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 142462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa938075d1fb9fc4eacba6cba7d8a8e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
+--- !u!114 &11496212
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -121,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa938075d1fb9fc4eacba6cba7d8a8e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 142462}
 --- !u!222 &22208086
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -216,7 +251,7 @@ RectTransform:
   m_GameObject: {fileID: 130704}
   m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
   m_LocalPosition: {x: 0, y: 0, z: -.209999993}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: .947272718, y: 1, z: 1}
   m_Children:
   - {fileID: 22419020}
   - {fileID: 22409908}
@@ -254,7 +289,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: m_Color.r
-      value: .117241383
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Color.g
@@ -262,7 +297,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Color.b
-      value: 0
+      value: .420689583
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_SizeDelta.x

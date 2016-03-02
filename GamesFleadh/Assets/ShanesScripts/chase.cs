@@ -2,33 +2,29 @@
 using System.Collections;
 
 public class chase : MonoBehaviour {
-	
-	public int ammo;
+
 	public float fireRate;
 	private float nextFire;
-	public float timer = 6;             
-	private float rotSpeed= 4.0f;      
-	float pauseDuration = 5;
+	public float timer = 6;                  
 	public Transform Planet;
-	public float MoveSpeed= 20;
-	private float RetreatSpeed = 15;
-	public float InvestigateSpeed = 35;
+	public float Speed= 60;
 	private int MaxDist= 2000;
 	public int range = 30;
-	public enum State {PatrolState,ShootState,InvestState,RetreatState,HealingState}
+	public enum State {PatrolState,ShootState,InvestState}
 	public State state;
 	private float curTime;
 	public GameObject lasershot;
 	public Transform shotspawn;
 	GameObject[] planets = null;
+	Transform Waypoint;
 	float closestDist = -2;
 	private CharacterController character;	
 
 	void  Start ()
 	{
 		character = GetComponent<CharacterController>();
-		//Planet = GameObject.FindWithTag("Planet").transform;
 		state = State.InvestState;
+		//Waypoint = GameObject.FindWithTag("Waypoint").transform;
 	}
 
 	void Awake ()
@@ -39,11 +35,6 @@ public class chase : MonoBehaviour {
 	{
 		TargetDistance ();
 		detectClosestEnemy ();
-		if (ammo <= 20) {
-			state = State.RetreatState;
-		} else {
-			TargetDistance ();
-		}
 
 		switch (state)
 		{
@@ -52,76 +43,48 @@ public class chase : MonoBehaviour {
 			Investigating ();
 			break;
 		}
-		case(State.PatrolState):
-		{
-			Patrol ();
-			break;
-		}
 		case(State.ShootState):
 		{
 			Shooting ();
 			break;
 		}
-		case(State.RetreatState):
+		case(State.PatrolState):
 		{
-			Retreat();
+			Patrolling ();
 			break;
 		}
-		case(State.HealingState):
-		{
-			Healing();
-			break;
-		}
+			
 		}	
-	}
+	}	
 	
 	void Shooting ()
 	{
 		if (Time.time > nextFire) {
-			//gameObject.GetComponent<Renderer> ().material.color = new Color (255, 0, 0, 0);
 			nextFire = Time.time + fireRate;
 			Instantiate (lasershot, shotspawn.position, shotspawn.rotation);
 		}
 	}
-	
-	void Healing()
-	{
-		gameObject.GetComponent<Renderer> ().material.color = new Color (255,192,203,0);
-		transform.position += (transform.forward * -1)*RetreatSpeed*Time.deltaTime;
-		timer -= Time.deltaTime;
-		if (timer <= 0)
-		{
-			timer = 6;
-			state = State.PatrolState;
-		}
 
-	}
-	void Retreat()
-	{
-		gameObject.GetComponent<Renderer> ().material.color = new Color (0,0,0,0);
-		transform.LookAt(Planet);
-		transform.position += (transform.forward * -1)*MoveSpeed*Time.deltaTime;
-	}
-	void  Patrol ()
-	{	  
-	}
 	void  Investigating ()
 	{
 		transform.LookAt(Planet);
-		//gameObject.GetComponent<Renderer> ().material.color = new Color (255,255,0,0);
-		transform.position += transform.forward*InvestigateSpeed*Time.deltaTime;
+		transform.position += transform.forward*Speed*Time.deltaTime;
+	}
+
+	void Patrolling ()
+	{
+		//transform.LookAt(Waypoint);
+		transform.position += transform.forward*Speed*Time.deltaTime;
 	}
 	
 	public void TargetDistance()
 	{
-		if (Vector3.Distance (transform.position, Planet.transform.position) <= MaxDist && (Vector3.Distance(transform.position, Planet.transform.position) >= range) )
-		{
+		if (Vector3.Distance (transform.position, Planet.transform.position) <= MaxDist && (Vector3.Distance (transform.position, Planet.transform.position) >= range)) {
 			state = State.InvestState;
 		} 
-		else if (Vector3.Distance (transform.position, Planet.transform.position) <= range) 
-		{
+		else if (Vector3.Distance (transform.position, Planet.transform.position) <= range) {
 			state = State.ShootState;
-		}
+		} 
 		else 
 		{
 			state = State.PatrolState;
@@ -147,14 +110,5 @@ public class chase : MonoBehaviour {
 			
 		}
 	}
-	public void ApplyDamage(int damage)
-	{
-		//health = health - damage;
-	}
 
-	public void destroySelf()
-	{
-		Destroy (gameObject);
-	}
-	
 }
