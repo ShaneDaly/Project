@@ -25,30 +25,18 @@ public class PlanetAttack : MonoBehaviour {
         if (enemy.activeSelf == true)
         {
             float distance = Vector3.Distance(enemy.transform.position, planet.transform.position);
-<<<<<<< HEAD
 			fwd = transform.TransformDirection (Vector3.up);
 			float dist = Vector3.Distance (enemy.transform.position, transform.position);
-			if (dist < 100) 
+			if (dist < range) 
 			{
 				timer += Time.deltaTime;
 				
 				if (timer > 2.0f)
 				{
 					timer -= 2.0f;
-					Instantiate (rocket, shotspawn.position, shotspawn.rotation);
+                    Instantiate(rocket, transform.position, transform.rotation);
 				}
 			}
-=======
-            timer -= Time.deltaTime;
-            if (distance <= range && timer <= 0)
-            {
-                
-                rocketCode = rocket.GetComponent<Rocket>();
-                rocketCode.homePlanet = planet;
-                Instantiate(rocket, planet.transform.position, planet.transform.rotation);
-                timer = 3;
-            }
->>>>>>> c18ef6d113c364c1993ffbbc724a21d1cdb89787
         }
 	}
 

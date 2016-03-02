@@ -36,9 +36,12 @@ public class HealthScript : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
-		decreaseHealth ();
-		float calc_Health = health / max;
-		SetHealthBar (calc_Health);
+        if (other.gameObject.tag == "Laser")
+        {
+            decreaseHealth();
+            float calc_Health = health / max;
+            SetHealthBar(calc_Health);
+        }
 	}
 
 	void decreaseHealth ()
@@ -66,9 +69,8 @@ public class HealthScript : MonoBehaviour
 
 		if (health <= 0) 
         {
-			Destroy(gameObject);
-			//gameObject.SetActive(false);
-			//gameObject.tag = "Untagged";
+			gameObject.SetActive(false);
+			gameObject.tag = "Untagged";
 			Instantiate(scrap, transform.position, transform.rotation);
 		}
 	}
