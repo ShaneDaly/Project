@@ -179,16 +179,15 @@ public class pointer : MonoBehaviour
         UnityEditor.Handles.DrawWireDisc(sun.transform.position, Vector3.up, distance);
     }
 
-    public void toggleEmitter()
+    public void enableMainEmitter()
     {
-        if (emitterSecondaryActive)
-        {
-            emitterSecondaryActive = false;
-        }
-        else
-        {
-            emitterSecondaryActive = true;
-        }
+        emitter.GetComponent<ParticleSystem>().enableEmission = true;
+        emitterSeconday.GetComponent<ParticleSystem>().enableEmission = false;
+    }
+    public void enableMainSecondary()
+    {
+        emitter.GetComponent<ParticleSystem>().enableEmission = false;
+        emitterSeconday.GetComponent<ParticleSystem>().enableEmission = true;
     }
 
     public bool getOrbiterSelected()
