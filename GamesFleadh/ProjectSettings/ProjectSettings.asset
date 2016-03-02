@@ -12,15 +12,7 @@ PlayerSettings:
   companyName: DefaultCompany
   productName: GamesFleadh
   defaultCursor: {fileID: 0}
-<<<<<<< HEAD
-  cursorHotspot: {x: -1.4016456e+26, y: -5.6067698e+26}
-=======
-<<<<<<< HEAD
-  cursorHotspot: {x: -2.26212629e+27, y: -3.66594571e+28}
-=======
-  cursorHotspot: {x: 0, y: 0}
->>>>>>> 2951c05ea08dba07be2bc60bae772e9a1ac80528
->>>>>>> 66bdad823fee23ca85dcffdf2dec5d4067467d83
+  cursorHotspot: {x: -9.54405348e+30, y: -9.5442058e+30}
   m_ShowUnitySplashScreen: 1
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
@@ -86,15 +78,7 @@ PlayerSettings:
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
   virtualRealitySupported: 0
-<<<<<<< HEAD
-  productGUID: 3e44b6f14212416478c3673c5ac170a1
-=======
-<<<<<<< HEAD
-  productGUID: 4f645562be378ed4a99c0740524053dd
-=======
-  productGUID: e12af13dbda07df4e892f08c819a5e21
->>>>>>> 2951c05ea08dba07be2bc60bae772e9a1ac80528
->>>>>>> 66bdad823fee23ca85dcffdf2dec5d4067467d83
+  productGUID: 71c0fc4ce55567d48a9ddb591131a222
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
@@ -133,15 +117,7 @@ PlayerSettings:
   iOSLaunchScreenLandscape: {fileID: 0}
   iOSLaunchScreenBackgroundColor:
     serializedVersion: 2
-<<<<<<< HEAD
-    rgba: 2778964476
-=======
-<<<<<<< HEAD
-    rgba: 2324203516
-=======
-    rgba: 1751408997
->>>>>>> 2951c05ea08dba07be2bc60bae772e9a1ac80528
->>>>>>> 66bdad823fee23ca85dcffdf2dec5d4067467d83
+    rgba: 4059032828
   iOSLaunchScreenFillPct: 100
   iOSLaunchScreenSize: 100
   iOSLaunchScreenCustomXibPath: 

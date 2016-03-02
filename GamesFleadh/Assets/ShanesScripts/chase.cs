@@ -69,12 +69,8 @@ public class chase : MonoBehaviour {
 
 	void  Investigating ()
 	{
-<<<<<<< HEAD
-		transform.LookAt(Planet.transform);
-=======
 		detectClosestEnemy ();
-		transform.LookAt(Planet);
->>>>>>> 66bdad823fee23ca85dcffdf2dec5d4067467d83
+		transform.LookAt(Planet.transform);
 		transform.position += transform.forward*Speed*Time.deltaTime;
 	}
 
