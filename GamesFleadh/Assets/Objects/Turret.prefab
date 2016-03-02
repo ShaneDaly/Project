@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &121204
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 463388}
+  m_Layer: 0
+  m_Name: turretspawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &146008
 GameObject:
   m_ObjectHideFlags: 0
@@ -30,7 +45,7 @@ GameObject:
   - 33: {fileID: 3349342}
   - 136: {fileID: 13634232}
   - 23: {fileID: 2301232}
-  - 114: {fileID: 11441944}
+  - 114: {fileID: 11489198}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -44,9 +59,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 146008}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 460.922913, y: 123.440002, z: 63.5699997}
-  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_LocalRotation: {x: .328990012, y: .469846338, z: .469846338, w: .671010017}
+  m_LocalPosition: {x: .0520000011, y: .493000001, z: .181999996}
+  m_LocalScale: {x: .200000018, y: .200000018, z: .200000018}
   m_Children:
   - {fileID: 426686}
   m_Father: {fileID: 0}
@@ -60,8 +75,21 @@ Transform:
   m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
   m_LocalPosition: {x: 0, y: -.0766677856, z: .589999974}
   m_LocalScale: {x: .333333343, y: .333333343, z: .333333343}
-  m_Children: []
+  m_Children:
+  - {fileID: 463388}
   m_Father: {fileID: 418252}
+  m_RootOrder: 0
+--- !u!4 &463388
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 121204}
+  m_LocalRotation: {x: -.707106888, y: -.664463103, z: 5.96046519e-08, w: .241844535}
+  m_LocalPosition: {x: -.349999994, y: 1.76999998, z: -1.04999995}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_Children: []
+  m_Father: {fileID: 426686}
   m_RootOrder: 0
 --- !u!23 &2301232
 MeshRenderer:
@@ -125,7 +153,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 148706}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &11441944
+--- !u!114 &11489198
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -133,12 +161,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 148706}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 377b1bd3a4ad40f4bb71be1d765a426b, type: 3}
+  m_Script: {fileID: 11500000, guid: ce7ec6228f551d14fb1240619f79b778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shot: {fileID: 175474, guid: f1f06ae9bb5e1b546811e43490a46ea6, type: 2}
   enemy: {fileID: 0}
-  ammo: 10
+  rocket: {fileID: 175474, guid: f1f06ae9bb5e1b546811e43490a46ea6, type: 2}
+  planet: {fileID: 0}
+  shotspawn: {fileID: 463388}
+  enemies: []
 --- !u!114 &11498796
 MonoBehaviour:
   m_ObjectHideFlags: 1

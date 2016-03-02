@@ -9,25 +9,25 @@ public class Health : MonoBehaviour {
 	public float time = 5;
 	public string newScene;
 	public int size;
-	public int num;
+	public int num = 0;
+	Health h;
 	
 	void Awake ()
 	{
 		planets = GameObject.FindGameObjectsWithTag ("Planet");
+		h = gameObject.GetComponent<Health> ();
 		size = planets.Length;
 	}
 	
 
 	void OnTriggerEnter (Collider laser)
 	{
-
+		health -= 1;
 	}
 
 	void Update ()
 	{
-		if (num == size) {
-			gameObject.tag = "Planet";
-		}
+
 
 		if (health <= 0) {
 			time -= Time.deltaTime;

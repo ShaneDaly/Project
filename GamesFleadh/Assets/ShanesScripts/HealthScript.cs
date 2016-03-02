@@ -12,12 +12,13 @@ public class HealthScript : MonoBehaviour
     private float health;
 	public float Length;
 	public float timer = 10;
-	public GameObject other;
 	public GameObject healthBar;
+	public GameObject other;
 	public GameObject scrap;
     [SerializeField]
     private float defence;
     PlanetStats planetStats;
+
 
 	Health Health;
 
@@ -56,8 +57,9 @@ public class HealthScript : MonoBehaviour
         health = defence * startHealth;
 		if (health <= 0) 
         {
-			gameObject.SetActive(false);
-			GetComponent<Health>().num += 1;
+			Destroy(gameObject);
+			//gameObject.SetActive(false);
+			//gameObject.tag = "Untagged";
 			Instantiate(scrap, transform.position, transform.rotation);
 		}
 	}
