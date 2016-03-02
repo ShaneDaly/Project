@@ -3,10 +3,8 @@ using System.Collections;
 
 public class cameraControl : MonoBehaviour
 {
-    public float sensitivityX = 8F;
-    public float sensitivityY = 8F;
-    public float mHdg = 0F;
-    public float mPitch = 90F;
+    public float sensitivityX;
+    public float sensitivityY;
 
     public Vector3 goToLocation;
     public Transform target;
@@ -20,6 +18,9 @@ public class cameraControl : MonoBehaviour
     public float zoomSpeed;
     public float GotoHeight;
 
+    public float mouseX;
+    public float mouseY;
+
     public bool isMoving;
     public bool active;
 
@@ -30,6 +31,9 @@ public class cameraControl : MonoBehaviour
     {
         mode = 0;
         active = true;
+
+        sensitivityX = 8F;
+        sensitivityY = 8F;
     }
 
     void Update()
@@ -57,36 +61,35 @@ public class cameraControl : MonoBehaviour
             moveCamera();
         }
     }
-
-    void MoveForwards(float aVal)
-    {
-        Vector3 fwd = transform.forward;
-        fwd.y = 0;
-        fwd.Normalize();
-        transform.position += aVal * fwd;
-    }
-
-    void Strafe(float aVal)
-    {
-        transform.position += aVal * transform.right;
-    }
+    
     void ChangeHeight(float aVal)
     {
-        transform.position += aVal * Vector3.up;
+        if (transform.position.y > minHeight && aVal < 0)
+        {
+            transform.position += aVal * Vector3.up;
+        }
+        else if (transform.position.y < maxHeight && aVal > 0)
+        {
+            transform.position += aVal * Vector3.up;
+        }
     }
+
+    public float newX;
+    public float newY;
+
     void ChangeHeading(float aVal)
     {
-        mHdg += aVal;
-        WrapAngle(ref mHdg);
-        transform.localEulerAngles = new Vector3(mPitch, mHdg, 0);
+        newY = Wrap360(aVal += transform.localEulerAngles.y);
+        transform.localEulerAngles = new Vector3(newX, newY, 0);
     }
+
     void ChangePitch(float aVal)
     {
-        mPitch += aVal;
-        WrapAngle(ref mPitch);
-        transform.localEulerAngles = new Vector3(mPitch, mHdg, 0);
+        newX = Wrap360(aVal += transform.localEulerAngles.x);
+        transform.localEulerAngles = new Vector3(newX, newY, 0);
     }
-    public static void WrapAngle(ref float angle)
+
+    float Wrap360(float angle)
     {
         if (angle < -360F)
         {
@@ -96,6 +99,7 @@ public class cameraControl : MonoBehaviour
         {
             angle -= 360F;
         }
+        return angle;
     }
 
     public void goTo(Vector3 newLocation)
@@ -157,8 +161,8 @@ public class cameraControl : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, goToLocation, step);
         }
 
-        float deltaX = Input.GetAxis("Mouse X") * sensitivityX;
-        float deltaY = Input.GetAxis("Mouse Y") * sensitivityY;
+        float mouseX = Input.GetAxis("Mouse X") * sensitivityX;
+        float mouseY = Input.GetAxis("Mouse Y") * sensitivityY;
 
         if (!(Input.GetMouseButton(0) || Input.GetMouseButton(1)))
         {
@@ -167,20 +171,14 @@ public class cameraControl : MonoBehaviour
 
         if (Input.GetMouseButton(0) && Input.GetMouseButton(1))
         {
-            Strafe(deltaX);
-            ChangeHeight(deltaY);
+            ChangeHeight(mouseY);
         }
         else
         {
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButton(1))
             {
-                MoveForwards(deltaY);
-                ChangeHeading(deltaX);
-            }
-            else if (Input.GetMouseButton(1))
-            {
-                ChangeHeading(deltaX);
-                ChangePitch(-deltaY);
+                ChangeHeading(mouseX);
+                ChangePitch(-mouseY);
             }
         }
     }
@@ -188,8 +186,6 @@ public class cameraControl : MonoBehaviour
     public void enableMain()
     {
         active = true;
-        mPitch = 90F;
-        mHdg = transform.eulerAngles.y;
         gameObject.GetComponent<SecondaryCamera>().toggleActive();
         Pointer.GetComponent<pointer>().toggleEmitter();
     }

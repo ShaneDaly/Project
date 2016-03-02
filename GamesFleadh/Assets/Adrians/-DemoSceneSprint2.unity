@@ -757,7 +757,7 @@ RectTransform:
   - {fileID: 759888820}
   - {fileID: 1863944932}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -1451,7 +1451,7 @@ Transform:
   m_Children:
   - {fileID: 718070896}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!114 &729805015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1686,19 +1686,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 192300, guid: 6007fbe24fef57c44b7a7e3ecb6e5aa7, type: 2}
       propertyPath: m_Name
-      value: GameObject
-      objectReference: {fileID: 0}
-    - target: {fileID: 6516240, guid: 6007fbe24fef57c44b7a7e3ecb6e5aa7, type: 2}
-      propertyPath: m_Size.x
-      value: 8.29029083
-      objectReference: {fileID: 0}
-    - target: {fileID: 6516240, guid: 6007fbe24fef57c44b7a7e3ecb6e5aa7, type: 2}
-      propertyPath: m_Center.x
-      value: .145687103
-      objectReference: {fileID: 0}
-    - target: {fileID: 6516240, guid: 6007fbe24fef57c44b7a7e3ecb6e5aa7, type: 2}
-      propertyPath: m_Enabled
-      value: 0
+      value: Enemy1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6007fbe24fef57c44b7a7e3ecb6e5aa7, type: 2}
@@ -2326,7 +2314,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!114 &1045571975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2912,6 +2900,7 @@ MonoBehaviour:
   timer: 0
   shotspawn: {fileID: 0}
   enemies: []
+  range: 100
 --- !u!122 &1505236090
 Halo:
   m_ObjectHideFlags: 0
@@ -3015,7 +3004,7 @@ Transform:
   m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!114 &1505236097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4019,6 +4008,48 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2025916951}
+--- !u!1001 &2038861787
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -134
+      objectReference: {fileID: 0}
+    - target: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 439960, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9c1689e17192c54408ffc03384ed404f, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &2061819793
 GameObject:
   m_ObjectHideFlags: 0
@@ -4146,7 +4177,7 @@ Transform:
   m_LocalScale: {x: 40, y: 40, z: 40}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!114 &2061819801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4181,6 +4212,7 @@ MonoBehaviour:
   timer: 0
   shotspawn: {fileID: 0}
   enemies: []
+  range: 100
 --- !u!114 &2061819803
 MonoBehaviour:
   m_ObjectHideFlags: 0

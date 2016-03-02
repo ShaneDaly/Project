@@ -49,12 +49,12 @@
      <Compile Include="Assets\Adrians\GlobalContollerScript.cs" />
      <Compile Include="Assets\Adrians\ImageFadeOut.cs" />
      <Compile Include="Assets\Adrians\LoadLevelDelay.cs" />
-     <Compile Include="Assets\Adrians\NewChase.cs" />
      <Compile Include="Assets\Adrians\PlanetStats.cs" />
      <Compile Include="Assets\Adrians\RocketOther.cs" />
      <Compile Include="Assets\Adrians\SatelliteStats.cs" />
      <Compile Include="Assets\Bounds.cs" />
      <Compile Include="Assets\Collect.cs" />
+     <Compile Include="Assets\Explotion.cs" />
      <Compile Include="Assets\HealthBar.cs" />
      <Compile Include="Assets\Jims Assets\Scripts\Moon.cs" />
      <Compile Include="Assets\Jims Assets\Scripts\Planet.cs" />
@@ -96,6 +96,7 @@
      <Compile Include="Assets\ShanesScripts\Rocket.cs" />
      <Compile Include="Assets\ShanesScripts\Rotator.cs" />
      <Compile Include="Assets\ShanesScripts\SatelliteAttack.cs" />
+     <Compile Include="Assets\ShanesScripts\SatelliteHealth.cs" />
      <Compile Include="Assets\ShanesScripts\SatelliteRocket.cs" />
      <Compile Include="Assets\ShanesScripts\ScrapGenerate.cs" />
      <Compile Include="Assets\ShanesScripts\Spawner.cs" />

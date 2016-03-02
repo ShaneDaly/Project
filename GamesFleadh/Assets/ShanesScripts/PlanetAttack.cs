@@ -2,31 +2,45 @@
 using System.Collections;
 
 public class PlanetAttack : MonoBehaviour {
-
+	
     public GameObject enemy;
     public GameObject rocket;
     public GameObject planet;
-    public float timer;
     public Transform shotspawn;
     public GameObject[] enemies;
     float closestDist = -2;
+	private Vector3 fwd;
     Rocket rocketCode;
+    public float range = 100;
 
     void Start()
     {
         planet = this.gameObject;
     }
 
-
+	float timer = 0.0f;
 	void Update () {
 
         detectClosestEnemy();
-        if (enemy.tag == "Enemy")
+        if (enemy.activeSelf == true)
         {
-
             float distance = Vector3.Distance(enemy.transform.position, planet.transform.position);
+<<<<<<< HEAD
+			fwd = transform.TransformDirection (Vector3.up);
+			float dist = Vector3.Distance (enemy.transform.position, transform.position);
+			if (dist < 100) 
+			{
+				timer += Time.deltaTime;
+				
+				if (timer > 2.0f)
+				{
+					timer -= 2.0f;
+					Instantiate (rocket, shotspawn.position, shotspawn.rotation);
+				}
+			}
+=======
             timer -= Time.deltaTime;
-            if (distance <= 200 && timer <= 0)
+            if (distance <= range && timer <= 0)
             {
                 
                 rocketCode = rocket.GetComponent<Rocket>();
@@ -34,6 +48,7 @@ public class PlanetAttack : MonoBehaviour {
                 Instantiate(rocket, planet.transform.position, planet.transform.rotation);
                 timer = 3;
             }
+>>>>>>> c18ef6d113c364c1993ffbbc724a21d1cdb89787
         }
 	}
 

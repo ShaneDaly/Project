@@ -14,20 +14,12 @@ public class Spawner : MonoBehaviour
 	{
 		InvokeRepeating ("Spawn", spawnTime, spawnTime);
 	}
-
-	public void ReduceMax ()
-	{
-		maxEn = maxEn - 1;
-	}
 	
+
 	void Spawn ()
 	{	
-		if (maxEn <= 5) {
-
-			int spawnPointIndex = Random.Range (0, spawnPoints.Length);
-			maxEn += 1;
-			Instantiate (enemy, spawnPoints [spawnPointIndex].position, spawnPoints [spawnPointIndex].rotation);
-
-		}
+		int spawnPointIndex = Random.Range (0, spawnPoints.Length);
+		maxEn += 1;
+		Instantiate (enemy, spawnPoints [spawnPointIndex].position, spawnPoints [spawnPointIndex].rotation);
 	}
 }
