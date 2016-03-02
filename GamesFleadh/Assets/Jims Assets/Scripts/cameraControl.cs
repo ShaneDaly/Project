@@ -24,6 +24,9 @@ public class cameraControl : MonoBehaviour
     public bool isMoving;
     public bool active;
 
+    public float newX;
+    public float newY;
+
     public GameObject sun;
     public GameObject Pointer;
 
@@ -44,7 +47,7 @@ public class cameraControl : MonoBehaviour
             {
                 active = false;
                 gameObject.GetComponent<SecondaryCamera>().toggleActive();
-                Pointer.GetComponent<pointer>().toggleEmitter();
+                Pointer.GetComponent<pointer>().enableMainSecondary();
                 isMoving = false;
             }
             else if (!active)
@@ -73,9 +76,6 @@ public class cameraControl : MonoBehaviour
             transform.position += aVal * Vector3.up;
         }
     }
-
-    public float newX;
-    public float newY;
 
     void ChangeHeading(float aVal)
     {
@@ -187,7 +187,7 @@ public class cameraControl : MonoBehaviour
     {
         active = true;
         gameObject.GetComponent<SecondaryCamera>().toggleActive();
-        Pointer.GetComponent<pointer>().toggleEmitter();
+        Pointer.GetComponent<pointer>().enableMainEmitter();
     }
 
     public bool checkActive()

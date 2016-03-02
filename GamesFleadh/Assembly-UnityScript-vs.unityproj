@@ -46,11 +46,12 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\EarthSimplePlanets\Scripts\RotateEarth.js" />
-     <Compile Include="Assets\EarthSimplePlanets\Scripts\RotationAroundPlanet.js" />
-     <Compile Include="Assets\EarthSimplePlanets\Scripts\SmoothMouseOrbit.js" />
-     <None Include="Assets\EarthSimplePlanets\Shaders\DisplayNightEarthTexture.shader" />
+     <Compile Include="Assets\FT_FreeSample\Script\AnimationScrollTexture.js" />
+     <Compile Include="Assets\FT_FreeSample\Script\AnimationSpriteSheet.js" />
+     <Compile Include="Assets\FT_FreeSample\Script\DeadTime.js" />
+     <None Include="Assets\MaxP\Shaders\_Source\Shaders\Resources\Blur.shader" />
      <None Include="Assets\Materials\UI-Default-No-Alpha.shader" />
+     <None Include="Assets\MaxP\Shaders\_Source\Shaders\Resources\DirtyLensFlare.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

@@ -35,26 +35,6 @@ public class pointer : MonoBehaviour
     }
     void Update () 
     {
-        if (planetHit)
-        {
-            emitter.GetComponent<ParticleSystem>().enableEmission = false;
-            emitterSeconday.GetComponent<ParticleSystem>().enableEmission = false;
-        }
-        else
-        {
-            if (emitterSecondaryActive)
-            {
-                emitter.GetComponent<ParticleSystem>().enableEmission = false;
-                emitterSeconday.GetComponent<ParticleSystem>().enableEmission = true;
-            }
-            else
-            {
-                emitter.GetComponent<ParticleSystem>().enableEmission = true;
-                emitterSeconday.GetComponent<ParticleSystem>().enableEmission = false;
-            }
-        }
-
-
         Plane plane = new Plane(Vector3.up, 0);
         float dist;
         
@@ -70,15 +50,9 @@ public class pointer : MonoBehaviour
                 if (!hit)
                 {
                     transform.position = new Vector3(point.x, -50, point.z);
-
-                    planetHit = false;
                 }
                 if (hit)
                 {
-                    if (hitInfo.transform.gameObject.tag == "Planet" || hitInfo.transform.gameObject.tag == "Satellite" || hitInfo.transform.gameObject.tag == "Sun")
-                    {
-                        planetHit = true;
-                    }
                 }
             }
         }
@@ -179,16 +153,15 @@ public class pointer : MonoBehaviour
         UnityEditor.Handles.DrawWireDisc(sun.transform.position, Vector3.up, distance);
     }
 
-    public void toggleEmitter()
+    public void enableMainEmitter()
     {
-        if (emitterSecondaryActive)
-        {
-            emitterSecondaryActive = false;
-        }
-        else
-        {
-            emitterSecondaryActive = true;
-        }
+        emitter.GetComponent<ParticleSystem>().enableEmission = true;
+        emitterSeconday.GetComponent<ParticleSystem>().enableEmission = false;
+    }
+    public void enableMainSecondary()
+    {
+        emitter.GetComponent<ParticleSystem>().enableEmission = false;
+        emitterSeconday.GetComponent<ParticleSystem>().enableEmission = true;
     }
 
     public bool getOrbiterSelected()
