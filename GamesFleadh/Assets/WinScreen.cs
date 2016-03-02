@@ -7,7 +7,7 @@ public class WinScreen : MonoBehaviour
     {
         if (GameObject.FindGameObjectWithTag("Enemy").Equals(0))
         {
-            Application.LoadLevel("MainMenu");
+            Application.LoadLevel("WinScreen");
         }
         else
         {

@@ -12,7 +12,11 @@ PlayerSettings:
   companyName: DefaultCompany
   productName: GamesFleadh
   defaultCursor: {fileID: 0}
+<<<<<<< HEAD
   cursorHotspot: {x: 0, y: 0}
+=======
+  cursorHotspot: {x: -2.26212629e+27, y: -3.66594571e+28}
+>>>>>>> c077f2b42e48f7be6ff1a6cbb3af76ef07fc83ac
   m_ShowUnitySplashScreen: 1
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
@@ -90,7 +94,11 @@ PlayerSettings:
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
   virtualRealitySupported: 0
+<<<<<<< HEAD
   productGUID: ce7f36e7abc906f43843fa2ee3779223
+=======
+  productGUID: 25749190692191d4595554d41fdfb504
+>>>>>>> c077f2b42e48f7be6ff1a6cbb3af76ef07fc83ac
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
@@ -131,7 +139,11 @@ PlayerSettings:
   iOSLaunchScreenLandscape: {fileID: 0}
   iOSLaunchScreenBackgroundColor:
     serializedVersion: 2
+<<<<<<< HEAD
     rgba: 4294967040
+=======
+    rgba: 2324203516
+>>>>>>> c077f2b42e48f7be6ff1a6cbb3af76ef07fc83ac
   iOSLaunchScreenFillPct: 100
   iOSLaunchScreenSize: 100
   iOSLaunchScreenCustomXibPath: 
@@ -420,6 +432,7 @@ PlayerSettings:
   XboxOneAllowedProductIds: []
   XboxOnePersistentLocalStorageSize: 0
   intPropertyNames:
+<<<<<<< HEAD
   - Android::ScriptingBackend
   - Metro::ScriptingBackend
   - Standalone::ScriptingBackend
@@ -442,22 +455,14 @@ PlayerSettings:
   WebPlayer::ScriptingBackend: 0
   iOS::Architecture: 2
   iOS::ScriptingBackend: 1
+=======
+  - WebPlayer::ScriptingBackend
+  WebPlayer::ScriptingBackend: 0
+>>>>>>> c077f2b42e48f7be6ff1a6cbb3af76ef07fc83ac
   boolPropertyNames:
-  - WebGL::analyzeBuildSize
-  - WebGL::dataCaching
-  - WebGL::useEmbeddedResources
   - XboxOne::enus
-  WebGL::analyzeBuildSize: 0
-  WebGL::dataCaching: 0
-  WebGL::useEmbeddedResources: 0
   XboxOne::enus: 1
-  stringPropertyNames:
-  - WebGL::emscriptenArgs
-  - WebGL::template
-  - additionalIl2CppArgs::additionalIl2CppArgs
-  WebGL::emscriptenArgs: 
-  WebGL::template: APPLICATION:Default
-  additionalIl2CppArgs::additionalIl2CppArgs: 
+  stringPropertyNames: []
   firstStreamedSceneWithResources: 0
   cloudProjectId: 
   projectName: 

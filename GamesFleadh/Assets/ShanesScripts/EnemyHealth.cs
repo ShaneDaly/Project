@@ -6,8 +6,14 @@ public class EnemyHealth : MonoBehaviour {
 	public float health = 100;
 	public float max = 100;
 	public GameObject scrap;
+	public GameObject rocket;
 
-
+	void OnTriggerEnter (Collider rocket)
+	{
+		if (health >= 1) {
+			health -= 10;
+		}
+	}
 
 	void Update () {
 
@@ -19,7 +25,5 @@ public class EnemyHealth : MonoBehaviour {
 		}
 	
 	}
-
-
 
 }
