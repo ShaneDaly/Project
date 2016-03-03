@@ -30,6 +30,8 @@ public class cameraControl : MonoBehaviour
     public GameObject sun;
     public GameObject Pointer;
 
+    public GameObject[] trailers;
+
     void start()
     {
         mode = 0;
@@ -49,6 +51,15 @@ public class cameraControl : MonoBehaviour
                 gameObject.GetComponent<SecondaryCamera>().toggleActive();
                 Pointer.GetComponent<pointer>().enableMainSecondary();
                 isMoving = false;
+
+                trailers = GameObject.FindGameObjectsWithTag("Trailer");
+                if (trailers != null)
+                {
+                    foreach (GameObject trailer in trailers)
+                    {
+                        trailer.GetComponent<trailCreator>().enableTrail();
+                    }
+                }
             }
             else if (!active)
             {
@@ -104,6 +115,7 @@ public class cameraControl : MonoBehaviour
 
     public void goTo(Vector3 newLocation)
     {
+        newX = transform.eulerAngles.x;
         goToLocation = newLocation;
         isMoving = true;
         float h;
@@ -188,6 +200,16 @@ public class cameraControl : MonoBehaviour
         active = true;
         gameObject.GetComponent<SecondaryCamera>().toggleActive();
         Pointer.GetComponent<pointer>().enableMainEmitter();
+
+
+        trailers = GameObject.FindGameObjectsWithTag("Trailer");
+        if (trailers != null)
+        {
+            foreach (GameObject trailer in trailers)
+            {
+                trailer.GetComponent<trailCreator>().disableTrail();
+            }
+        }
     }
 
     public bool checkActive()

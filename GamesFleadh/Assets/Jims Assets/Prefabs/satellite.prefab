@@ -419,6 +419,7 @@ MonoBehaviour:
   direction: {x: 0, y: 0, z: 0}
   prevPos: {x: 0, y: 0, z: 0}
   isAcc: 0
+  trailer: {fileID: 149030, guid: 3ef371c1a91f87248892ff54aec1a5a0, type: 2}
 --- !u!135 &13503572
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -1562,6 +1563,7 @@ ReflectionProbe:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IntensityMultiplier: 1
+  m_BlendDistance: 1
   m_HDR: 1
   m_BoxProjection: 0
   m_RenderDynamicObjects: 0
@@ -1614,6 +1616,10 @@ Prefab:
       propertyPath: startHealth
       value: 500
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: trailer
+      value: 
+      objectReference: {fileID: 149030, guid: 3ef371c1a91f87248892ff54aec1a5a0, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 133454}

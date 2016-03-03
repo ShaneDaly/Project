@@ -5,8 +5,6 @@ Project("{396F4D2E-44BC-5367-38AA-B1E61A6468A9}") = "GamesFleadh", "Assembly-CSh
 EndProject
 Project("{396F4D2E-44BC-5367-38AA-B1E61A6468A9}") = "GamesFleadh", "Assembly-CSharp-Editor.csproj", "{42406B01-F33D-D060-7A6F-8FC05B6DA754}"
 EndProject
-Project("{396F4D2E-44BC-5367-38AA-B1E61A6468A9}") = "GamesFleadh", "Assembly-UnityScript.unityproj", "{1B8169AF-74C6-0784-575F-DF389201F153}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,18 +19,23 @@ Global
 		{42406B01-F33D-D060-7A6F-8FC05B6DA754}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42406B01-F33D-D060-7A6F-8FC05B6DA754}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42406B01-F33D-D060-7A6F-8FC05B6DA754}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1B8169AF-74C6-0784-575F-DF389201F153}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1B8169AF-74C6-0784-575F-DF389201F153}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1B8169AF-74C6-0784-575F-DF389201F153}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1B8169AF-74C6-0784-575F-DF389201F153}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+<<<<<<< HEAD
 																																																																																																																																																																														GlobalSection(MonoDevelopProperties) = preSolution
+=======
+<<<<<<< HEAD
+																																																																																																																																																																									GlobalSection(MonoDevelopProperties) = preSolution
+=======
+<<<<<<< HEAD
+																																																																																																																																																																										GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> 7ebeac521e15f6e66ca12b62b5783b22edb1bb8a
 =======
 																																																																																																																																																																												GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> 20da3458abf53daa35eb78f1c7b930139a7ef37f
+>>>>>>> f85dba542ca92b8f29a69a4bf2d1dba4f68107fb
 =======
 																																																																																																																																																																																				GlobalSection(MonoDevelopProperties) = preSolution
 =======

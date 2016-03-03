@@ -3,15 +3,20 @@ using System.Collections;
 
 public class trailCreator : MonoBehaviour
 {
-    public TrailRenderer TR;
-    
+
+    void Start()
+    {
+        gameObject.tag = "Trailer";
+        transform.position.Set(transform.position.x, -50, transform.position.z);
+    }
+
     public void enableTrail()
     {
-        TR.enabled = true;
+        //gameObject.GetComponent<TrailRenderer>().time = 9;
     }
     public void disableTrail()
     {
-        TR.enabled = false;
+        //gameObject.GetComponent<TrailRenderer>().time = 0;
     }
 
 }
