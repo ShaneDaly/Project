@@ -12,7 +12,7 @@ PlayerSettings:
   companyName: DefaultCompany
   productName: GamesFleadh
   defaultCursor: {fileID: 0}
-  cursorHotspot: {x: 0, y: 0}
+  cursorHotspot: {x: 1.02204154e-36, y: 0}
   m_ShowUnitySplashScreen: 1
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
@@ -78,11 +78,7 @@ PlayerSettings:
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
   virtualRealitySupported: 0
-<<<<<<< HEAD
-  productGUID: b3f34b8b5bdac9441b2919c3f72c5e8a
-=======
-  productGUID: 4f70d7bf5c8a91748b0eeb181afabe82
->>>>>>> 2b91c9232e3ea5a65b585390cafe7fcc4a1089ec
+  productGUID: b1c137cbbcb0c7c44a5c8f3a9e1c96c6
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
