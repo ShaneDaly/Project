@@ -6,6 +6,14 @@ public class GameOver : MonoBehaviour
 
 	public string newScene;
 	string level;
+	public GameObject enemy;
+	EnemyHealth eh;
+
+	void Update ()
+	{
+		eh = enemy.GetComponent<EnemyHealth> ();
+		eh.health = eh.increase;
+	}
 
 	void OnGUI()
 	{

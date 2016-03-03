@@ -90,7 +90,15 @@ PlayerSettings:
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
   virtualRealitySupported: 0
+<<<<<<< HEAD
   productGUID: 20dddb0f668af574295fba273a76865e
+=======
+<<<<<<< HEAD
+  productGUID: 49c00e6d3e13a844284f8732da91ca44
+=======
+  productGUID: bcde797289a0e3f418e06c16dbdc8063
+>>>>>>> 20da3458abf53daa35eb78f1c7b930139a7ef37f
+>>>>>>> f85dba542ca92b8f29a69a4bf2d1dba4f68107fb
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
@@ -420,7 +428,10 @@ PlayerSettings:
   XboxOneAllowedProductIds: []
   XboxOnePersistentLocalStorageSize: 0
   intPropertyNames:
+<<<<<<< HEAD
   - Android::ScriptingBackend
+=======
+>>>>>>> f85dba542ca92b8f29a69a4bf2d1dba4f68107fb
   - Metro::ScriptingBackend
   - Standalone::ScriptingBackend
   - WP8::ScriptingBackend

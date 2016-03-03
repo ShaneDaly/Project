@@ -3,13 +3,14 @@ using System.Collections;
 
 public class Health : MonoBehaviour {
 
-	public int health = 1000;
+	public int health = 500;
+	public int dead = 0;
 	public GameObject[] planets;
 	public GameObject laser;
-	public float time = 5;
 	public string newScene;
 	public int size;
-	int num;
+	public int num = 0;
+	public int increase = 1;
 
 	void Awake ()
 	{
@@ -30,11 +31,9 @@ public class Health : MonoBehaviour {
 		}
 
 		if (health <= 0) {
-			time -= Time.deltaTime;
-			if(time <=0){
-				Application.LoadLevel(newScene);
-				LevelManager.setLastLevel(Application.loadedLevelName);
-			}
+			Application.LoadLevel(newScene);
+			LevelManager.setLastLevel(Application.loadedLevelName);
+			
 		}
 	}
 }

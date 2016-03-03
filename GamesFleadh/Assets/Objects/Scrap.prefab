@@ -13,7 +13,6 @@ GameObject:
   - 23: {fileID: 2324330}
   - 114: {fileID: 11489434}
   - 54: {fileID: 5428528}
-  - 114: {fileID: 11439174}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Scrap
@@ -50,7 +49,6 @@ GameObject:
   - 23: {fileID: 2342486}
   - 114: {fileID: 11497778}
   - 54: {fileID: 5495456}
-  - 114: {fileID: 11459014}
   m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Scrap
@@ -71,7 +69,6 @@ GameObject:
   - 23: {fileID: 2373984}
   - 114: {fileID: 11498702}
   - 54: {fileID: 5436980}
-  - 114: {fileID: 11422644}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Scrap
@@ -92,7 +89,6 @@ GameObject:
   - 23: {fileID: 2369058}
   - 114: {fileID: 11402774}
   - 54: {fileID: 5493900}
-  - 114: {fileID: 11432036}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Scrap
@@ -128,7 +124,6 @@ GameObject:
   - 23: {fileID: 2325482}
   - 114: {fileID: 11486906}
   - 54: {fileID: 5434706}
-  - 114: {fileID: 11455916}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Scrap
@@ -149,7 +144,6 @@ GameObject:
   - 23: {fileID: 2358020}
   - 114: {fileID: 11430626}
   - 54: {fileID: 5427250}
-  - 114: {fileID: 11431852}
   m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Scrap
@@ -170,7 +164,6 @@ GameObject:
   - 23: {fileID: 2373464}
   - 114: {fileID: 11427016}
   - 54: {fileID: 5430106}
-  - 114: {fileID: 11457482}
   m_Layer: 0
   m_Name: Cube (6)
   m_TagString: Untagged
@@ -711,17 +704,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 077d1d0dd9cd28b4bb577dbfb374ee3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11422644
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 152214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a377338135c7f0469c506f5aa38474e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11427016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -742,72 +724,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 077d1d0dd9cd28b4bb577dbfb374ee3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11431852
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 186356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a377338135c7f0469c506f5aa38474e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11432036
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 155162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a377338135c7f0469c506f5aa38474e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11439174
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 106232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a377338135c7f0469c506f5aa38474e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11455916
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 160662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a377338135c7f0469c506f5aa38474e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11457482
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 193252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a377338135c7f0469c506f5aa38474e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11459014
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 137394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a377338135c7f0469c506f5aa38474e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11486906

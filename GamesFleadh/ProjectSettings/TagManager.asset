@@ -4,8 +4,26 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - Trailer
   - Planet
+=======
+<<<<<<< HEAD
+  - Enemy
+  - Rocket
+  - Laser
+  - Planet
+  - Waypoint
+  - Sun
+=======
+  - Sun
+  - Planet
+  - Enemy
+  - Scrap
+  - Laser
+  - Rocket
+>>>>>>> 20da3458abf53daa35eb78f1c7b930139a7ef37f
+>>>>>>> f85dba542ca92b8f29a69a4bf2d1dba4f68107fb
   layers:
   - Default
   - TransparentFX

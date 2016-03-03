@@ -1294,7 +1294,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 180095642}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 58}
+  m_LocalPosition: {x: 0, y: 0, z: 29}
   m_LocalScale: {x: 12.2427588, y: 12.2427568, z: 12.2427568}
   m_Children: []
   m_Father: {fileID: 557638313}
@@ -1445,7 +1445,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 527798300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 25}
+  m_LocalPosition: {x: 0, y: 0, z: 11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 557638313}
@@ -1550,7 +1550,7 @@ Canvas:
   m_GameObject: {fileID: 557638307}
   m_Enabled: 1
   serializedVersion: 2
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 1090037393}
   m_PlaneDistance: 100
   m_PixelPerfect: 1
@@ -1727,7 +1727,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 942795963}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 212}
+  m_LocalPosition: {x: 0, y: 0, z: 63}
   m_LocalScale: {x: 16.814209, y: 16.814188, z: 16.814188}
   m_Children: []
   m_Father: {fileID: 557638313}
@@ -1818,7 +1818,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1090037389}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 943, y: 676, z: 2490.5}
+  m_LocalPosition: {x: 943, y: 676, z: 2399}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1905,6 +1905,7 @@ MonoBehaviour:
   sizeKm: 0
   ownRotateSpeed: 0
   halo: {fileID: 0}
+  trailer: {fileID: 1808622258}
 --- !u!123 &1774593978
 LensFlare:
   m_ObjectHideFlags: 0
@@ -1971,7 +1972,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1978484992}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 152}
+  m_LocalPosition: {x: 0, y: 0, z: 44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 557638313}

@@ -21,8 +21,7 @@ public class HealthScript : MonoBehaviour
     private float defence;
     float startDefence;
     PlanetStats planetStats;
-
-
+	public GameObject sun;
 	Health Health;
 
     void Start()
@@ -60,6 +59,7 @@ public class HealthScript : MonoBehaviour
 	void Update () 
     {
         defence = (planetStats.defence / 10.0f) + 1;
+		Health = sun.GetComponent<Health> ();
         if (defence != startDefence)
         {
             max = defence * max;
@@ -72,7 +72,9 @@ public class HealthScript : MonoBehaviour
 			gameObject.SetActive(false);
 			gameObject.tag = "Untagged";
 			Instantiate(scrap, transform.position, transform.rotation);
+			Health.num += Health.increase;
 		}
 	}
 
 }
+
