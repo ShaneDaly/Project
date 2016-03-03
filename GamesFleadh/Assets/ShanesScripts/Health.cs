@@ -9,13 +9,11 @@ public class Health : MonoBehaviour {
 	public float time = 5;
 	public string newScene;
 	public int size;
-	public int num = 0;
-	Health h;
-	
+	int num;
+
 	void Awake ()
 	{
 		planets = GameObject.FindGameObjectsWithTag ("Planet");
-		h = gameObject.GetComponent<Health> ();
 		size = planets.Length;
 	}
 	
@@ -27,7 +25,9 @@ public class Health : MonoBehaviour {
 
 	void Update ()
 	{
-
+		if (num == size) {
+			gameObject.tag = "Planet";
+		}
 
 		if (health <= 0) {
 			time -= Time.deltaTime;
