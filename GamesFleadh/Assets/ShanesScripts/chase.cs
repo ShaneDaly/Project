@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class chase : MonoBehaviour {
-
+	
 	public float fireRate;
 	private float nextFire;
 	public float timer = 6;
