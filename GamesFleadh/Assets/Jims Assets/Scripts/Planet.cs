@@ -36,10 +36,8 @@ public class Planet : MonoBehaviour
 
     public float ownRotateSpeed;
     public GameObject halo;
+    public GameObject trailer;
     
-
-
-
     // Use this for initialization
     void Start () 
 	{
@@ -50,7 +48,7 @@ public class Planet : MonoBehaviour
         }
         gameObject.tag = "Planet";
 
-        
+        GameObject ptrailer = (GameObject)Instantiate(trailer, transform.position, new Quaternion(0,0,0,0)); ;
     }
 	
 	// Update is called once per frame
