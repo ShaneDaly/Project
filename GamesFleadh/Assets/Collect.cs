@@ -10,8 +10,8 @@ public class Collect : MonoBehaviour {
 	}
 
 	void Update () {
-		if (Input.GetMouseButtonDown (0)) {
-			Destroy (gameObject);
+		if (Input.GetMouseButtonDown (0)) 
+        {
 
 		}
 	}

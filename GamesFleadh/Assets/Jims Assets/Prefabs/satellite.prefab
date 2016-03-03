@@ -392,8 +392,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f10a7341f73607b4f9e44d411fafe0e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offence: 1
-  defence: 1
+  offence: 5
+  defence: 0
   cost: 20
   active: 1
 --- !u!114 &11454898

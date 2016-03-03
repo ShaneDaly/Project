@@ -33,7 +33,7 @@ public class SatelliteAttack : MonoBehaviour {
                 rocketCode = rocket.GetComponent<SatelliteRocket>();
                 rocketCode.homeSatellite = satellite;
                 Instantiate(rocket, satellite.transform.position, satellite.transform.rotation);
-                timer = 3;
+                timer = 1;
             }
         }
 	}

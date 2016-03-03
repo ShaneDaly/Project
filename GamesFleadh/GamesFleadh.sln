@@ -5,6 +5,8 @@ Project("{396F4D2E-44BC-5367-38AA-B1E61A6468A9}") = "GamesFleadh", "Assembly-CSh
 EndProject
 Project("{396F4D2E-44BC-5367-38AA-B1E61A6468A9}") = "GamesFleadh", "Assembly-CSharp-Editor.csproj", "{42406B01-F33D-D060-7A6F-8FC05B6DA754}"
 EndProject
+Project("{396F4D2E-44BC-5367-38AA-B1E61A6468A9}") = "GamesFleadh", "Assembly-UnityScript.unityproj", "{1B8169AF-74C6-0784-575F-DF389201F153}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,11 +21,37 @@ Global
 		{42406B01-F33D-D060-7A6F-8FC05B6DA754}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42406B01-F33D-D060-7A6F-8FC05B6DA754}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42406B01-F33D-D060-7A6F-8FC05B6DA754}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B8169AF-74C6-0784-575F-DF389201F153}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B8169AF-74C6-0784-575F-DF389201F153}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B8169AF-74C6-0784-575F-DF389201F153}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B8169AF-74C6-0784-575F-DF389201F153}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+<<<<<<< HEAD
 																																																																																																																																																																							GlobalSection(MonoDevelopProperties) = preSolution
+=======
+																																																																																																																																																																																				GlobalSection(MonoDevelopProperties) = preSolution
+=======
+<<<<<<< HEAD
+																																																																																																																																																																					GlobalSection(MonoDevelopProperties) = preSolution
+=======
+<<<<<<< HEAD
+																																																																																																																																																																																		GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> ddbea8fbee388805abbb36ab96702ba138aa9cd9
+=======
+																																																																																																																																																																				GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> e83d3be5127790485826e312f925296feb31dfc5
+=======
+<<<<<<< HEAD
+																																																																																																																																																																													GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> 648213c8fe5274cb5f62a7994223f6d836a30148
+=======
+<<<<<<< HEAD
+																																																																																																																																																												GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> 66bdad823fee23ca85dcffdf2dec5d4067467d83
+>>>>>>> ba7e005254ded610acd117def88687d814734023
 =======
 <<<<<<< HEAD
 																																																																																																																																										GlobalSection(MonoDevelopProperties) = preSolution
@@ -43,6 +71,7 @@ Global
 =======
 <<<<<<< HEAD
 																																																																																																																																																																								GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> 2951c05ea08dba07be2bc60bae772e9a1ac80528
 =======
 <<<<<<< HEAD
 																																																																																																																																																						GlobalSection(MonoDevelopProperties) = preSolution

@@ -60,7 +60,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 421584}
   - 33: {fileID: 3368570}
-  - 65: {fileID: 6513394}
   - 23: {fileID: 2359426}
   - 143: {fileID: 14364850}
   m_Layer: 0
@@ -91,7 +90,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 192300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 146.300003, y: 0, z: -.800000012}
+  m_LocalPosition: {x: -100.800003, y: 0, z: 37.0999985}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 421584}
@@ -183,18 +182,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168304}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &6513394
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 193918}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6516240
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -240,6 +227,7 @@ MonoBehaviour:
   health: 100
   max: 100
   scrap: {fileID: 156382, guid: e4a8a15934b9d844ba33b8caa06a2687, type: 2}
+  rocket: {fileID: 0}
 --- !u!136 &13677614
 CapsuleCollider:
   m_ObjectHideFlags: 1
