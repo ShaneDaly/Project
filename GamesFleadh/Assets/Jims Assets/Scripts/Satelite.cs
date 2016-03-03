@@ -35,12 +35,16 @@ public class Satelite : MonoBehaviour
     [SerializeField]
     private bool isAcc;
 
+    public GameObject trailer;
+
     // Use this for initialization
     void Start()
     {
         isAcc = true;
 
         sun = GameObject.FindGameObjectWithTag("Sun");
+
+        GameObject ptrailer = (GameObject)Instantiate(trailer, transform.position, new Quaternion(0, 0, 0, 0)); ;
     }
 
     // Update is called once per frame

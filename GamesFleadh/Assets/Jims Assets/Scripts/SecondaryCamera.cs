@@ -24,6 +24,7 @@ public class SecondaryCamera : MonoBehaviour
     void Start ()
     {
         active = false;
+
 	}
 	
 	void Update ()
