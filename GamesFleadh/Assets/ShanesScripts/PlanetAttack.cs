@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlanetAttack : MonoBehaviour {
 	
-    public GameObject enemy;
+    public GameObject enemy = null;
     public GameObject rocket;
     public GameObject planet;
     public Transform shotspawn;
@@ -19,10 +19,10 @@ public class PlanetAttack : MonoBehaviour {
     }
 
 	float timer = 0.0f;
-	void Update () {
-
+	void Update () 
+    {
         detectClosestEnemy();
-        if (enemy.activeSelf == true)
+        if (enemy != null && enemy.activeSelf == true)
         {
             float distance = Vector3.Distance(enemy.transform.position, planet.transform.position);
 			fwd = transform.TransformDirection (Vector3.up);
