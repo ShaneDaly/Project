@@ -32,6 +32,8 @@ public class pointer : MonoBehaviour
         isTracking = false;
         prevSet = false;
         gameObject.tag = "pointer";
+        enableMainSecondary();
+        enableMainEmitter();
     }
     void Update () 
     {
