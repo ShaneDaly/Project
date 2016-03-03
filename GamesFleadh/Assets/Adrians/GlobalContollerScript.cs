@@ -115,6 +115,13 @@ public class GlobalContollerScript : MonoBehaviour
                     sidebarPlanet.SetActive(false);
                     setSatelliteStats();
                 }
+                else if (hitInfo.transform.gameObject.tag == "Scrap")
+                {
+                    Destroy(hitInfo.transform.gameObject);
+                    resources += 5;
+                    resValText.text = "" + resources;
+
+                }
             }
             else
             {
