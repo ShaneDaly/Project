@@ -4,9 +4,9 @@ using System.Collections;
 public class Health : MonoBehaviour {
 
 	public int health = 500;
+	public int dead = 0;
 	public GameObject[] planets;
 	public GameObject laser;
-	public float time = 5;
 	public string newScene;
 	public int size;
 	public int num = 0;
@@ -31,11 +31,9 @@ public class Health : MonoBehaviour {
 		}
 
 		if (health <= 0) {
-			time -= Time.deltaTime;
-			if(time <=0){
-				Application.LoadLevel(newScene);
-				LevelManager.setLastLevel(Application.loadedLevelName);
-			}
+			Application.LoadLevel(newScene);
+			LevelManager.setLastLevel(Application.loadedLevelName);
+			
 		}
 	}
 }

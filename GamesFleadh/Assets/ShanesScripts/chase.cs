@@ -7,7 +7,6 @@ public class chase : MonoBehaviour {
 	private float nextFire;
 	public float timer = 6;
     public GameObject Planet;
-	HealthScript Health;
 	public float Speed= 60;
 	private int MaxDist= 2000;
 	public int range = 30;
@@ -34,6 +33,11 @@ public class chase : MonoBehaviour {
     {
         detectClosestEnemy();
 		TargetDistance ();
+
+		if (Planet.tag == "Untagged")
+		{
+			state = State.RetreatState; 
+		}
 
 		switch (state)
 		{
@@ -87,7 +91,8 @@ public class chase : MonoBehaviour {
 
 	void Retreating()
 	{
-
+		transform.LookAt(Waypoint);
+		transform.position += transform.forward *Speed*Time.deltaTime;
 	}
 	
 	public void TargetDistance()

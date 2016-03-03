@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class EnemyHealth : MonoBehaviour {
-
+	
 	public float health = 100;
 	//public int stage = 1;
 	//int stageRec;
