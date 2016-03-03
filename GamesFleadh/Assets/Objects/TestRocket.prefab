@@ -92,6 +92,7 @@ MonoBehaviour:
   timer: 7
   homeSatellite: {fileID: 0}
   damage: 0
+  rocketExpolsion: {fileID: 189506, guid: 873b6b2e07651ae479e576b0fcc19426, type: 2}
 --- !u!136 &13645260
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -139,6 +140,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_TagString
       value: Rocket
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: rocketExpolsion
+      value: 
+      objectReference: {fileID: 189506, guid: 873b6b2e07651ae479e576b0fcc19426, type: 2}
+    - target: {fileID: 0}
+      propertyPath: homeSatellite
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

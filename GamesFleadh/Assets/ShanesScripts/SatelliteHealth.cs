@@ -57,7 +57,6 @@ public class SatelliteHealth : MonoBehaviour
 		if (health <= 0) 
         {
 			gameObject.SetActive(false);
-			GetComponent<Health>().num += 1;
 			Instantiate(scrap, transform.position, transform.rotation);
 		}
 	}

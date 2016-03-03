@@ -12,6 +12,8 @@ public class SatelliteRocket : MonoBehaviour {
     public GameObject homeSatellite;
     SatelliteStats homeSatelliteStats;
     public int damage;
+    public GameObject rocketExpolsion;
+    RocketExplosion rocketExpolsionStats;
 
     void Start()
     {
@@ -20,11 +22,17 @@ public class SatelliteRocket : MonoBehaviour {
         damage = homeSatelliteStats.offence;
     }
 
-    void OnTriggerEnter(Collider enemies)
+    void OnTriggerEnter(Collider enemyCol)
     {
-        gameObject.SetActive(false);
-        EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
-        enemyHealth.health -= damage;
+
+        if (enemyCol.gameObject.tag != "Laser")
+        {
+
+            rocketExpolsionStats = rocketExpolsion.GetComponent<RocketExplosion>();
+            rocketExpolsionStats.damage = damage;
+            Instantiate(rocketExpolsion, transform.position, rocketExpolsion.transform.rotation);
+            gameObject.SetActive(false);
+        }
     }
 
     void Update () 
