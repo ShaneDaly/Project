@@ -240,6 +240,7 @@ MonoBehaviour:
   health: 100
   max: 100
   scrap: {fileID: 156382, guid: e4a8a15934b9d844ba33b8caa06a2687, type: 2}
+  rocket: {fileID: 0}
 --- !u!136 &13677614
 CapsuleCollider:
   m_ObjectHideFlags: 1

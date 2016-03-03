@@ -33,6 +33,8 @@ public class PlanetAttack : MonoBehaviour {
 				
 				if (timer > 2.0f)
 				{
+                    rocketCode = rocket.GetComponent<Rocket>();
+                    rocketCode.homePlanet = planet;
 					timer -= 2.0f;
                     Instantiate(rocket, transform.position, transform.rotation);
 				}
@@ -45,24 +47,27 @@ public class PlanetAttack : MonoBehaviour {
 
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
         float newDist;
-        foreach (GameObject element in enemies)
+        if(enemies.Length > 0)
         {
-            float dist = Vector3.Distance(element.transform.position, transform.position);
-            newDist = dist;
-            if (closestDist >= 0)
+            foreach (GameObject element in enemies)
             {
-                if (newDist < closestDist)
+                float dist = Vector3.Distance(element.transform.position, transform.position);
+                newDist = dist;
+                if (closestDist >= 0)
+                {
+                    if (newDist <= closestDist)
+                    {
+                        closestDist = dist;
+                        enemy = element;
+                    }
+                }
+                else
                 {
                     closestDist = dist;
                     enemy = element;
                 }
-            }
-            else
-            {
-                closestDist = dist;
-                enemy = element;
-            }
 
+            }
         }
 
     }

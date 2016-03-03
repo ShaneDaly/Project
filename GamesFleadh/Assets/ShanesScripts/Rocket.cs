@@ -22,12 +22,17 @@ public class Rocket : MonoBehaviour {
         damage = homePlanetStats.offence;
     }
 
-    void OnTriggerEnter(Collider enemies)
+    void OnTriggerEnter(Collider enemyCol)
     {
-        rocketExpolsionStats = rocketExpolsion.GetComponent<RocketExplosion>();
-        rocketExpolsionStats.damage = damage;
-        Instantiate(rocketExpolsion, transform.position, rocketExpolsion.transform.rotation);
-        gameObject.SetActive(false);
+        
+        if (enemyCol.gameObject.tag != "Laser")
+        {
+
+            rocketExpolsionStats = rocketExpolsion.GetComponent<RocketExplosion>();
+            rocketExpolsionStats.damage = damage;
+            Instantiate(rocketExpolsion, transform.position, rocketExpolsion.transform.rotation);
+            gameObject.SetActive(false);
+        }
     }
 
     void Update () 

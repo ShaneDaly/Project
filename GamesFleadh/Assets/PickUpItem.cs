@@ -5,7 +5,7 @@ public class PickUpItem : MonoBehaviour
 {
     void OnTriggerEnter(Collider Scrap)
     {
-        Destroy(GameObject.FindWithTag("scrap"));
+        Destroy(GameObject.FindWithTag("Scrap"));
       
     }
 }
