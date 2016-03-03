@@ -3,20 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-<<<<<<< HEAD
   tags:
   - Planet
-  - Enemy
-  - Rocket
-=======
-<<<<<<< HEAD
-  tags: []
-=======
-  tags:
-  - scrap
-  - Laser
->>>>>>> ffe391d8bd5165c87cd5d29ab03f066a69d99476
->>>>>>> 2951c05ea08dba07be2bc60bae772e9a1ac80528
   layers:
   - Default
   - TransparentFX
