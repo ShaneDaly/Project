@@ -4,17 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Laser
-  - Planet
-<<<<<<< HEAD
-=======
   - Enemy
-  - Scrap
   - Rocket
+  - Planet
   - Sun
-  - Waypoint
-  - Satellite
->>>>>>> 648213c8fe5274cb5f62a7994223f6d836a30148
+  - Laser
+  - Scrap
   layers:
   - Default
   - TransparentFX

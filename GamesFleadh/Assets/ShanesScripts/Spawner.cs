@@ -22,7 +22,8 @@ public class Spawner : MonoBehaviour
 		{
 			spawnTime -= 1;
 			countdown += 1;
-			timer = 20 + (5 * countdown);
+			timer = 5;
+			//timer = 20 + (5 * countdown);
 		}
 	}
 	

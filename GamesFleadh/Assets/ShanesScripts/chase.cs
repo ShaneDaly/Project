@@ -29,7 +29,7 @@ public class chase : MonoBehaviour {
         //Waypoint = GameObject.FindWithTag("Waypoint").transform;
         detectClosestEnemy();
 	}
-
+	
 	void  Update ()
     {
         detectClosestEnemy();
