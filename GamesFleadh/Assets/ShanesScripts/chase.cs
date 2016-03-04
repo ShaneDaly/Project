@@ -10,7 +10,7 @@ public class chase : MonoBehaviour {
 	public float Speed= 60;
 	private int MaxDist= 2000;
 	public int range = 30;
-	public enum State {PatrolState,ShootState,InvestState, RetreatState}
+	public enum State {ShootState,InvestState, RetreatState}
 	public State state;
 	private float curTime;
 	public GameObject lasershot;
@@ -25,7 +25,11 @@ public class chase : MonoBehaviour {
 	{
 		character = GetComponent<CharacterController>();
 		state = State.InvestState;
+<<<<<<< HEAD
        // Waypoint = GameObject.FindWithTag("Waypoint").transform;
+=======
+        Waypoint = GameObject.FindWithTag("Ship").transform;
+>>>>>>> 001a2531728478c5c8054035277f399556200bfa
         detectClosestEnemy();
 	}
 	
@@ -49,11 +53,6 @@ public class chase : MonoBehaviour {
 		case(State.ShootState):
 		{
 			Shooting ();
-			break;
-		}
-		case(State.PatrolState):
-		{
-			Patrolling ();
 			break;
 		}
 		case(State.RetreatState):
@@ -105,13 +104,15 @@ public class chase : MonoBehaviour {
 		} 
 		else 
 		{
-			state = State.PatrolState;
+			state = State.RetreatState;
 		}
 	}
+
 	public void detectClosestEnemy()
 	{
 		
 		planets = GameObject.FindGameObjectsWithTag ("Planet");
+
 		float newDist;
 		foreach (GameObject element in planets) {
 			float dist = Vector3.Distance (element.transform.position, transform.position);
