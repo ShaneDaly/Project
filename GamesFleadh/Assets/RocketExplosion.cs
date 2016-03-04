@@ -17,7 +17,7 @@ public class RocketExplosion : MonoBehaviour {
         int i = 0;
         while (i < hitColliders.Length)
         {
-            if (hitColliders[i].gameObject.tag == "Enemy")
+            if (hitColliders[i].gameObject.activeSelf && hitColliders[i].gameObject.tag == "Enemy")
             {
                 EnemyHealth enemyHealth = hitColliders[i].GetComponent<EnemyHealth>();
                 enemyHealth.health -= damage;

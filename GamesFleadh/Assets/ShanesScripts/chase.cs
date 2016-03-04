@@ -25,7 +25,7 @@ public class chase : MonoBehaviour {
 	{
 		character = GetComponent<CharacterController>();
 		state = State.InvestState;
-        Waypoint = GameObject.FindWithTag("Waypoint").transform;
+       // Waypoint = GameObject.FindWithTag("Waypoint").transform;
         detectClosestEnemy();
 	}
 	
