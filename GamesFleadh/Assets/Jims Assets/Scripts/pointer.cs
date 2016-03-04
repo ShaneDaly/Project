@@ -35,6 +35,13 @@ public class pointer : MonoBehaviour
         enableMainSecondary();
         enableMainEmitter();
     }
+
+    void Awake()
+    {
+        enableMainSecondary();
+        enableMainEmitter();
+    }
+
     void Update () 
     {
         Plane plane = new Plane(Vector3.up, 0);
