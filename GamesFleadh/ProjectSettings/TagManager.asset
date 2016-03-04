@@ -3,8 +3,26 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Rocket
+  - Planet
+  - Laser
+  - Waypoint
+  - New Tag
+  - Sun
+  - Scrap
+  - Button
+  - Satellite
+  - SatelliteTrailer
+  - Ship
   layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
   - 
   - 
   - 
@@ -31,10 +49,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  m_SortingLayers: []
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
