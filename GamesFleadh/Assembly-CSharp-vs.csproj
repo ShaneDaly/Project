@@ -75,6 +75,7 @@
      <Compile Include="Assets\Jims Assets\Scripts\trailCreator.cs" />
      <Compile Include="Assets\Jims Assets\Scripts\waypoint.cs" />
      <Compile Include="Assets\MaxP\Shaders\Scripts\DirtyLensFlare.cs" />
+     <Compile Include="Assets\OnOff.cs" />
      <Compile Include="Assets\Pause.cs" />
      <Compile Include="Assets\PickUpItem.cs" />
      <Compile Include="Assets\Robs\Scripts\Camera Script\CameraBounds.cs" />
