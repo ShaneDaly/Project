@@ -4,30 +4,18 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< HEAD
-  - Sun
-  - Button
-  - Planet
-  - Enemy
-  - Scrap
   - Satellite
-  - Waypoint
   - Trailer
   - Laser
-=======
-  - Enemy
-  - Rocket
   - Planet
-  - Laser
-  - Waypoint
-  - New Tag
-  - Sun
+  - Rocket
   - Scrap
-  - Button
-  - Satellite
+  - Enemy
+  - Waypoint
+  - PlanetTrailer
   - SatelliteTrailer
+  - Sun
   - Ship
->>>>>>> 001a2531728478c5c8054035277f399556200bfa
   layers:
   - Default
   - TransparentFX

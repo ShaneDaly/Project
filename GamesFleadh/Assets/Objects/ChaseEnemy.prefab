@@ -177,9 +177,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  increase: 100
   max: 100
-  rocket: {fileID: 0}
   scrap: {fileID: 156382, guid: e4a8a15934b9d844ba33b8caa06a2687, type: 2}
+  rocket: {fileID: 0}
 --- !u!136 &13649686
 CapsuleCollider:
   m_ObjectHideFlags: 1

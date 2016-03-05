@@ -25,11 +25,7 @@ public class chase : MonoBehaviour {
 	{
 		character = GetComponent<CharacterController>();
 		state = State.InvestState;
-<<<<<<< HEAD
-       // Waypoint = GameObject.FindWithTag("Waypoint").transform;
-=======
         Waypoint = GameObject.FindWithTag("Ship").transform;
->>>>>>> 001a2531728478c5c8054035277f399556200bfa
         detectClosestEnemy();
 	}
 	
@@ -38,28 +34,28 @@ public class chase : MonoBehaviour {
         detectClosestEnemy();
 		TargetDistance ();
 
-		if (Planet.tag == "Untagged")
+		if (Planet.activeSelf == false)
 		{
 			state = State.RetreatState; 
 		}
 
 		switch (state)
 		{
-		case(State.InvestState):
-		{
-			Investigating ();
-			break;
-		}
-		case(State.ShootState):
-		{
-			Shooting ();
-			break;
-		}
-		case(State.RetreatState):
-		{
-			Retreating ();
-			break;
-		}
+		    case(State.InvestState):
+		    {
+			    Investigating ();
+			    break;
+		    }
+		    case(State.ShootState):
+		    {
+			    Shooting ();
+			    break;
+		    }
+		    case(State.RetreatState):
+		    {
+			    Retreating ();
+			    break;
+		    }
 			
 		}	
 	}	
