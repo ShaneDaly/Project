@@ -6,35 +6,42 @@ public class SatelliteHealth : MonoBehaviour
 {
 
     public float startHealth;
-	[SerializeField]
+    float orgHealth;
+    float orgMax;
+    [SerializeField]
     private float max;
     [SerializeField]
     private float health;
-	public float Length;
-	public float timer = 10;
-	public GameObject other;
-	public GameObject healthBar;
-	public GameObject scrap;
+    public float Length;
+    public float timer = 10;
+    public GameObject healthBar;
+    public GameObject other;
+    public GameObject scrap;
     [SerializeField]
     private float defence;
+    float startDefence;
     SatelliteStats satelliteStats;
-
-	Health Health;
 
     void Start()
     {
         satelliteStats = gameObject.GetComponent<SatelliteStats>();
         defence = (satelliteStats.defence / 10.0f) + 1;
+        max = defence * startHealth;
+        health = defence * startHealth;
+        startDefence = defence;
     }
 
-	void OnTriggerEnter(Collider other)
-	{
-		decreaseHealth ();
-		float calc_Health = health / max;
-		SetHealthBar (calc_Health);
-	}
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Laser")
+        {
+            decreaseHealth();
+            float calc_Health = health / max;
+            SetHealthBar(calc_Health);
+        }
+    }
 
-	void decreaseHealth ()
+    void decreaseHealth ()
 	{
 		health -= 1;
 	}
@@ -49,15 +56,19 @@ public class SatelliteHealth : MonoBehaviour
 
 	void Update () 
     {
-        max = startHealth;
-        health = startHealth;
         defence = (satelliteStats.defence / 10.0f) + 1;
-        max = defence * startHealth;
-        health = defence * startHealth;
-		if (health <= 0) 
+        if (defence != startDefence)
+        {
+            max = defence * max;
+            health = defence * health;
+            startDefence = defence;
+        }
+
+        if (health <= 0) 
         {
 			gameObject.SetActive(false);
-			Instantiate(scrap, transform.position, transform.rotation);
+            gameObject.tag = "Untagged";
+            Instantiate(scrap, transform.position, transform.rotation);
 		}
 	}
 

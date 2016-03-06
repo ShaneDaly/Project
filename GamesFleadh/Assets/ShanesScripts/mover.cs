@@ -12,7 +12,7 @@ public class mover : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-        if (other.gameObject.activeSelf == true || other.gameObject.tag == "Planet")
+        if (other.gameObject.activeSelf == true && other.gameObject.tag == "Planet")
         {
             Destroy(gameObject);
         }
