@@ -112,7 +112,6 @@
      <Compile Include="Assets\ShanesScripts\WinOrLose.cs" />
      <Compile Include="Assets\ShanesScripts\YouWin.cs" />
      <Compile Include="Assets\ShanesScripts\chase.cs" />
-     <Compile Include="Assets\ShanesScripts\flying.cs" />
      <Compile Include="Assets\ShanesScripts\mover.cs" />
      <Compile Include="Assets\Timer.cs" />
      <Compile Include="Assets\WinScreen.cs" />

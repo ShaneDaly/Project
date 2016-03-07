@@ -42,6 +42,7 @@ public class Satelite : MonoBehaviour
     private bool isAcc;
 
     public GameObject trailer;
+    GameObject ptrailer;
 
     // Use this for initialization
     void Start()
@@ -50,7 +51,7 @@ public class Satelite : MonoBehaviour
 
         sun = GameObject.FindGameObjectWithTag("Sun");
 
-        GameObject ptrailer = (GameObject)Instantiate(trailer, transform.position, new Quaternion(0, 0, 0, 0)); ;
+        ptrailer = (GameObject)Instantiate(trailer, transform.position, new Quaternion(0, 0, 0, 0)); ;
     }
 
     // Update is called once per frame
@@ -147,5 +148,10 @@ public class Satelite : MonoBehaviour
         direction = (transform.position - prevPos).normalized;
         prevPos = transform.position;
         transform.LookAt(direction);
+    }
+    public void destroyPlanet()
+    {
+        Destroy(ptrailer);
+        gameObject.SetActive(false);
     }
 }
