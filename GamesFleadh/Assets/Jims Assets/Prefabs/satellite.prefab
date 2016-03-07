@@ -359,8 +359,8 @@ MonoBehaviour:
   health: 0
   Length: 0
   timer: 10
-  other: {fileID: 0}
   healthBar: {fileID: 118670, guid: a9f7294949effbe428696ad518cace7b, type: 2}
+  other: {fileID: 0}
   scrap: {fileID: 156382, guid: e4a8a15934b9d844ba33b8caa06a2687, type: 2}
   defence: 0
 --- !u!114 &11423566
@@ -392,8 +392,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f10a7341f73607b4f9e44d411fafe0e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offence: 5
-  defence: 0
+  offence: 10
+  defence: 2
   cost: 20
   active: 1
 --- !u!114 &11454898
@@ -1585,11 +1585,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: offence
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: defence
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_TagString
