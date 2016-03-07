@@ -6,12 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Adrians/-MainMenuScreen.unity
+    path: Assets/Adrians/-1MainMenuScreen.unity
   - enabled: 1
-    path: Assets/Adrians/-DemoSceneSprint2.unity
-  - enabled: 1
-    path: Assets/DemoScene.unity
+    path: Assets/Adrians/-2DemoSceneSprint2.unity
   - enabled: 1
     path: Assets/GameOver.unity
-  - enabled: 1
-    path: Assets/WinScreen.unity

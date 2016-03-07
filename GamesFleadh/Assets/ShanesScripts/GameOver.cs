@@ -4,7 +4,7 @@ using System.Collections;
 public class GameOver : MonoBehaviour
 {
 
-	public string newScene;
+	public int newScene;
 	string level;
 	public GameObject enemy;
 	EnemyHealth eh;
@@ -22,8 +22,7 @@ public class GameOver : MonoBehaviour
 		
 		if (GUI.Button(new Rect(Screen.width / 2 - (buttonWidth / 2),(1 * Screen.height / 3) - (buttonHeight / 2),buttonWidth,buttonHeight),"Retry!"))
 		{
-			level = LevelManager.getLastLevel();
-			Application.LoadLevel(level);
+			Application.LoadLevel(newScene);
 		}
 		
 		if (GUI.Button(new Rect(Screen.width / 2 - (buttonWidth / 2),(2 * Screen.height / 3) - (buttonHeight / 2),buttonWidth,buttonHeight),"Quit game"))
