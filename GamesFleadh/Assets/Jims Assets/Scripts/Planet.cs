@@ -139,7 +139,7 @@ public class Planet : MonoBehaviour
     public void destroyPlanet()
     {
         Destroy(ptrailer);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
     
 
