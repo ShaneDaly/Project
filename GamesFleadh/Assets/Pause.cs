@@ -5,6 +5,7 @@ public class Pause : MonoBehaviour
 {
     private bool isEnabled = false;
     public GameObject pauseMenu;
+    public GameObject sideBar;
 
     void Start()
     {
@@ -13,7 +14,7 @@ public class Pause : MonoBehaviour
 
 	void Update ()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
             if (pauseMenu.activeSelf == false)
             {
@@ -30,6 +31,7 @@ public class Pause : MonoBehaviour
 
     public void pause()
     {
+        sideBar.SetActive(false);
         pauseMenu.SetActive(true);
         isEnabled = true;
         Time.timeScale = 0;
@@ -37,6 +39,7 @@ public class Pause : MonoBehaviour
 
     public void unpause()
     {
+        sideBar.SetActive(true);
         pauseMenu.SetActive(false);
         isEnabled = false;
         Time.timeScale = 1;
