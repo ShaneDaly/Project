@@ -11,6 +11,7 @@ using System;
 public class Planet : MonoBehaviour 
 {
 	public GameObject sun;
+    GameObject ptrailer;
     public float rotationSpeed;
     public bool RandomSize;
 
@@ -37,6 +38,8 @@ public class Planet : MonoBehaviour
     public float ownRotateSpeed;
     public GameObject halo;
     public GameObject trailer;
+
+    public bool destroy;
     
     // Use this for initialization
     void Start () 
@@ -48,7 +51,7 @@ public class Planet : MonoBehaviour
         }
         gameObject.tag = "Planet";
 
-        GameObject ptrailer = (GameObject)Instantiate(trailer, transform.position, new Quaternion(0,0,0,0)); ;
+        ptrailer = (GameObject)Instantiate(trailer, transform.position, new Quaternion(0,0,0,0));
     }
 	
 	// Update is called once per frame
@@ -60,7 +63,6 @@ public class Planet : MonoBehaviour
             calcOrbit();
         }
         transform.RotateAround(transform.position, Vector3.up, ownRotateSpeed * Time.deltaTime);
-
     }
 
     // Sets the Sun to orbit
@@ -134,6 +136,14 @@ public class Planet : MonoBehaviour
     {
         selected = false;
     }
+    public void destroyPlanet()
+    {
+        Destroy(ptrailer);
+        Destroy(gameObject);
+    }
+    
+
+
     
     
 }
