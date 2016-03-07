@@ -318,5 +318,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40e829e50ccf0c54da93d4ff62732d39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newScene: DemoScene
+  newScene: 1
   enemy: {fileID: 184906, guid: b7960e926ddc16d45b5848a0257d4aba, type: 2}

@@ -22,7 +22,7 @@ public class SatelliteAttack : MonoBehaviour {
 	void Update () {
 
         detectClosestEnemy();
-        if (enemy.activeSelf == true)
+        if (enemy != null && enemy.activeSelf == true)
         {
 
             float distance = Vector3.Distance(enemy.transform.position, satellite.transform.position);
@@ -45,11 +45,19 @@ public class SatelliteAttack : MonoBehaviour {
         float newDist;
         foreach (GameObject element in enemies)
         {
-            float dist = Vector3.Distance(element.transform.position, transform.position);
-            newDist = dist;
-            if (closestDist >= 0)
+            if (enemies.Length > 0)
             {
-                if (newDist < closestDist)
+                float dist = Vector3.Distance(element.transform.position, transform.position);
+                newDist = dist;
+                if (closestDist >= 0)
+                {
+                    if (newDist < closestDist)
+                    {
+                        closestDist = dist;
+                        enemy = element;
+                    }
+                }
+                else
                 {
                     closestDist = dist;
                     enemy = element;
@@ -57,8 +65,7 @@ public class SatelliteAttack : MonoBehaviour {
             }
             else
             {
-                closestDist = dist;
-                enemy = element;
+                enemy = null;
             }
 
         }

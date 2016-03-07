@@ -360,7 +360,7 @@ MonoBehaviour:
   Length: 0
   timer: 10
   other: {fileID: 0}
-  healthBar: {fileID: 130704, guid: fcdfe34cefb7304439e8b2d5c23f6726, type: 2}
+  healthBar: {fileID: 118670, guid: a9f7294949effbe428696ad518cace7b, type: 2}
   scrap: {fileID: 156382, guid: e4a8a15934b9d844ba33b8caa06a2687, type: 2}
   defence: 0
 --- !u!114 &11423566
@@ -1563,7 +1563,6 @@ ReflectionProbe:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IntensityMultiplier: 1
-  m_BlendDistance: 1
   m_HDR: 1
   m_BoxProjection: 0
   m_RenderDynamicObjects: 0

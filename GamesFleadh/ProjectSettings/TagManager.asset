@@ -4,17 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
-  - Rocket
-  - Planet
-  - Laser
-  - Waypoint
-  - New Tag
-  - Sun
-  - Scrap
-  - Button
   - Satellite
+  - Trailer
+  - Laser
+  - Planet
+  - Rocket
+  - Scrap
+  - Enemy
+  - Waypoint
+  - PlanetTrailer
   - SatelliteTrailer
+  - Sun
   - Ship
   layers:
   - Default

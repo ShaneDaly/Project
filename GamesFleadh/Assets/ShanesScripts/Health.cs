@@ -7,16 +7,11 @@ public class Health : MonoBehaviour {
 	public int dead = 0;
 	public GameObject[] planets;
 	public GameObject laser;
-	public string newScene;
+	public int newScene;
 	public int size;
 	public int num = 0;
 	public int increase = 1;
-
-	void Awake ()
-	{
-		planets = GameObject.FindGameObjectsWithTag ("Planet");
-		size = planets.Length;
-	}
+    
 	
 
 	void OnTriggerEnter (Collider laser)
@@ -26,13 +21,8 @@ public class Health : MonoBehaviour {
 
 	void Update ()
 	{
-		if (num == size) {
-			gameObject.tag = "Planet";
-		}
-
 		if (health <= 0) {
 			Application.LoadLevel(newScene);
-			LevelManager.setLastLevel(Application.loadedLevelName);
 			
 		}
 	}
