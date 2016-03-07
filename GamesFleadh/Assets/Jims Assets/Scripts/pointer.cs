@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿/** Author: James Gallagher
+ * 
+ * 
+**/
+
+
+using UnityEngine;
 using System.Collections;
 
 public class pointer : MonoBehaviour 

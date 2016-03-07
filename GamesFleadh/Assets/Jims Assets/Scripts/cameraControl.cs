@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿/** Author: James Gallagher
+ * 
+ * 
+**/
+
+
+using UnityEngine;
 using System.Collections;
 
 public class cameraControl : MonoBehaviour
@@ -76,27 +82,16 @@ public class cameraControl : MonoBehaviour
         }
     }
     
-    void ChangeHeight(float aVal)
-    {
-        if (transform.position.y > minHeight && aVal < 0)
-        {
-            transform.position += aVal * Vector3.up;
-        }
-        else if (transform.position.y < maxHeight && aVal > 0)
-        {
-            transform.position += aVal * Vector3.up;
-        }
-    }
 
-    void ChangeHeading(float aVal)
+    void ChangeX(float nNum)
     {
-        newY = Wrap360(aVal += transform.localEulerAngles.y);
+        newY = Wrap360(nNum += transform.localEulerAngles.y);
         transform.localEulerAngles = new Vector3(newX, newY, 0);
     }
 
-    void ChangePitch(float aVal)
+    void ChangeY(float nNum)
     {
-        newX = Wrap360(aVal += transform.localEulerAngles.x);
+        newX = Wrap360(nNum += transform.localEulerAngles.x);
         transform.localEulerAngles = new Vector3(newX, newY, 0);
     }
 
@@ -146,11 +141,11 @@ public class cameraControl : MonoBehaviour
 
             if (Input.GetKey(KeyCode.W) && transform.position.y < maxHeight)
             {
-                transform.position += transform.up * Time.deltaTime * movementSpeed;
+                transform.position += transform.forward * Time.deltaTime * movementSpeed;
             }
             else if (Input.GetKey(KeyCode.S) && transform.position.y > minHeight)
             {
-                transform.position -= transform.up * Time.deltaTime * movementSpeed;
+                transform.position -= transform.forward * Time.deltaTime * movementSpeed;
             }
 
             if (Input.GetKey(KeyCode.A))
@@ -180,17 +175,13 @@ public class cameraControl : MonoBehaviour
         {
             return;
         }
-
-        if (Input.GetMouseButton(0) && Input.GetMouseButton(1))
-        {
-            ChangeHeight(mouseY);
-        }
+        
         else
         {
             if (Input.GetMouseButton(1))
             {
-                ChangeHeading(mouseX);
-                ChangePitch(-mouseY);
+                ChangeX(mouseX);
+                ChangeY(-mouseY);
             }
         }
     }
