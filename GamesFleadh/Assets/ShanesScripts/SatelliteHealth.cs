@@ -21,6 +21,7 @@ public class SatelliteHealth : MonoBehaviour
     private float defence;
     float startDefence;
     SatelliteStats satelliteStats;
+    Satelite code;
 
     void Start()
     {
@@ -29,6 +30,7 @@ public class SatelliteHealth : MonoBehaviour
         max = defence * startHealth;
         health = defence * startHealth;
         startDefence = defence;
+        code = gameObject.GetComponent<Satelite>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -66,7 +68,7 @@ public class SatelliteHealth : MonoBehaviour
 
         if (health <= 0) 
         {
-			gameObject.SetActive(false);
+            code.destroyPlanet();
             gameObject.tag = "Untagged";
             Instantiate(scrap, transform.position, transform.rotation);
 		}
