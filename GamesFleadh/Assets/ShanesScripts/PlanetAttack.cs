@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlanetAttack : MonoBehaviour {
+public class PlanetAttack : MonoBehaviour 
+{
 	
     public GameObject enemy = null;
     public GameObject rocket;
@@ -21,6 +22,7 @@ public class PlanetAttack : MonoBehaviour {
 	float timer = 0.0f;
 	void Update () 
     {
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
         detectClosestEnemy();
         if (enemy != null && enemy.activeSelf == true)
         {
