@@ -37,11 +37,13 @@ public class GlobalContollerScript : MonoBehaviour
     Text costValSatellite;
     public int newSatelliteCost = 100;
     GameObject newSatelliteCost2;
+    Pause pause;
 
 
 
     void Start () 
     {
+        pause = gameObject.GetComponent<Pause>();
         newSatelliteCost2 = GameObject.Find("SatCostValue");
         Text newSatelliteCostTxt = newSatelliteCost2.GetComponent<Text>();
         newSatelliteCostTxt.text = "" + newSatelliteCost;
@@ -61,6 +63,7 @@ public class GlobalContollerScript : MonoBehaviour
         resValText = resVal.GetComponent<Text>();
         resValText.text = "" + resources;
         StartCoroutine(wait(resourceDelay));
+        StartCoroutine(wait2(0.5f));
     }
 	
 	void Update () 
@@ -242,6 +245,11 @@ public class GlobalContollerScript : MonoBehaviour
         yield return new WaitForSeconds(time);
         calcResources();
         StartCoroutine(wait(resourceDelay));
+    }
+    IEnumerator wait2(float time2)
+    {
+        yield return new WaitForSeconds(time2);
+        pause.pause();
     }
 
 

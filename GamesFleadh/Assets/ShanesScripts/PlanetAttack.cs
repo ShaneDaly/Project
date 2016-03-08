@@ -12,7 +12,7 @@ public class PlanetAttack : MonoBehaviour
     float closestDist = -2;
 	private Vector3 fwd;
     Rocket rocketCode;
-    public float range = 100;
+    public float range = 150;
 
     void Start()
     {

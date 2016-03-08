@@ -14,7 +14,7 @@ public class Pause : MonoBehaviour
 
 	void Update ()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (pauseMenu.activeSelf == false)
             {

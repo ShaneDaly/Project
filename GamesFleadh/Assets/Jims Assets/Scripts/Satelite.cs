@@ -117,22 +117,22 @@ public class Satelite : MonoBehaviour
         transform.RotateAround(sunVec, Vector3.up, rotateSpeed * Time.deltaTime);
     }
 
-    private void OnDrawGizmos()
-    {
-        if (!selected)
-        {
-            UnityEditor.Handles.color = Color.white;
-        }
-        else
-        {
-            UnityEditor.Handles.color = Color.blue;
-        }
-        if (allowOrbitDebug)
-        {
-            float distance = Vector3.Distance(transform.position, sun.transform.position);
-            UnityEditor.Handles.DrawWireDisc(sun.transform.position, Vector3.up, distance);
-        }
-    }
+    //private void OnDrawGizmos()
+    //{
+    //    if (!selected)
+    //    {
+    //        UnityEditor.Handles.color = Color.white;
+    //    }
+    //    else
+    //    {
+    //        UnityEditor.Handles.color = Color.blue;
+    //    }
+    //    if (allowOrbitDebug)
+    //    {
+    //        float distance = Vector3.Distance(transform.position, sun.transform.position);
+    //        UnityEditor.Handles.DrawWireDisc(sun.transform.position, Vector3.up, distance);
+    //    }
+    //}
 
     public void setSelected()
     {

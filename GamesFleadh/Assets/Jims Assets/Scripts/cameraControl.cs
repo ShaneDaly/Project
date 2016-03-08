@@ -33,6 +33,8 @@ public class cameraControl : MonoBehaviour
     public float newX;
     public float newY;
 
+    float posy;
+
     public GameObject sun;
     public GameObject Pointer;
 
@@ -40,6 +42,7 @@ public class cameraControl : MonoBehaviour
 
     void start()
     {
+        
         mode = 0;
         active = true;
 
@@ -49,10 +52,20 @@ public class cameraControl : MonoBehaviour
 
     void Update()
     {
+
+        if (active)
+        {
+            isMoving = false;
+            moveCamera();
+            posy = 90;
+            Vector3 thing = new Vector3(transform.position.x, posy, transform.position.z);
+            transform.position = (thing);
+        }
         if (Input.GetKeyDown(KeyCode.Z))
         {
             if (active)
             {
+
                 active = false;
                 gameObject.GetComponent<SecondaryCamera>().toggleActive();
                 Pointer.GetComponent<pointer>().enableMainSecondary();
@@ -75,10 +88,6 @@ public class cameraControl : MonoBehaviour
                 isMoving = true;
             }
             return;
-        }
-        if (active)
-        {
-            moveCamera();
         }
     }
     
@@ -128,35 +137,26 @@ public class cameraControl : MonoBehaviour
 
     void moveCamera()
     {
-        if (!isMoving)
+            
+
+        if (Input.GetKey(KeyCode.W))
         {
-            if (Input.GetAxis("Mouse ScrollWheel") > 0f && transform.position.y > minHeight)
-            {
-                transform.position -= (transform.position - Pointer.transform.position).normalized * Time.deltaTime * zoomSpeed;
-            }
-            else if (Input.GetAxis("Mouse ScrollWheel") < 0f && transform.position.y < maxHeight)
-            {
-                transform.position += (transform.position - Pointer.transform.position).normalized * Time.deltaTime * zoomSpeed;
-            }
-
-            if (Input.GetKey(KeyCode.W) && transform.position.y < maxHeight)
-            {
-                transform.position += transform.forward * Time.deltaTime * movementSpeed;
-            }
-            else if (Input.GetKey(KeyCode.S) && transform.position.y > minHeight)
-            {
-                transform.position -= transform.forward * Time.deltaTime * movementSpeed;
-            }
-
-            if (Input.GetKey(KeyCode.A))
-            {
-                transform.position -= transform.right * Time.deltaTime * movementSpeed;
-            }
-            else if (Input.GetKey(KeyCode.D))
-            {
-                transform.position += transform.right * Time.deltaTime * movementSpeed;
-            }
+            transform.position += transform.forward * Time.deltaTime * movementSpeed;
         }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            transform.position -= transform.forward * Time.deltaTime * movementSpeed;
+        }
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            transform.position -= transform.right * Time.deltaTime * movementSpeed;
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            transform.position += transform.right * Time.deltaTime * movementSpeed;
+        }
+        
 
         if (isMoving)
         {

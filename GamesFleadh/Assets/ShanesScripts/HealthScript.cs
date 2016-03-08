@@ -45,7 +45,7 @@ public class HealthScript : MonoBehaviour
 
 	void decreaseHealth ()
 	{
-		health -= 1;
+		health -= 5;
 	}
 
 	public void SetHealthBar (float myHealth)

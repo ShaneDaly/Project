@@ -91,7 +91,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6e3f3bcf26124a94b95c7ae546b9a8cf, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .00999999978
+  m_Volume: .0599999987
   m_Pitch: 1.10000002
   Loop: 0
   Mute: 0
@@ -248,7 +248,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Volume
-      value: .00999999978
+      value: .0599999987
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: Priority

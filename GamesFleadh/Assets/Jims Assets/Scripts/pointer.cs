@@ -161,12 +161,12 @@ public class pointer : MonoBehaviour
             mCamera.transform.position = (mCamera.transform.position + difference);
         }
     }
-    private void OnDrawGizmos()
-    {
-        distance = Vector3.Distance(border, sun.transform.position);
-        UnityEditor.Handles.color = Color.red;
-        UnityEditor.Handles.DrawWireDisc(sun.transform.position, Vector3.up, distance);
-    }
+    //private void OnDrawGizmos()
+    //{
+    //    distance = Vector3.Distance(border, sun.transform.position);
+    //    UnityEditor.Handles.color = Color.red;
+    //    UnityEditor.Handles.DrawWireDisc(sun.transform.position, Vector3.up, distance);
+    //}
 
     public void enableMainEmitter()
     {

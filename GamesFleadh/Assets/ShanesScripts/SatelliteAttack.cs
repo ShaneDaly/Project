@@ -11,7 +11,7 @@ public class SatelliteAttack : MonoBehaviour {
     public GameObject[] enemies;
     float closestDist = -2;
     SatelliteRocket rocketCode;
-    public float range = 100;
+    public float range = 150;
 
     void Start()
     {
